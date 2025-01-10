@@ -22,7 +22,6 @@ class AuthenticationController extends Controller
      */
     public function register(RegisterRequest $request)
     {
-        logger($request);
         $validatedRequest = $request->validated();
 
         DB::beginTransaction();
