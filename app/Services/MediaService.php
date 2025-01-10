@@ -8,13 +8,11 @@ class MediaService
 {
     /**
      * Uploads a file to the specified storage disk and path.
-     *
-     * @param  \Illuminate\Http\UploadedFile  $file
      */
     public function uploadFile($file, string $directory, ?string $disk = 'public'): array
     {
         try {
-            $path = $file->store($directory, $disk);
+            $path = Storage::url($file->store($directory, $disk));
 
             return [
                 'success' => true,
