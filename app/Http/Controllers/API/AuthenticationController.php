@@ -9,6 +9,7 @@ use App\Http\Resources\UserResource;
 use App\Models\User;
 use App\Services\MediaService;
 use Exception;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class AuthenticationController extends Controller
@@ -22,7 +23,6 @@ class AuthenticationController extends Controller
      */
     public function register(RegisterRequest $request)
     {
-        logger($request);
         $validatedRequest = $request->validated();
 
         DB::beginTransaction();
@@ -75,10 +75,54 @@ class AuthenticationController extends Controller
     /**
      * User authentication
      */
-    public function login(LoginRequest $request) {}
+    public function login(LoginRequest $request)
+    {
+        $credentials = $request->validated();
+
+        if (Auth::attempt($credentials)) {
+            $user = Auth::user();
+            $token = $user->createToken('auth_token')->plainTextToken;
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Login successful',
+                'data' => [
+                    'user' => new UserResource($user),
+                    'token' => $token,
+                ],
+            ], 200);
+        }
+
+        return response()->json([
+            'success' => false,
+            'message' => 'Invalid credentials',
+        ], 401);
+    }
 
     /**
      * User logout from application
      */
-    public function logout() {}
+    public function logout()
+    {
+        try {
+            Auth::user()->tokens()->delete();
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Logout successful',
+            ], 200);
+            
+        } catch (Exception $e) {
+            logger()->error('Logout failed', [
+                'error' => $e->getMessage(),
+                'trace' => $e->getTraceAsString(),
+            ]);
+
+            return response()->json([
+                'success' => false,
+                'message' => 'Logout failed',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
 }
