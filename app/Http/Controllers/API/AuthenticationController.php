@@ -36,8 +36,8 @@ class AuthenticationController extends Controller
                 'address' => $validatedRequest['address'],
             ]);
 
-            if ($request->hasFile('avatar')) {
-                $response = $this->mediaService->uploadFile($request->file('avatar'), 'avatars');
+            if ($request->hasFile('profile_pic')) {
+                $response = $this->mediaService->uploadFile($request->file('profile_pic'), 'profile_pics');
 
                 if ($response['success']) {
                     $user->avatar = $response['path'];
@@ -104,8 +104,11 @@ class AuthenticationController extends Controller
      */
     public function logout()
     {
+        /** @var User $user **/ 
         try {
-            Auth::user()->tokens()->delete();
+            $user = Auth::user();
+
+            $user->tokens()->delete();
 
             return response()->json([
                 'success' => true,
