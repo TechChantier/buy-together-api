@@ -20,7 +20,7 @@ class UserResource extends JsonResource
             'email' => $this->email,
             'phone_number' => $this->phone_number,
             'address' => $this->address,
-            'avatar_url' => $this->avatar,
+            'profile_pic' => $this->profile_pic,
             'purchase_goals' => PurchaseGoalResource::collection($this->whenLoaded('purchaseGoals')),
         ];
     }
