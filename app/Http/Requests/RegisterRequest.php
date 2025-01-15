@@ -27,7 +27,7 @@ class RegisterRequest extends FormRequest
             'password' => ['required', 'string', 'confirmed'],
             'address' => ['required', 'string'],
             'phone_number' => ['required', 'string', 'unique:users'],
-            'avatar' => ['nullable', 'file', 'max:51200'],
+            'profile_pic' => ['nullable', 'file', 'max:51200'],
         ];
     }
 }
