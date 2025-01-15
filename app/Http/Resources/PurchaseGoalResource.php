@@ -15,7 +15,18 @@ class PurchaseGoalResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            
+            'id' => $this->id,
+            'title' => $this->title,
+            'description' => $this->description,
+            'target_amount' => $this->target_amount,
+            'status' => $this->status ?? 'open',
+            'group_link' => $this->group_link,
+            'start_date' => $this->start_date,
+            'end_date' => $this->end_date,
+            'created_by' => new UserResource($this->whenLoaded('creator')),
+            'product' => new ProductResource($this->whenLoaded('product')),
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
         ];
     }
 }
