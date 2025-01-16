@@ -11,7 +11,7 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable, HasApiTokens;
+    use HasApiTokens, HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -39,5 +39,12 @@ class User extends Authenticatable
     public function purchaseGoals()
     {
         return $this->hasMany(PurchaseGoal::class, 'creator_id');
+    }
+
+    public function purchaseGoalsParticipated()
+    {
+        return $this->belongsToMany(PurchaseGoal::class, 'user_in_purchase_goals')
+            ->withPivot('contributed_amount', 'joined_at', 'status')
+            ->withTimestamps();
     }
 }

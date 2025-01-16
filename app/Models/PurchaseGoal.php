@@ -33,4 +33,10 @@ class PurchaseGoal extends Model
     {
         return $this->hasOne(Product::class);
     }
+
+    public function participants()
+    {
+        return $this->belongsToMany(User::class, 'user_in_purchase_goals', 'purchase_goal_id', 'user_id')
+            ->withPivot('joined_at', 'contributed_amount');
+    }
 }
