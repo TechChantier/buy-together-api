@@ -40,13 +40,16 @@ class AuthenticationController extends Controller
                 $response = $this->mediaService->uploadFile($request->file('profile_pic'), 'profile_pics');
 
                 if ($response['success']) {
-                    $user->avatar = $response['path'];
+                    $user->profile_pic = $response['path'];
                     $user->save();
                 } else {
-                    throw new Exception($response['message']);
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'Unable to upload profile picture',
+                    ], 500);
                 }
             }
- 
+
             DB::commit();
 
             $user->load('purchaseGoals');
@@ -104,7 +107,7 @@ class AuthenticationController extends Controller
      */
     public function logout()
     {
-        /** @var User $user **/ 
+        /** @var User $user * */
         try {
             $user = Auth::user();
 
@@ -114,7 +117,7 @@ class AuthenticationController extends Controller
                 'success' => true,
                 'message' => 'Logout successful',
             ], 200);
-            
+
         } catch (Exception $e) {
             logger()->error('Logout failed', [
                 'error' => $e->getMessage(),
