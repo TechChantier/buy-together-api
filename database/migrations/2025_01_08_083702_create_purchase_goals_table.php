@@ -17,8 +17,8 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->unsignedBigInteger('creator_id');
             $table->decimal('target_amount', 10, 2);
-            $table->decimal('collected_amount', 10, 2)->default(0);
-            $table->enum('status', ['open', 'closed']);
+            $table->decimal('amount_per_person', 10, 2)->nullable();
+            $table->enum('status', ['open', 'closed'])->default('open');
             $table->string('group_link');
             $table->date('start_date');
             $table->date('end_date');
