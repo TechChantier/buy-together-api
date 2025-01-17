@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class PurchaseGoal extends Model
@@ -34,9 +35,9 @@ class PurchaseGoal extends Model
         return $this->hasOne(Product::class);
     }
 
-    public function participants()
+    public function participants(): BelongsToMany
     {
         return $this->belongsToMany(User::class, 'user_in_purchase_goals', 'purchase_goal_id', 'user_id')
-            ->withPivot('joined_at', 'contributed_amount');
+            ->withPivot('joined_at', 'contributed_amount', 'status');
     }
 }

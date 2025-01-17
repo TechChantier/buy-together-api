@@ -12,6 +12,7 @@ class UserInPurchaseGoal extends Model
         'user_id',
         'purchase_goal_id',
         'joined_at',
+        'status'
     ];
 
     public function user()
