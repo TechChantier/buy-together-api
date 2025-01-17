@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\UserInPurchaseGoalResource;
 use App\Http\Resources\UserResource;
 use App\Models\PurchaseGoal;
+use App\Models\User;
 use App\Models\UserInPurchaseGoal;
 use Exception;
 use Illuminate\Support\Facades\Auth;
@@ -125,6 +126,98 @@ class ParticipationController extends Controller
             return response()->json([
                 'success' => false,
                 'message' => 'Failed to join purchase goal.',
+                'statusCode' => 500,
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function approve(PurchaseGoal $purchaseGoal, User $user)
+    {
+        if (Auth::id() !== $purchaseGoal->creator_id) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Unauthorized to approve this join request.',
+                'statusCode' => 401,
+            ], 401);
+        }
+
+        $joinRequest = $purchaseGoal->participants()
+            ->where('user_id', $user->id)
+            ->where('status', 'pending')
+            ->first();
+
+        if (! $joinRequest) {
+            return response()->json([
+                'success' => false,
+                'message' => 'No pending join request found for this user.',
+                'statusCode' => 404,
+            ], 404);
+        }
+
+        try {
+            $joinRequest->pivot->update(['status' => 'approved']);
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Join request approved successfully.',
+                'statusCode' => 200,
+            ], 200);
+        } catch (Exception $e) {
+            logger()->error('Failed to approve join request', [
+                'error' => $e->getMessage(),
+                'trace' => $e->getTraceAsString(),
+            ]);
+
+            return response()->json([
+                'success' => false,
+                'message' => 'Failed to approve join request.',
+                'statusCode' => 500,
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function decline(PurchaseGoal $purchaseGoal, User $user)
+    {
+        if (Auth::id() !== $purchaseGoal->creator_id) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Unauthorized to decline join requests.',
+                'statusCode' => 401,
+            ], 401);
+        }
+
+        $joinRequest = $purchaseGoal->participants()
+            ->where('user_id', $user->id)
+            ->where('status', 'pending')
+            ->first();
+
+        if (! $joinRequest) {
+            return response()->json([
+                'success' => false,
+                'message' => 'No pending join request found for this user.',
+                'statusCode' => 404,
+            ], 404);
+        }
+
+        try {
+            $joinRequest->pivot->delete();
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Join request declined successfully.',
+                'statusCode' => 200,
+            ], 200);
+        } catch (Exception $e) {
+            logger()->error('Failed to decline join request', [
+                'error' => $e->getMessage(),
+                'trace' => $e->getTraceAsString(),
+            ]);
+
+            return response()->json([
+                'success' => false,
+                'message' => 'Failed to decline join request.',
                 'statusCode' => 500,
                 'error' => $e->getMessage(),
             ], 500);

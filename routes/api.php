@@ -23,6 +23,8 @@ Route::apiResource('purchase-goals', PurchaseGoalController::class)->middleware(
 Route::controller(ParticipationController::class)->group(function () {
     Route::get('purchase-goals/{purchase_goal}/participants', 'purchaseGoalParticipants')->middleware('auth:sanctum');
     Route::post('purchase-goals/{purchase_goal}/join', 'join')->middleware('auth:sanctum');
+    Route::post('purchase-goals/{purchase_goal}/approve/{user_id}', 'approve')->middleware('auth:sanctum');
+    Route::post('purchase-goals/{purchase_goal}/decline/{user_id}', 'decline')->middleware('auth:sanctum');
 });
 
 // Product endpoints
