@@ -19,6 +19,7 @@ class PurchaseGoalController extends Controller
     protected $relationships = [
         'product',
         'creator',
+        'participants'
     ];
 
     public function __construct(
@@ -30,8 +31,20 @@ class PurchaseGoalController extends Controller
      */
     public function index()
     {
-        $purchaseGoals = PurchaseGoal::where('creator_id', Auth::id())->get();
-        $purchaseGoals->load($this->relationships);
+        $query = PurchaseGoal::query();
+
+        if (request()->has('search')) {
+            $search = request()->query('search');
+
+            $query->where(function ($q) use ($search) {
+                $q->where('title', 'LIKE', "%$search%")
+                    ->orWhere('description', 'LIKE', "%$search%")
+                    ->orWhere('target_amount', 'LIKE', "%$search%")
+                    ->orWhere('amount_per_person', 'LIKE', "%$search%");
+            });
+        }
+
+        $purchaseGoals = $query->with($this->relationships)->get();
 
         return response()->json([
             'success' => true,
