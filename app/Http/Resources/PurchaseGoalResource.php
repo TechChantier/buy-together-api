@@ -19,6 +19,8 @@ class PurchaseGoalResource extends JsonResource
             'title' => $this->title,
             'description' => $this->description,
             'target_amount' => $this->target_amount,
+            'amount_per_person' => $this->amount_per_person,
+            'number_of_participants' => count(UserInPurchaseGoalResource::collection($this->whenLoaded('participants'))),
             'status' => $this->status ?? 'open',
             'group_link' => $this->group_link,
             'start_date' => $this->start_date,
