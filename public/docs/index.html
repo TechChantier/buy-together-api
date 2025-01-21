@@ -88,44 +88,42 @@
                     <a href="#endpoints">Endpoints</a>
                 </li>
                                     <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-purchase-goals--purchase_goal--change-status">
-                                <a href="#endpoints-POSTapi-purchase-goals--purchase_goal--change-status">Change the status of specified purchase goal</a>
+                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-purchase-goals--id--participants">
+                                <a href="#endpoints-GETapi-purchase-goals--id--participants">GET api/purchase-goals/{id}/participants</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-purchase-goals">
-                                <a href="#endpoints-GETapi-purchase-goals">Display a listing of the purchase goals.</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-purchase-goals--id--join">
+                                <a href="#endpoints-POSTapi-purchase-goals--id--join">POST api/purchase-goals/{id}/join</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-purchase-goals">
-                                <a href="#endpoints-POSTapi-purchase-goals">Store a newly created purchase goal in storage.</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-purchase-goals--id--approve--user_id-">
+                                <a href="#endpoints-POSTapi-purchase-goals--id--approve--user_id-">POST api/purchase-goals/{id}/approve/{user_id}</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-purchase-goals--id-">
-                                <a href="#endpoints-GETapi-purchase-goals--id-">Display the specified purchase goal.</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-purchase-goals--id--decline--user_id-">
+                                <a href="#endpoints-POSTapi-purchase-goals--id--decline--user_id-">POST api/purchase-goals/{id}/decline/{user_id}</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-PUTapi-purchase-goals--id-">
-                                <a href="#endpoints-PUTapi-purchase-goals--id-">Update the specified purchase goal in storage.</a>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-purchase-goals" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="purchase-goals">
+                    <a href="#purchase-goals">Purchase Goals</a>
+                </li>
+                                    <ul id="tocify-subheader-purchase-goals" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="purchase-goals-POSTapi-purchase-goals--id--change-status">
+                                <a href="#purchase-goals-POSTapi-purchase-goals--id--change-status">Change the status of specified purchase goal</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-DELETEapi-purchase-goals--id-">
-                                <a href="#endpoints-DELETEapi-purchase-goals--id-">Remove the specified purchase goal from storage.</a>
+                                                                                <li class="tocify-item level-2" data-unique="purchase-goals-GETapi-purchase-goals">
+                                <a href="#purchase-goals-GETapi-purchase-goals">Listing of all purchase goals.</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-purchase-goals--purchase_goal--participants">
-                                <a href="#endpoints-GETapi-purchase-goals--purchase_goal--participants">GET api/purchase-goals/{purchase_goal}/participants</a>
+                                                                                <li class="tocify-item level-2" data-unique="purchase-goals-GETapi-purchase-goals--id-">
+                                <a href="#purchase-goals-GETapi-purchase-goals--id-">Fetch details of a specific purchase goal.</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-purchase-goals--purchase_goal--join">
-                                <a href="#endpoints-POSTapi-purchase-goals--purchase_goal--join">POST api/purchase-goals/{purchase_goal}/join</a>
+                                                                                <li class="tocify-item level-2" data-unique="purchase-goals-POSTapi-purchase-goals">
+                                <a href="#purchase-goals-POSTapi-purchase-goals">Create a new purchase goal.</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-purchase-goals--purchase_goal_id--approve--user_id-">
-                                <a href="#endpoints-POSTapi-purchase-goals--purchase_goal_id--approve--user_id-">POST api/purchase-goals/{purchase_goal_id}/approve/{user_id}</a>
+                                                                                <li class="tocify-item level-2" data-unique="purchase-goals-PUTapi-purchase-goals--id-">
+                                <a href="#purchase-goals-PUTapi-purchase-goals--id-">Update an existing purchase goal.</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-purchase-goals--purchase_goal_id--decline--user_id-">
-                                <a href="#endpoints-POSTapi-purchase-goals--purchase_goal_id--decline--user_id-">POST api/purchase-goals/{purchase_goal_id}/decline/{user_id}</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-products">
-                                <a href="#endpoints-POSTapi-products">POST api/products</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-PUTapi-products--id-">
-                                <a href="#endpoints-PUTapi-products--id-">PUT api/products/{id}</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-DELETEapi-products--id-">
-                                <a href="#endpoints-DELETEapi-products--id-">DELETE api/products/{id}</a>
+                                                                                <li class="tocify-item level-2" data-unique="purchase-goals-DELETEapi-purchase-goals--id-">
+                                <a href="#purchase-goals-DELETEapi-purchase-goals--id-">Delete a purchase goal.</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -182,12 +180,12 @@ Users will not be able to create or join purchase goals if they are not register
     "http://localhost/api/register" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "name=qohsesjhpekjknvtxpgbqfeq"\
-    --form "email=atillman@example.net"\
-    --form "password=jcxJZ!A"\
-    --form "password_confirmation=jcxJZ!A"\
-    --form "address=praesentium"\
-    --form "phone_number=illum"</code></pre></div>
+    --form "name=wtqhogrnncfelbnjsghiys"\
+    --form "email=jaunita.daugherty@example.org"\
+    --form "password=NQ(cVWF&gt;S6^"\
+    --form "address=possimus"\
+    --form "phone_number=praesentium"\
+    --form "profile_pic=@C:\Users\user\AppData\Local\Temp\php92CE.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -201,12 +199,12 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('name', 'qohsesjhpekjknvtxpgbqfeq');
-body.append('email', 'atillman@example.net');
-body.append('password', 'jcxJZ!A');
-body.append('password_confirmation', 'jcxJZ!A');
-body.append('address', 'praesentium');
-body.append('phone_number', 'illum');
+body.append('name', 'wtqhogrnncfelbnjsghiys');
+body.append('email', 'jaunita.daugherty@example.org');
+body.append('password', 'NQ(cVWF&gt;S6^');
+body.append('address', 'possimus');
+body.append('phone_number', 'praesentium');
+body.append('profile_pic', document.querySelector('input[name="profile_pic"]').files[0]);
 
 fetch(url, {
     method: "POST",
@@ -236,7 +234,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <form id="form-POSTapi-register" data-method="POST"
       data-path="api/register"
       data-authed="0"
-      data-hasfiles="0"
+      data-hasfiles="1"
       data-isarraybody="0"
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-register', this);">
@@ -294,10 +292,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-register"
-               value="qohsesjhpekjknvtxpgbqfeq"
+               value="wtqhogrnncfelbnjsghiys"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>qohsesjhpekjknvtxpgbqfeq</code></p>
+<p>Must not be greater than 255 characters. Example: <code>wtqhogrnncfelbnjsghiys</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -305,10 +303,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-register"
-               value="atillman@example.net"
+               value="jaunita.daugherty@example.org"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>atillman@example.net</code></p>
+<p>Must be a valid email address. Example: <code>jaunita.daugherty@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -316,21 +314,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-register"
-               value="jcxJZ!A"
+               value="NQ(cVWF>S6^"
                data-component="body">
     <br>
-<p>Example: <code>jcxJZ!A</code></p>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>password_confirmation</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="password_confirmation"                data-endpoint="POSTapi-register"
-               value="jcxJZ!A"
-               data-component="body">
-    <br>
-<p>Example: <code>jcxJZ!A</code></p>
+<p>Example: <code>NQ(cVWF&gt;S6^</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>address</code></b>&nbsp;&nbsp;
@@ -338,10 +325,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="address"                data-endpoint="POSTapi-register"
-               value="praesentium"
+               value="possimus"
                data-component="body">
     <br>
-<p>Example: <code>praesentium</code></p>
+<p>Example: <code>possimus</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone_number</code></b>&nbsp;&nbsp;
@@ -349,10 +336,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="phone_number"                data-endpoint="POSTapi-register"
-               value="illum"
+               value="praesentium"
                data-component="body">
     <br>
-<p>Example: <code>illum</code></p>
+<p>Example: <code>praesentium</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>profile_pic</code></b>&nbsp;&nbsp;
@@ -363,7 +350,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 51200 kilobytes.</p>
+<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\user\AppData\Local\Temp\php92CE.tmp</code></p>
         </div>
         </form>
 
@@ -387,8 +374,8 @@ An authentication token is always generated upon successful login.
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"ian76@example.org\",
-    \"password\": \"{_aV!Uh]\\\"nUgRH\"
+    \"email\": \"betsy.reynolds@example.org\",
+    \"password\": \"pu6Ia5I#s\\\\\"
 }"
 </code></pre></div>
 
@@ -404,8 +391,8 @@ const headers = {
 };
 
 let body = {
-    "email": "ian76@example.org",
-    "password": "{_aV!Uh]\"nUgRH"
+    "email": "betsy.reynolds@example.org",
+    "password": "pu6Ia5I#s\\"
 };
 
 fetch(url, {
@@ -494,10 +481,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-login"
-               value="ian76@example.org"
+               value="betsy.reynolds@example.org"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>ian76@example.org</code></p>
+<p>Must be a valid email address. Example: <code>betsy.reynolds@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -505,10 +492,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-login"
-               value="{_aV!Uh]"nUgRH"
+               value="pu6Ia5I#s\"
                data-component="body">
     <br>
-<p>Example: <code>{_aV!Uh]"nUgRH</code></p>
+<p>Example: <code>pu6Ia5I#s\</code></p>
         </div>
         </form>
 
@@ -627,27 +614,163 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
     
 
-                                <h2 id="endpoints-POSTapi-purchase-goals--purchase_goal--change-status">Change the status of specified purchase goal</h2>
+                                <h2 id="endpoints-GETapi-purchase-goals--id--participants">GET api/purchase-goals/{id}/participants</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-POSTapi-purchase-goals--purchase_goal--change-status">
+<span id="example-requests-GETapi-purchase-goals--id--participants">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/purchase-goals/consequatur/change-status" \
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/purchase-goals/17/participants" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/consequatur/change-status"
+    "http://localhost/api/purchase-goals/17/participants"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-purchase-goals--id--participants">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-purchase-goals--id--participants" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-purchase-goals--id--participants"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-purchase-goals--id--participants"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-purchase-goals--id--participants" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-purchase-goals--id--participants">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-purchase-goals--id--participants" data-method="GET"
+      data-path="api/purchase-goals/{id}/participants"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-purchase-goals--id--participants', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-purchase-goals--id--participants"
+                    onclick="tryItOut('GETapi-purchase-goals--id--participants');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-purchase-goals--id--participants"
+                    onclick="cancelTryOut('GETapi-purchase-goals--id--participants');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-purchase-goals--id--participants"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/purchase-goals/{id}/participants</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-purchase-goals--id--participants"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-purchase-goals--id--participants"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="GETapi-purchase-goals--id--participants"
+               value="17"
+               data-component="url">
+    <br>
+<p>The ID of the purchase goal. Example: <code>17</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="endpoints-POSTapi-purchase-goals--id--join">POST api/purchase-goals/{id}/join</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-purchase-goals--id--join">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/purchase-goals/16/join" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/purchase-goals/16/join"
 );
 
 const headers = {
@@ -662,45 +785,45 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-POSTapi-purchase-goals--purchase_goal--change-status">
+<span id="example-responses-POSTapi-purchase-goals--id--join">
 </span>
-<span id="execution-results-POSTapi-purchase-goals--purchase_goal--change-status" hidden>
+<span id="execution-results-POSTapi-purchase-goals--id--join" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-POSTapi-purchase-goals--purchase_goal--change-status"></span>:
+                id="execution-response-status-POSTapi-purchase-goals--id--join"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-purchase-goals--purchase_goal--change-status"
+    <pre class="json"><code id="execution-response-content-POSTapi-purchase-goals--id--join"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-POSTapi-purchase-goals--purchase_goal--change-status" hidden>
+<span id="execution-error-POSTapi-purchase-goals--id--join" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-purchase-goals--purchase_goal--change-status">
+    <pre><code id="execution-error-message-POSTapi-purchase-goals--id--join">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-POSTapi-purchase-goals--purchase_goal--change-status" data-method="POST"
-      data-path="api/purchase-goals/{purchase_goal}/change-status"
+<form id="form-POSTapi-purchase-goals--id--join" data-method="POST"
+      data-path="api/purchase-goals/{id}/join"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-purchase-goals--purchase_goal--change-status', this);">
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-purchase-goals--id--join', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-purchase-goals--purchase_goal--change-status"
-                    onclick="tryItOut('POSTapi-purchase-goals--purchase_goal--change-status');">Try it out ⚡
+                    id="btn-tryout-POSTapi-purchase-goals--id--join"
+                    onclick="tryItOut('POSTapi-purchase-goals--id--join');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-purchase-goals--purchase_goal--change-status"
-                    onclick="cancelTryOut('POSTapi-purchase-goals--purchase_goal--change-status');" hidden>Cancel 🛑
+                    id="btn-canceltryout-POSTapi-purchase-goals--id--join"
+                    onclick="cancelTryOut('POSTapi-purchase-goals--id--join');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-purchase-goals--purchase_goal--change-status"
+                    id="btn-executetryout-POSTapi-purchase-goals--id--join"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -708,7 +831,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-black">POST</small>
-            <b><code>api/purchase-goals/{purchase_goal}/change-status</code></b>
+            <b><code>api/purchase-goals/{id}/join</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -716,7 +839,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-purchase-goals--purchase_goal--change-status"
+                              name="Content-Type"                data-endpoint="POSTapi-purchase-goals--id--join"
                value="application/json"
                data-component="header">
     <br>
@@ -727,7 +850,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-purchase-goals--purchase_goal--change-status"
+                              name="Accept"                data-endpoint="POSTapi-purchase-goals--id--join"
                value="application/json"
                data-component="header">
     <br>
@@ -735,24 +858,415 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>purchase_goal</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="purchase_goal"                data-endpoint="POSTapi-purchase-goals--purchase_goal--change-status"
-               value="consequatur"
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="POSTapi-purchase-goals--id--join"
+               value="16"
                data-component="url">
     <br>
-<p>Example: <code>consequatur</code></p>
+<p>The ID of the purchase goal. Example: <code>16</code></p>
             </div>
                     </form>
 
-                    <h2 id="endpoints-GETapi-purchase-goals">Display a listing of the purchase goals.</h2>
+                    <h2 id="endpoints-POSTapi-purchase-goals--id--approve--user_id-">POST api/purchase-goals/{id}/approve/{user_id}</h2>
 
 <p>
 </p>
 
 
+
+<span id="example-requests-POSTapi-purchase-goals--id--approve--user_id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/purchase-goals/18/approve/12" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/purchase-goals/18/approve/12"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-purchase-goals--id--approve--user_id-">
+</span>
+<span id="execution-results-POSTapi-purchase-goals--id--approve--user_id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-purchase-goals--id--approve--user_id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-purchase-goals--id--approve--user_id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-purchase-goals--id--approve--user_id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-purchase-goals--id--approve--user_id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-purchase-goals--id--approve--user_id-" data-method="POST"
+      data-path="api/purchase-goals/{id}/approve/{user_id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-purchase-goals--id--approve--user_id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-purchase-goals--id--approve--user_id-"
+                    onclick="tryItOut('POSTapi-purchase-goals--id--approve--user_id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-purchase-goals--id--approve--user_id-"
+                    onclick="cancelTryOut('POSTapi-purchase-goals--id--approve--user_id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-purchase-goals--id--approve--user_id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/purchase-goals/{id}/approve/{user_id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-purchase-goals--id--approve--user_id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-purchase-goals--id--approve--user_id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="POSTapi-purchase-goals--id--approve--user_id-"
+               value="18"
+               data-component="url">
+    <br>
+<p>The ID of the purchase goal. Example: <code>18</code></p>
+            </div>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>user_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="user_id"                data-endpoint="POSTapi-purchase-goals--id--approve--user_id-"
+               value="12"
+               data-component="url">
+    <br>
+<p>The ID of the user. Example: <code>12</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="endpoints-POSTapi-purchase-goals--id--decline--user_id-">POST api/purchase-goals/{id}/decline/{user_id}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-purchase-goals--id--decline--user_id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/purchase-goals/2/decline/17" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/purchase-goals/2/decline/17"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-purchase-goals--id--decline--user_id-">
+</span>
+<span id="execution-results-POSTapi-purchase-goals--id--decline--user_id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-purchase-goals--id--decline--user_id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-purchase-goals--id--decline--user_id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-purchase-goals--id--decline--user_id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-purchase-goals--id--decline--user_id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-purchase-goals--id--decline--user_id-" data-method="POST"
+      data-path="api/purchase-goals/{id}/decline/{user_id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-purchase-goals--id--decline--user_id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-purchase-goals--id--decline--user_id-"
+                    onclick="tryItOut('POSTapi-purchase-goals--id--decline--user_id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-purchase-goals--id--decline--user_id-"
+                    onclick="cancelTryOut('POSTapi-purchase-goals--id--decline--user_id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-purchase-goals--id--decline--user_id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/purchase-goals/{id}/decline/{user_id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-purchase-goals--id--decline--user_id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-purchase-goals--id--decline--user_id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="POSTapi-purchase-goals--id--decline--user_id-"
+               value="2"
+               data-component="url">
+    <br>
+<p>The ID of the purchase goal. Example: <code>2</code></p>
+            </div>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>user_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="user_id"                data-endpoint="POSTapi-purchase-goals--id--decline--user_id-"
+               value="17"
+               data-component="url">
+    <br>
+<p>The ID of the user. Example: <code>17</code></p>
+            </div>
+                    </form>
+
+                <h1 id="purchase-goals">Purchase Goals</h1>
+
+    <p>Endpoints for managing purchase goals</p>
+
+                                <h2 id="purchase-goals-POSTapi-purchase-goals--id--change-status">Change the status of specified purchase goal</h2>
+
+<p>
+</p>
+
+<aside class="notice">
+Only the owner of the goal can change its status from open to close and vice versa.
+</aside>
+
+<span id="example-requests-POSTapi-purchase-goals--id--change-status">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/purchase-goals/est/change-status" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/purchase-goals/est/change-status"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-purchase-goals--id--change-status">
+</span>
+<span id="execution-results-POSTapi-purchase-goals--id--change-status" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-purchase-goals--id--change-status"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-purchase-goals--id--change-status"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-purchase-goals--id--change-status" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-purchase-goals--id--change-status">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-purchase-goals--id--change-status" data-method="POST"
+      data-path="api/purchase-goals/{id}/change-status"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-purchase-goals--id--change-status', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-purchase-goals--id--change-status"
+                    onclick="tryItOut('POSTapi-purchase-goals--id--change-status');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-purchase-goals--id--change-status"
+                    onclick="cancelTryOut('POSTapi-purchase-goals--id--change-status');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-purchase-goals--id--change-status"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/purchase-goals/{id}/change-status</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-purchase-goals--id--change-status"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-purchase-goals--id--change-status"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="id"                data-endpoint="POSTapi-purchase-goals--id--change-status"
+               value="est"
+               data-component="url">
+    <br>
+<p>The ID of the purchase goal. Example: <code>est</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="purchase-goals-GETapi-purchase-goals">Listing of all purchase goals.</h2>
+
+<p>
+</p>
+
+<p>This endpoint allows users to view purchase goals.</p>
+<aside class="notice">
+Users must NOT be authenticated to access this endpoint.
+</aside>
 
 <span id="example-requests-GETapi-purchase-goals">
 <blockquote>Example request:</blockquote>
@@ -784,7 +1298,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-purchase-goals">
             <blockquote>
-            <p>Example response (401):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -796,7 +1310,10 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Unauthenticated.&quot;
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Purchase goals retrieved successfully.&quot;,
+    &quot;statusCode&quot;: 200,
+    &quot;data&quot;: []
 }</code>
  </pre>
     </span>
@@ -871,12 +1388,153 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="endpoints-POSTapi-purchase-goals">Store a newly created purchase goal in storage.</h2>
+                    <h2 id="purchase-goals-GETapi-purchase-goals--id-">Fetch details of a specific purchase goal.</h2>
 
 <p>
 </p>
 
+<p>This endpoint allows users to view the details of a purchase goal by ID.</p>
 
+<span id="example-requests-GETapi-purchase-goals--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/purchase-goals/18" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/purchase-goals/18"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-purchase-goals--id-">
+            <blockquote>
+            <p>Example response (404):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Purchase goal not found.&quot;,
+    &quot;statusCode&quot;: 404
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-purchase-goals--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-purchase-goals--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-purchase-goals--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-purchase-goals--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-purchase-goals--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-purchase-goals--id-" data-method="GET"
+      data-path="api/purchase-goals/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-purchase-goals--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-purchase-goals--id-"
+                    onclick="tryItOut('GETapi-purchase-goals--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-purchase-goals--id-"
+                    onclick="cancelTryOut('GETapi-purchase-goals--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-purchase-goals--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/purchase-goals/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-purchase-goals--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-purchase-goals--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="GETapi-purchase-goals--id-"
+               value="18"
+               data-component="url">
+    <br>
+<p>The ID of the purchase goal. Example: <code>18</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="purchase-goals-POSTapi-purchase-goals">Create a new purchase goal.</h2>
+
+<p>
+</p>
+
+<p>This endpoint allows users to create a purchase goal.</p>
+<aside class="notice">
+Users must be authenticated to access this endpoint.
+</aside>
 
 <span id="example-requests-POSTapi-purchase-goals">
 <blockquote>Example request:</blockquote>
@@ -887,19 +1545,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
     "http://localhost/api/purchase-goals" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "title=uehglakbwbbttkjuqbshcxk"\
-    --form "description=Possimus eos sint et quia voluptas distinctio impedit."\
-    --form "target_amount=60"\
-    --form "amount_per_person=83"\
-    --form "product_name=odit"\
-    --form "product_description=dignissimos"\
-    --form "product_unit_price=16"\
-    --form "product_bulk_price=45"\
-    --form "product_quantity=25"\
-    --form "group_link=dzlsgnvxqx"\
-    --form "start_date=2025-01-21T05:30:20"\
-    --form "end_date=2052-09-25"\
-    --form "product_image=@C:\Users\user\AppData\Local\Temp\phpB62E.tmp" </code></pre></div>
+    --form "title=ohbjgfqrvdy"\
+    --form "description=Placeat aliquam provident reiciendis quia et."\
+    --form "target_amount=41"\
+    --form "amount_per_person=6"\
+    --form "product_name=aut"\
+    --form "product_description=est"\
+    --form "product_unit_price=71"\
+    --form "product_bulk_price=11"\
+    --form "product_quantity=14"\
+    --form "group_link=vhqjapnjcbwbr"\
+    --form "start_date=2025-01-21T10:59:00"\
+    --form "end_date=2027-08-09"\
+    --form "product_image=@C:\Users\user\AppData\Local\Temp\php9CF1.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -913,18 +1571,18 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('title', 'uehglakbwbbttkjuqbshcxk');
-body.append('description', 'Possimus eos sint et quia voluptas distinctio impedit.');
-body.append('target_amount', '60');
-body.append('amount_per_person', '83');
-body.append('product_name', 'odit');
-body.append('product_description', 'dignissimos');
-body.append('product_unit_price', '16');
-body.append('product_bulk_price', '45');
-body.append('product_quantity', '25');
-body.append('group_link', 'dzlsgnvxqx');
-body.append('start_date', '2025-01-21T05:30:20');
-body.append('end_date', '2052-09-25');
+body.append('title', 'ohbjgfqrvdy');
+body.append('description', 'Placeat aliquam provident reiciendis quia et.');
+body.append('target_amount', '41');
+body.append('amount_per_person', '6');
+body.append('product_name', 'aut');
+body.append('product_description', 'est');
+body.append('product_unit_price', '71');
+body.append('product_bulk_price', '11');
+body.append('product_quantity', '14');
+body.append('group_link', 'vhqjapnjcbwbr');
+body.append('start_date', '2025-01-21T10:59:00');
+body.append('end_date', '2027-08-09');
 body.append('product_image', document.querySelector('input[name="product_image"]').files[0]);
 
 fetch(url, {
@@ -1013,10 +1671,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="POSTapi-purchase-goals"
-               value="uehglakbwbbttkjuqbshcxk"
+               value="ohbjgfqrvdy"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>uehglakbwbbttkjuqbshcxk</code></p>
+<p>Must not be greater than 255 characters. Example: <code>ohbjgfqrvdy</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -1024,10 +1682,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="POSTapi-purchase-goals"
-               value="Possimus eos sint et quia voluptas distinctio impedit."
+               value="Placeat aliquam provident reiciendis quia et."
                data-component="body">
     <br>
-<p>Example: <code>Possimus eos sint et quia voluptas distinctio impedit.</code></p>
+<p>Example: <code>Placeat aliquam provident reiciendis quia et.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>target_amount</code></b>&nbsp;&nbsp;
@@ -1035,10 +1693,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="target_amount"                data-endpoint="POSTapi-purchase-goals"
-               value="60"
+               value="41"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>60</code></p>
+<p>Must be at least 0. Example: <code>41</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>amount_per_person</code></b>&nbsp;&nbsp;
@@ -1046,10 +1704,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="amount_per_person"                data-endpoint="POSTapi-purchase-goals"
-               value="83"
+               value="6"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>83</code></p>
+<p>Must be at least 0. Example: <code>6</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_name</code></b>&nbsp;&nbsp;
@@ -1057,10 +1715,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="product_name"                data-endpoint="POSTapi-purchase-goals"
-               value="odit"
+               value="aut"
                data-component="body">
     <br>
-<p>Example: <code>odit</code></p>
+<p>Example: <code>aut</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_description</code></b>&nbsp;&nbsp;
@@ -1068,10 +1726,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="product_description"                data-endpoint="POSTapi-purchase-goals"
-               value="dignissimos"
+               value="est"
                data-component="body">
     <br>
-<p>Example: <code>dignissimos</code></p>
+<p>Example: <code>est</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_unit_price</code></b>&nbsp;&nbsp;
@@ -1079,10 +1737,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_unit_price"                data-endpoint="POSTapi-purchase-goals"
-               value="16"
+               value="71"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>16</code></p>
+<p>Must be at least 0. Example: <code>71</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_bulk_price</code></b>&nbsp;&nbsp;
@@ -1090,10 +1748,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_bulk_price"                data-endpoint="POSTapi-purchase-goals"
-               value="45"
+               value="11"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>45</code></p>
+<p>Must be at least 0. Example: <code>11</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_quantity</code></b>&nbsp;&nbsp;
@@ -1101,10 +1759,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_quantity"                data-endpoint="POSTapi-purchase-goals"
-               value="25"
+               value="14"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>25</code></p>
+<p>Must be at least 0. Example: <code>14</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_image</code></b>&nbsp;&nbsp;
@@ -1115,7 +1773,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\user\AppData\Local\Temp\phpB62E.tmp</code></p>
+<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\user\AppData\Local\Temp\php9CF1.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>group_link</code></b>&nbsp;&nbsp;
@@ -1123,10 +1781,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="group_link"                data-endpoint="POSTapi-purchase-goals"
-               value="dzlsgnvxqx"
+               value="vhqjapnjcbwbr"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>dzlsgnvxqx</code></p>
+<p>Must not be greater than 255 characters. Example: <code>vhqjapnjcbwbr</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>start_date</code></b>&nbsp;&nbsp;
@@ -1134,10 +1792,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="start_date"                data-endpoint="POSTapi-purchase-goals"
-               value="2025-01-21T05:30:20"
+               value="2025-01-21T10:59:00"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-01-21T05:30:20</code></p>
+<p>Must be a valid date. Example: <code>2025-01-21T10:59:00</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -1145,155 +1803,22 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="end_date"                data-endpoint="POSTapi-purchase-goals"
-               value="2052-09-25"
+               value="2027-08-09"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2052-09-25</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2027-08-09</code></p>
         </div>
         </form>
 
-                    <h2 id="endpoints-GETapi-purchase-goals--id-">Display the specified purchase goal.</h2>
+                    <h2 id="purchase-goals-PUTapi-purchase-goals--id-">Update an existing purchase goal.</h2>
 
 <p>
 </p>
 
-
-
-<span id="example-requests-GETapi-purchase-goals--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/purchase-goals/fugit" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/fugit"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-purchase-goals--id-">
-            <blockquote>
-            <p>Example response (401):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-access-control-allow-origin: *
- </code></pre></details>         <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Unauthenticated.&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-purchase-goals--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-purchase-goals--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-purchase-goals--id-"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-GETapi-purchase-goals--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-purchase-goals--id-">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-GETapi-purchase-goals--id-" data-method="GET"
-      data-path="api/purchase-goals/{id}"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-purchase-goals--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-purchase-goals--id-"
-                    onclick="tryItOut('GETapi-purchase-goals--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-purchase-goals--id-"
-                    onclick="cancelTryOut('GETapi-purchase-goals--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-purchase-goals--id-"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/purchase-goals/{id}</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-purchase-goals--id-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-purchase-goals--id-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="id"                data-endpoint="GETapi-purchase-goals--id-"
-               value="fugit"
-               data-component="url">
-    <br>
-<p>The ID of the purchase goal. Example: <code>fugit</code></p>
-            </div>
-                    </form>
-
-                    <h2 id="endpoints-PUTapi-purchase-goals--id-">Update the specified purchase goal in storage.</h2>
-
-<p>
-</p>
-
-
+<p>This endpoint allows users to update details of a purchase goal.</p>
+<aside class="notice">
+Only the owner of the goal can update it.
+</aside>
 
 <span id="example-requests-PUTapi-purchase-goals--id-">
 <blockquote>Example request:</blockquote>
@@ -1301,27 +1826,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/purchase-goals/debitis" \
+    "http://localhost/api/purchase-goals/2" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "title=xayinqiombdrygwhxrhb"\
-    --form "description=Necessitatibus neque quibusdam vel."\
-    --form "target_amount=82"\
-    --form "amount_per_person=13"\
-    --form "product_name=optio"\
-    --form "product_description=minima"\
-    --form "product_unit_price=28"\
-    --form "product_bulk_price=67"\
-    --form "product_quantity=58"\
-    --form "group_link=a"\
-    --form "start_date=2025-01-21T05:30:20"\
-    --form "end_date=2081-07-02"\
-    --form "product_image=@C:\Users\user\AppData\Local\Temp\phpB63E.tmp" </code></pre></div>
+    --form "title=rrtqjspiyrdradiwffclnb"\
+    --form "description=Aut amet a tempore porro magnam consequatur."\
+    --form "target_amount=28"\
+    --form "amount_per_person=59"\
+    --form "product_name=voluptate"\
+    --form "product_description=omnis"\
+    --form "product_unit_price=51"\
+    --form "product_bulk_price=14"\
+    --form "product_quantity=23"\
+    --form "group_link=qad"\
+    --form "start_date=2025-01-21T10:59:00"\
+    --form "end_date=2121-06-05"\
+    --form "product_image=@C:\Users\user\AppData\Local\Temp\php9D21.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/debitis"
+    "http://localhost/api/purchase-goals/2"
 );
 
 const headers = {
@@ -1330,18 +1855,18 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('title', 'xayinqiombdrygwhxrhb');
-body.append('description', 'Necessitatibus neque quibusdam vel.');
-body.append('target_amount', '82');
-body.append('amount_per_person', '13');
-body.append('product_name', 'optio');
-body.append('product_description', 'minima');
-body.append('product_unit_price', '28');
-body.append('product_bulk_price', '67');
-body.append('product_quantity', '58');
-body.append('group_link', 'a');
-body.append('start_date', '2025-01-21T05:30:20');
-body.append('end_date', '2081-07-02');
+body.append('title', 'rrtqjspiyrdradiwffclnb');
+body.append('description', 'Aut amet a tempore porro magnam consequatur.');
+body.append('target_amount', '28');
+body.append('amount_per_person', '59');
+body.append('product_name', 'voluptate');
+body.append('product_description', 'omnis');
+body.append('product_unit_price', '51');
+body.append('product_bulk_price', '14');
+body.append('product_quantity', '23');
+body.append('group_link', 'qad');
+body.append('start_date', '2025-01-21T10:59:00');
+body.append('end_date', '2121-06-05');
 body.append('product_image', document.querySelector('input[name="product_image"]').files[0]);
 
 fetch(url, {
@@ -1430,14 +1955,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
                         <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
+<small>integer</small>&nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="id"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="debitis"
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="PUTapi-purchase-goals--id-"
+               value="2"
                data-component="url">
     <br>
-<p>The ID of the purchase goal. Example: <code>debitis</code></p>
+<p>The ID of the purchase goal. Example: <code>2</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -1446,10 +1971,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="xayinqiombdrygwhxrhb"
+               value="rrtqjspiyrdradiwffclnb"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>xayinqiombdrygwhxrhb</code></p>
+<p>Must not be greater than 255 characters. Example: <code>rrtqjspiyrdradiwffclnb</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -1457,10 +1982,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="Necessitatibus neque quibusdam vel."
+               value="Aut amet a tempore porro magnam consequatur."
                data-component="body">
     <br>
-<p>Example: <code>Necessitatibus neque quibusdam vel.</code></p>
+<p>Example: <code>Aut amet a tempore porro magnam consequatur.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>target_amount</code></b>&nbsp;&nbsp;
@@ -1468,10 +1993,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="target_amount"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="82"
+               value="28"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>82</code></p>
+<p>Must be at least 0. Example: <code>28</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>amount_per_person</code></b>&nbsp;&nbsp;
@@ -1479,10 +2004,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="amount_per_person"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="13"
+               value="59"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>13</code></p>
+<p>Must be at least 0. Example: <code>59</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_name</code></b>&nbsp;&nbsp;
@@ -1490,10 +2015,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="product_name"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="optio"
+               value="voluptate"
                data-component="body">
     <br>
-<p>Example: <code>optio</code></p>
+<p>Example: <code>voluptate</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_description</code></b>&nbsp;&nbsp;
@@ -1501,10 +2026,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="product_description"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="minima"
+               value="omnis"
                data-component="body">
     <br>
-<p>Example: <code>minima</code></p>
+<p>Example: <code>omnis</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_unit_price</code></b>&nbsp;&nbsp;
@@ -1512,10 +2037,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_unit_price"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="28"
+               value="51"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>28</code></p>
+<p>Must be at least 0. Example: <code>51</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_bulk_price</code></b>&nbsp;&nbsp;
@@ -1523,10 +2048,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_bulk_price"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="67"
+               value="14"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>67</code></p>
+<p>Must be at least 0. Example: <code>14</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_quantity</code></b>&nbsp;&nbsp;
@@ -1534,10 +2059,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_quantity"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="58"
+               value="23"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>58</code></p>
+<p>Must be at least 0. Example: <code>23</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_image</code></b>&nbsp;&nbsp;
@@ -1548,7 +2073,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\user\AppData\Local\Temp\phpB63E.tmp</code></p>
+<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\user\AppData\Local\Temp\php9D21.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>group_link</code></b>&nbsp;&nbsp;
@@ -1556,10 +2081,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="group_link"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="a"
+               value="qad"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>a</code></p>
+<p>Must not be greater than 255 characters. Example: <code>qad</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>start_date</code></b>&nbsp;&nbsp;
@@ -1567,10 +2092,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="start_date"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="2025-01-21T05:30:20"
+               value="2025-01-21T10:59:00"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-01-21T05:30:20</code></p>
+<p>Must be a valid date. Example: <code>2025-01-21T10:59:00</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -1578,19 +2103,22 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="end_date"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="2081-07-02"
+               value="2121-06-05"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2081-07-02</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2121-06-05</code></p>
         </div>
         </form>
 
-                    <h2 id="endpoints-DELETEapi-purchase-goals--id-">Remove the specified purchase goal from storage.</h2>
+                    <h2 id="purchase-goals-DELETEapi-purchase-goals--id-">Delete a purchase goal.</h2>
 
 <p>
 </p>
 
-
+<p>This endpoint allows users to delete a specific purchase goal by ID.</p>
+<aside class="notice">
+Only the owner of the goal can delete it.
+</aside>
 
 <span id="example-requests-DELETEapi-purchase-goals--id-">
 <blockquote>Example request:</blockquote>
@@ -1598,14 +2126,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/purchase-goals/nobis" \
+    "http://localhost/api/purchase-goals/10" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/nobis"
+    "http://localhost/api/purchase-goals/10"
 );
 
 const headers = {
@@ -1694,884 +2222,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
                         <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="id"                data-endpoint="DELETEapi-purchase-goals--id-"
-               value="nobis"
-               data-component="url">
-    <br>
-<p>The ID of the purchase goal. Example: <code>nobis</code></p>
-            </div>
-                    </form>
-
-                    <h2 id="endpoints-GETapi-purchase-goals--purchase_goal--participants">GET api/purchase-goals/{purchase_goal}/participants</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-purchase-goals--purchase_goal--participants">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/purchase-goals/id/participants" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/id/participants"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-purchase-goals--purchase_goal--participants">
-            <blockquote>
-            <p>Example response (401):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-access-control-allow-origin: *
- </code></pre></details>         <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Unauthenticated.&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-purchase-goals--purchase_goal--participants" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-purchase-goals--purchase_goal--participants"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-purchase-goals--purchase_goal--participants"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-GETapi-purchase-goals--purchase_goal--participants" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-purchase-goals--purchase_goal--participants">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-GETapi-purchase-goals--purchase_goal--participants" data-method="GET"
-      data-path="api/purchase-goals/{purchase_goal}/participants"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-purchase-goals--purchase_goal--participants', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-purchase-goals--purchase_goal--participants"
-                    onclick="tryItOut('GETapi-purchase-goals--purchase_goal--participants');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-purchase-goals--purchase_goal--participants"
-                    onclick="cancelTryOut('GETapi-purchase-goals--purchase_goal--participants');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-purchase-goals--purchase_goal--participants"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/purchase-goals/{purchase_goal}/participants</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-purchase-goals--purchase_goal--participants"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-purchase-goals--purchase_goal--participants"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>purchase_goal</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="purchase_goal"                data-endpoint="GETapi-purchase-goals--purchase_goal--participants"
-               value="id"
-               data-component="url">
-    <br>
-<p>Example: <code>id</code></p>
-            </div>
-                    </form>
-
-                    <h2 id="endpoints-POSTapi-purchase-goals--purchase_goal--join">POST api/purchase-goals/{purchase_goal}/join</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-purchase-goals--purchase_goal--join">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/purchase-goals/dolor/join" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/dolor/join"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-purchase-goals--purchase_goal--join">
-</span>
-<span id="execution-results-POSTapi-purchase-goals--purchase_goal--join" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-purchase-goals--purchase_goal--join"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-purchase-goals--purchase_goal--join"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-POSTapi-purchase-goals--purchase_goal--join" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-purchase-goals--purchase_goal--join">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-POSTapi-purchase-goals--purchase_goal--join" data-method="POST"
-      data-path="api/purchase-goals/{purchase_goal}/join"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-purchase-goals--purchase_goal--join', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-purchase-goals--purchase_goal--join"
-                    onclick="tryItOut('POSTapi-purchase-goals--purchase_goal--join');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-purchase-goals--purchase_goal--join"
-                    onclick="cancelTryOut('POSTapi-purchase-goals--purchase_goal--join');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-purchase-goals--purchase_goal--join"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/purchase-goals/{purchase_goal}/join</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-purchase-goals--purchase_goal--join"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-purchase-goals--purchase_goal--join"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>purchase_goal</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="purchase_goal"                data-endpoint="POSTapi-purchase-goals--purchase_goal--join"
-               value="dolor"
-               data-component="url">
-    <br>
-<p>Example: <code>dolor</code></p>
-            </div>
-                    </form>
-
-                    <h2 id="endpoints-POSTapi-purchase-goals--purchase_goal_id--approve--user_id-">POST api/purchase-goals/{purchase_goal_id}/approve/{user_id}</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-purchase-goals--purchase_goal_id--approve--user_id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/purchase-goals/7/approve/12" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/7/approve/12"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-purchase-goals--purchase_goal_id--approve--user_id-">
-</span>
-<span id="execution-results-POSTapi-purchase-goals--purchase_goal_id--approve--user_id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-purchase-goals--purchase_goal_id--approve--user_id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-purchase-goals--purchase_goal_id--approve--user_id-"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-POSTapi-purchase-goals--purchase_goal_id--approve--user_id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-purchase-goals--purchase_goal_id--approve--user_id-">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-POSTapi-purchase-goals--purchase_goal_id--approve--user_id-" data-method="POST"
-      data-path="api/purchase-goals/{purchase_goal_id}/approve/{user_id}"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-purchase-goals--purchase_goal_id--approve--user_id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-purchase-goals--purchase_goal_id--approve--user_id-"
-                    onclick="tryItOut('POSTapi-purchase-goals--purchase_goal_id--approve--user_id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-purchase-goals--purchase_goal_id--approve--user_id-"
-                    onclick="cancelTryOut('POSTapi-purchase-goals--purchase_goal_id--approve--user_id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-purchase-goals--purchase_goal_id--approve--user_id-"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/purchase-goals/{purchase_goal_id}/approve/{user_id}</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-purchase-goals--purchase_goal_id--approve--user_id-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-purchase-goals--purchase_goal_id--approve--user_id-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>purchase_goal_id</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
  &nbsp;
                 <input type="number" style="display: none"
-               step="any"               name="purchase_goal_id"                data-endpoint="POSTapi-purchase-goals--purchase_goal_id--approve--user_id-"
-               value="7"
+               step="any"               name="id"                data-endpoint="DELETEapi-purchase-goals--id-"
+               value="10"
                data-component="url">
     <br>
-<p>The ID of the purchase goal. Example: <code>7</code></p>
-            </div>
-                    <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>user_id</code></b>&nbsp;&nbsp;
-<small>integer</small>&nbsp;
- &nbsp;
-                <input type="number" style="display: none"
-               step="any"               name="user_id"                data-endpoint="POSTapi-purchase-goals--purchase_goal_id--approve--user_id-"
-               value="12"
-               data-component="url">
-    <br>
-<p>The ID of the user. Example: <code>12</code></p>
-            </div>
-                    </form>
-
-                    <h2 id="endpoints-POSTapi-purchase-goals--purchase_goal_id--decline--user_id-">POST api/purchase-goals/{purchase_goal_id}/decline/{user_id}</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-purchase-goals--purchase_goal_id--decline--user_id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/purchase-goals/20/decline/2" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/20/decline/2"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-purchase-goals--purchase_goal_id--decline--user_id-">
-</span>
-<span id="execution-results-POSTapi-purchase-goals--purchase_goal_id--decline--user_id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-purchase-goals--purchase_goal_id--decline--user_id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-purchase-goals--purchase_goal_id--decline--user_id-"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-POSTapi-purchase-goals--purchase_goal_id--decline--user_id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-purchase-goals--purchase_goal_id--decline--user_id-">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-POSTapi-purchase-goals--purchase_goal_id--decline--user_id-" data-method="POST"
-      data-path="api/purchase-goals/{purchase_goal_id}/decline/{user_id}"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-purchase-goals--purchase_goal_id--decline--user_id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-purchase-goals--purchase_goal_id--decline--user_id-"
-                    onclick="tryItOut('POSTapi-purchase-goals--purchase_goal_id--decline--user_id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-purchase-goals--purchase_goal_id--decline--user_id-"
-                    onclick="cancelTryOut('POSTapi-purchase-goals--purchase_goal_id--decline--user_id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-purchase-goals--purchase_goal_id--decline--user_id-"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/purchase-goals/{purchase_goal_id}/decline/{user_id}</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-purchase-goals--purchase_goal_id--decline--user_id-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-purchase-goals--purchase_goal_id--decline--user_id-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>purchase_goal_id</code></b>&nbsp;&nbsp;
-<small>integer</small>&nbsp;
- &nbsp;
-                <input type="number" style="display: none"
-               step="any"               name="purchase_goal_id"                data-endpoint="POSTapi-purchase-goals--purchase_goal_id--decline--user_id-"
-               value="20"
-               data-component="url">
-    <br>
-<p>The ID of the purchase goal. Example: <code>20</code></p>
-            </div>
-                    <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>user_id</code></b>&nbsp;&nbsp;
-<small>integer</small>&nbsp;
- &nbsp;
-                <input type="number" style="display: none"
-               step="any"               name="user_id"                data-endpoint="POSTapi-purchase-goals--purchase_goal_id--decline--user_id-"
-               value="2"
-               data-component="url">
-    <br>
-<p>The ID of the user. Example: <code>2</code></p>
-            </div>
-                    </form>
-
-                    <h2 id="endpoints-POSTapi-products">POST api/products</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-products">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/products" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/products"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-products">
-</span>
-<span id="execution-results-POSTapi-products" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-products"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-products"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-POSTapi-products" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-products">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-POSTapi-products" data-method="POST"
-      data-path="api/products"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-products', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-products"
-                    onclick="tryItOut('POSTapi-products');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-products"
-                    onclick="cancelTryOut('POSTapi-products');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-products"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/products</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-products"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-products"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
-
-                    <h2 id="endpoints-PUTapi-products--id-">PUT api/products/{id}</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-PUTapi-products--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/products/9" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/products/9"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "PUT",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-PUTapi-products--id-">
-</span>
-<span id="execution-results-PUTapi-products--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-PUTapi-products--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-PUTapi-products--id-"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-PUTapi-products--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-PUTapi-products--id-">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-PUTapi-products--id-" data-method="PUT"
-      data-path="api/products/{id}"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('PUTapi-products--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-PUTapi-products--id-"
-                    onclick="tryItOut('PUTapi-products--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-PUTapi-products--id-"
-                    onclick="cancelTryOut('PUTapi-products--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-PUTapi-products--id-"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-darkblue">PUT</small>
-            <b><code>api/products/{id}</code></b>
-        </p>
-            <p>
-            <small class="badge badge-purple">PATCH</small>
-            <b><code>api/products/{id}</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="PUTapi-products--id-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="PUTapi-products--id-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>integer</small>&nbsp;
- &nbsp;
-                <input type="number" style="display: none"
-               step="any"               name="id"                data-endpoint="PUTapi-products--id-"
-               value="9"
-               data-component="url">
-    <br>
-<p>The ID of the product. Example: <code>9</code></p>
-            </div>
-                    </form>
-
-                    <h2 id="endpoints-DELETEapi-products--id-">DELETE api/products/{id}</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-DELETEapi-products--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/products/5" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/products/5"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "DELETE",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-DELETEapi-products--id-">
-</span>
-<span id="execution-results-DELETEapi-products--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-DELETEapi-products--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-DELETEapi-products--id-"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-DELETEapi-products--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-DELETEapi-products--id-">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-DELETEapi-products--id-" data-method="DELETE"
-      data-path="api/products/{id}"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-products--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-DELETEapi-products--id-"
-                    onclick="tryItOut('DELETEapi-products--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-DELETEapi-products--id-"
-                    onclick="cancelTryOut('DELETEapi-products--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-DELETEapi-products--id-"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-red">DELETE</small>
-            <b><code>api/products/{id}</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="DELETEapi-products--id-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="DELETEapi-products--id-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>integer</small>&nbsp;
- &nbsp;
-                <input type="number" style="display: none"
-               step="any"               name="id"                data-endpoint="DELETEapi-products--id-"
-               value="5"
-               data-component="url">
-    <br>
-<p>The ID of the product. Example: <code>5</code></p>
+<p>The ID of the purchase goal. Example: <code>10</code></p>
             </div>
                     </form>
 

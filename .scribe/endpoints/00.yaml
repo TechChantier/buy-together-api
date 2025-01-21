@@ -30,7 +30,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: qohsesjhpekjknvtxpgbqfeq
+        example: wtqhogrnncfelbnjsghiys
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -40,7 +40,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: false
-        example: atillman@example.net
+        example: jaunita.daugherty@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -50,17 +50,7 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: jcxJZ!A
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      password_confirmation:
-        name: password_confirmation
-        description: ''
-        required: true
-        example: jcxJZ!A
+        example: NQ(cVWF>S6^
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -70,7 +60,7 @@ endpoints:
         name: address
         description: ''
         required: true
-        example: praesentium
+        example: possimus
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -80,7 +70,7 @@ endpoints:
         name: phone_number
         description: ''
         required: true
-        example: illum
+        example: praesentium
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -97,11 +87,11 @@ endpoints:
         nullable: true
         custom: []
     cleanBodyParameters:
-      name: rtisybxqjrpcvlyrkorkiuu
-      email: janice.braun@example.com
-      password: 1j951B;BXs%AJW
-      address: commodi
-      phone_number: quasi
+      name: wtqhogrnncfelbnjsghiys
+      email: jaunita.daugherty@example.org
+      password: NQ(cVWF>S6^
+      address: possimus
+      phone_number: praesentium
     fileParameters:
       profile_pic: null
     responses: []
@@ -140,7 +130,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: ian76@example.org
+        example: betsy.reynolds@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -150,15 +140,15 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: '{_aV!Uh]"nUgRH'
+        example: 'pu6Ia5I#s\'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: ian76@example.org
-      password: '{_aV!Uh]"nUgRH'
+      email: betsy.reynolds@example.org
+      password: 'pu6Ia5I#s\'
     fileParameters: []
     responses: []
     responseFields: []
