@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Buy Together API Documentation",
-        "_postman_id": "138b6d6d-445d-467e-b892-605252209edd",
+        "_postman_id": "7c575884-bbe7-4b27-8bd7-b781cd35435b",
         "description": "This API aims to provide all the information you need in order to work with our API",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -44,31 +44,31 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "wtqhogrnncfelbnjsghiys",
+                                    "value": "sknonxvhbdfqioxelfzhdsfu",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "email",
-                                    "value": "jaunita.daugherty@example.org",
+                                    "value": "rosalind75@example.org",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "password",
-                                    "value": "NQ(cVWF>S6^",
+                                    "value": "^]C\"<\"<!TUNt",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "address",
-                                    "value": "possimus",
+                                    "value": "quia",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "phone_number",
-                                    "value": "praesentium",
+                                    "value": "illum",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -108,7 +108,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"betsy.reynolds@example.org\",\"password\":\"pu6Ia5I#s\\\\\"}"
+                            "raw": "{\"email\":\"odie74@example.net\",\"password\":\"6;?lB9x6U\\\"I]t)cfOu&1\"}"
                         },
                         "description": "This endpoint allows authenticate or log in a user.\n<aside class=\"notice\">\nAn authentication token is always generated upon successful login.\n<\/aside>",
                         "auth": {
@@ -148,188 +148,6 @@
             ]
         },
         {
-            "name": "Endpoints",
-            "description": "",
-            "item": [
-                {
-                    "name": "GET api\/purchase-goals\/{id}\/participants",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/purchase-goals\/:id\/participants",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/purchase-goals\/:id\/participants",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "17",
-                                    "description": "The ID of the purchase goal."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "POST api\/purchase-goals\/{id}\/join",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/purchase-goals\/:id\/join",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/purchase-goals\/:id\/join",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "16",
-                                    "description": "The ID of the purchase goal."
-                                }
-                            ]
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "POST api\/purchase-goals\/{id}\/approve\/{user_id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/purchase-goals\/:id\/approve\/:user_id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/purchase-goals\/:id\/approve\/:user_id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "18",
-                                    "description": "The ID of the purchase goal."
-                                },
-                                {
-                                    "id": "user_id",
-                                    "key": "user_id",
-                                    "value": "12",
-                                    "description": "The ID of the user."
-                                }
-                            ]
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "POST api\/purchase-goals\/{id}\/decline\/{user_id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/purchase-goals\/:id\/decline\/:user_id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/purchase-goals\/:id\/decline\/:user_id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "2",
-                                    "description": "The ID of the purchase goal."
-                                },
-                                {
-                                    "id": "user_id",
-                                    "key": "user_id",
-                                    "value": "17",
-                                    "description": "The ID of the user."
-                                }
-                            ]
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                }
-            ]
-        },
-        {
             "name": "Purchase Goals",
             "description": "Endpoints for managing purchase goals",
             "item": [
@@ -345,7 +163,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "est",
+                                    "value": "aut",
                                     "description": "The ID of the purchase goal."
                                 }
                             ]
@@ -429,7 +247,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "18",
+                                    "value": "20",
                                     "description": "The ID of the purchase goal."
                                 }
                             ]
@@ -498,73 +316,73 @@
                             "formdata": [
                                 {
                                     "key": "title",
-                                    "value": "ohbjgfqrvdy",
+                                    "value": "zotjgcurbqueiftgw",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "description",
-                                    "value": "Placeat aliquam provident reiciendis quia et.",
+                                    "value": "Molestiae exercitationem qui corrupti sint.",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "target_amount",
-                                    "value": "41",
+                                    "value": "49",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "amount_per_person",
-                                    "value": "6",
+                                    "value": "45",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "product_name",
-                                    "value": "aut",
+                                    "value": "suscipit",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "product_description",
-                                    "value": "est",
+                                    "value": "quis",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "product_unit_price",
-                                    "value": "71",
+                                    "value": "25",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "product_bulk_price",
-                                    "value": "11",
+                                    "value": "83",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "product_quantity",
-                                    "value": "14",
+                                    "value": "77",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "group_link",
-                                    "value": "vhqjapnjcbwbr",
+                                    "value": "hpdzjsj",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "start_date",
-                                    "value": "2025-01-21T10:59:00",
+                                    "value": "2025-01-21T13:59:48",
                                     "type": "text",
                                     "description": "Must be a valid date."
                                 },
                                 {
                                     "key": "end_date",
-                                    "value": "2027-08-09",
+                                    "value": "2067-09-18",
                                     "type": "text",
                                     "description": "Must be a valid date. Must be a date after or equal to <code>start_date<\/code>."
                                 },
@@ -594,7 +412,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "2",
+                                    "value": "6",
                                     "description": "The ID of the purchase goal."
                                 }
                             ]
@@ -615,73 +433,73 @@
                             "formdata": [
                                 {
                                     "key": "title",
-                                    "value": "rrtqjspiyrdradiwffclnb",
+                                    "value": "wxuv",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "description",
-                                    "value": "Aut amet a tempore porro magnam consequatur.",
+                                    "value": "Enim iure enim sed odit et enim suscipit.",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "target_amount",
-                                    "value": "28",
+                                    "value": "77",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "amount_per_person",
-                                    "value": "59",
+                                    "value": "52",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "product_name",
-                                    "value": "voluptate",
+                                    "value": "recusandae",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "product_description",
-                                    "value": "omnis",
+                                    "value": "occaecati",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "product_unit_price",
-                                    "value": "51",
+                                    "value": "16",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "product_bulk_price",
-                                    "value": "14",
+                                    "value": "31",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "product_quantity",
-                                    "value": "23",
+                                    "value": "4",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "group_link",
-                                    "value": "qad",
+                                    "value": "vinitbvdhsqgnzhhjcmdtlw",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "start_date",
-                                    "value": "2025-01-21T10:59:00",
+                                    "value": "2025-01-21T13:59:48",
                                     "type": "text",
                                     "description": "Must be a valid date."
                                 },
                                 {
                                     "key": "end_date",
-                                    "value": "2121-06-05",
+                                    "value": "2038-10-09",
                                     "type": "text",
                                     "description": "Must be a valid date. Must be a date after or equal to <code>start_date<\/code>."
                                 },
@@ -734,6 +552,188 @@
                         ],
                         "body": null,
                         "description": "This endpoint allows users to delete a specific purchase goal by ID.\n<aside class=\"notice\">\nOnly the owner of the goal can delete it.\n<\/aside>",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "User Participation",
+            "description": "Endpoints for managing user participation in purchase goals",
+            "item": [
+                {
+                    "name": "Get participants of a purchase goal.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/purchase-goals\/:id\/participants",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/purchase-goals\/:id\/participants",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "20",
+                                    "description": "The ID of the purchase goal."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Retrieve all participants of a specified purchase goal.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Join a purchase goal.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/purchase-goals\/:id\/join",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/purchase-goals\/:id\/join",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "4",
+                                    "description": "The ID of the purchase goal."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Allows a user to join a specific purchase goal.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Approve a purchase goal.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/purchase-goals\/:id\/approve\/:user_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/purchase-goals\/:id\/approve\/:user_id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "11",
+                                    "description": "The ID of the purchase goal."
+                                },
+                                {
+                                    "id": "user_id",
+                                    "key": "user_id",
+                                    "value": "20",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Allows a user to APPROVE another user to join purchase goal.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Decline request to join a purchase goal.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/purchase-goals\/:id\/decline\/:user_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/purchase-goals\/:id\/decline\/:user_id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "11",
+                                    "description": "The ID of the purchase goal."
+                                },
+                                {
+                                    "id": "user_id",
+                                    "key": "user_id",
+                                    "value": "13",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Allows user to DECLINE a request from another user to join purchase goal.",
                         "auth": {
                             "type": "noauth"
                         }

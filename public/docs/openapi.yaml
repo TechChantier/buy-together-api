@@ -26,27 +26,27 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: wtqhogrnncfelbnjsghiys
+                  example: sknonxvhbdfqioxelfzhdsfu
                   nullable: false
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: jaunita.daugherty@example.org
+                  example: rosalind75@example.org
                   nullable: true
                 password:
                   type: string
                   description: ''
-                  example: NQ(cVWF>S6^
+                  example: '^]C"<"<!TUNt'
                   nullable: false
                 address:
                   type: string
                   description: ''
-                  example: possimus
+                  example: quia
                   nullable: false
                 phone_number:
                   type: string
                   description: ''
-                  example: praesentium
+                  example: illum
                   nullable: false
                 profile_pic:
                   type: string
@@ -78,12 +78,12 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: betsy.reynolds@example.org
+                  example: odie74@example.net
                   nullable: false
                 password:
                   type: string
                   description: ''
-                  example: 'pu6Ia5I#s\'
+                  example: '6;?lB9x6U"I]t)cfOu&1'
                   nullable: false
               required:
                 - email
@@ -99,110 +99,6 @@ paths:
       tags:
         - Authentication
       security: []
-  '/api/purchase-goals/{id}/participants':
-    get:
-      summary: ''
-      operationId: getApiPurchaseGoalsIdParticipants
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the purchase goal.'
-        example: 17
-        required: true
-        schema:
-          type: integer
-  '/api/purchase-goals/{id}/join':
-    post:
-      summary: ''
-      operationId: postApiPurchaseGoalsIdJoin
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the purchase goal.'
-        example: 16
-        required: true
-        schema:
-          type: integer
-  '/api/purchase-goals/{id}/approve/{user_id}':
-    post:
-      summary: ''
-      operationId: postApiPurchaseGoalsIdApproveUser_id
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the purchase goal.'
-        example: 18
-        required: true
-        schema:
-          type: integer
-      -
-        in: path
-        name: user_id
-        description: 'The ID of the user.'
-        example: 12
-        required: true
-        schema:
-          type: integer
-  '/api/purchase-goals/{id}/decline/{user_id}':
-    post:
-      summary: ''
-      operationId: postApiPurchaseGoalsIdDeclineUser_id
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the purchase goal.'
-        example: 2
-        required: true
-        schema:
-          type: integer
-      -
-        in: path
-        name: user_id
-        description: 'The ID of the user.'
-        example: 17
-        required: true
-        schema:
-          type: integer
   '/api/purchase-goals/{id}/change-status':
     post:
       summary: 'Change the status of specified purchase goal'
@@ -218,7 +114,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the purchase goal.'
-        example: est
+        example: aut
         required: true
         schema:
           type: string
@@ -274,47 +170,47 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ohbjgfqrvdy
+                  example: zotjgcurbqueiftgw
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Placeat aliquam provident reiciendis quia et.'
+                  example: 'Molestiae exercitationem qui corrupti sint.'
                   nullable: false
                 target_amount:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 41
+                  example: 49
                   nullable: false
                 amount_per_person:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 6
+                  example: 45
                   nullable: true
                 product_name:
                   type: string
                   description: ''
-                  example: aut
+                  example: suscipit
                   nullable: false
                 product_description:
                   type: string
                   description: ''
-                  example: est
+                  example: quis
                   nullable: false
                 product_unit_price:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 71
+                  example: 25
                   nullable: false
                 product_bulk_price:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 11
+                  example: 83
                   nullable: true
                 product_quantity:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 14
+                  example: 77
                   nullable: false
                 product_image:
                   type: string
@@ -324,17 +220,17 @@ paths:
                 group_link:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: vhqjapnjcbwbr
+                  example: hpdzjsj
                   nullable: true
                 start_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2025-01-21T10:59:00'
+                  example: '2025-01-21T13:59:48'
                   nullable: false
                 end_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
-                  example: '2027-08-09'
+                  example: '2067-09-18'
                   nullable: true
               required:
                 - title
@@ -394,47 +290,47 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: rrtqjspiyrdradiwffclnb
+                  example: wxuv
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Aut amet a tempore porro magnam consequatur.'
+                  example: 'Enim iure enim sed odit et enim suscipit.'
                   nullable: false
                 target_amount:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 28
+                  example: 77
                   nullable: false
                 amount_per_person:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 59
+                  example: 52
                   nullable: true
                 product_name:
                   type: string
                   description: ''
-                  example: voluptate
+                  example: recusandae
                   nullable: false
                 product_description:
                   type: string
                   description: ''
-                  example: omnis
+                  example: occaecati
                   nullable: false
                 product_unit_price:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 51
+                  example: 16
                   nullable: false
                 product_bulk_price:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 14
+                  example: 31
                   nullable: true
                 product_quantity:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 23
+                  example: 4
                   nullable: false
                 product_image:
                   type: string
@@ -444,17 +340,17 @@ paths:
                 group_link:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: qad
+                  example: vinitbvdhsqgnzhhjcmdtlw
                   nullable: true
                 start_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2025-01-21T10:59:00'
+                  example: '2025-01-21T13:59:48'
                   nullable: false
                 end_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
-                  example: '2121-06-05'
+                  example: '2038-10-09'
                   nullable: true
       security: []
     delete:
@@ -471,7 +367,111 @@ paths:
         in: path
         name: id
         description: 'The ID of the purchase goal.'
-        example: 18
+        example: 20
+        required: true
+        schema:
+          type: integer
+  '/api/purchase-goals/{id}/participants':
+    get:
+      summary: 'Get participants of a purchase goal.'
+      operationId: getParticipantsOfAPurchaseGoal
+      description: 'Retrieve all participants of a specified purchase goal.'
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'User Participation'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the purchase goal.'
+        example: 20
+        required: true
+        schema:
+          type: integer
+  '/api/purchase-goals/{id}/join':
+    post:
+      summary: 'Join a purchase goal.'
+      operationId: joinAPurchaseGoal
+      description: 'Allows a user to join a specific purchase goal.'
+      parameters: []
+      responses: {  }
+      tags:
+        - 'User Participation'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the purchase goal.'
+        example: 4
+        required: true
+        schema:
+          type: integer
+  '/api/purchase-goals/{id}/approve/{user_id}':
+    post:
+      summary: 'Approve a purchase goal.'
+      operationId: approveAPurchaseGoal
+      description: 'Allows a user to APPROVE another user to join purchase goal.'
+      parameters: []
+      responses: {  }
+      tags:
+        - 'User Participation'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the purchase goal.'
+        example: 11
+        required: true
+        schema:
+          type: integer
+      -
+        in: path
+        name: user_id
+        description: 'The ID of the user.'
+        example: 20
+        required: true
+        schema:
+          type: integer
+  '/api/purchase-goals/{id}/decline/{user_id}':
+    post:
+      summary: 'Decline request to join a purchase goal.'
+      operationId: declineRequestToJoinAPurchaseGoal
+      description: 'Allows user to DECLINE a request from another user to join purchase goal.'
+      parameters: []
+      responses: {  }
+      tags:
+        - 'User Participation'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the purchase goal.'
+        example: 11
+        required: true
+        schema:
+          type: integer
+      -
+        in: path
+        name: user_id
+        description: 'The ID of the user.'
+        example: 13
         required: true
         schema:
           type: integer
@@ -480,11 +480,11 @@ tags:
     name: Authentication
     description: 'Endpoints for login, registration, and logout'
   -
-    name: Endpoints
-    description: ''
-  -
     name: 'Purchase Goals'
     description: 'Endpoints for managing purchase goals'
+  -
+    name: 'User Participation'
+    description: 'Endpoints for managing user participation in purchase goals'
 components:
   securitySchemes:
     default:

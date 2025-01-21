@@ -27,14 +27,14 @@ endpoints:
         name: id
         description: 'The ID of the purchase goal.'
         required: true
-        example: est
+        example: aut
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: est
+      id: aut
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -111,14 +111,14 @@ endpoints:
         name: id
         description: 'The ID of the purchase goal.'
         required: true
-        example: 18
+        example: 20
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 18
+      id: 20
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -169,7 +169,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: ohbjgfqrvdy
+        example: zotjgcurbqueiftgw
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -179,7 +179,7 @@ endpoints:
         name: description
         description: ''
         required: true
-        example: 'Placeat aliquam provident reiciendis quia et.'
+        example: 'Molestiae exercitationem qui corrupti sint.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -189,7 +189,7 @@ endpoints:
         name: target_amount
         description: 'Must be at least 0.'
         required: true
-        example: 41
+        example: 49
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -199,7 +199,7 @@ endpoints:
         name: amount_per_person
         description: 'Must be at least 0.'
         required: false
-        example: 6
+        example: 45
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -209,7 +209,7 @@ endpoints:
         name: product_name
         description: ''
         required: true
-        example: aut
+        example: suscipit
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -219,7 +219,7 @@ endpoints:
         name: product_description
         description: ''
         required: true
-        example: est
+        example: quis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -229,7 +229,7 @@ endpoints:
         name: product_unit_price
         description: 'Must be at least 0.'
         required: true
-        example: 71
+        example: 25
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -239,7 +239,7 @@ endpoints:
         name: product_bulk_price
         description: 'Must be at least 0.'
         required: false
-        example: 11
+        example: 83
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -249,7 +249,7 @@ endpoints:
         name: product_quantity
         description: 'Must be at least 0.'
         required: true
-        example: 14
+        example: 77
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -269,7 +269,7 @@ endpoints:
         name: group_link
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: vhqjapnjcbwbr
+        example: hpdzjsj
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -279,7 +279,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-01-21T10:59:00'
+        example: '2025-01-21T13:59:48'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -289,25 +289,25 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: false
-        example: '2027-08-09'
+        example: '2067-09-18'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      title: ohbjgfqrvdy
-      description: 'Placeat aliquam provident reiciendis quia et.'
-      target_amount: 41
-      amount_per_person: 6
-      product_name: aut
-      product_description: est
-      product_unit_price: 71
-      product_bulk_price: 11
-      product_quantity: 14
-      group_link: vhqjapnjcbwbr
-      start_date: '2025-01-21T10:59:00'
-      end_date: '2027-08-09'
+      title: zotjgcurbqueiftgw
+      description: 'Molestiae exercitationem qui corrupti sint.'
+      target_amount: 49
+      amount_per_person: 45
+      product_name: suscipit
+      product_description: quis
+      product_unit_price: 25
+      product_bulk_price: 83
+      product_quantity: 77
+      group_link: hpdzjsj
+      start_date: '2025-01-21T13:59:48'
+      end_date: '2067-09-18'
     fileParameters:
       product_image: null
     responses: []
@@ -343,14 +343,14 @@ endpoints:
         name: id
         description: 'The ID of the purchase goal.'
         required: true
-        example: 2
+        example: 6
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 2
+      id: 6
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -358,7 +358,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: rrtqjspiyrdradiwffclnb
+        example: wxuv
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -368,7 +368,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Aut amet a tempore porro magnam consequatur.'
+        example: 'Enim iure enim sed odit et enim suscipit.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -378,7 +378,7 @@ endpoints:
         name: target_amount
         description: 'Must be at least 0.'
         required: false
-        example: 28
+        example: 77
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -388,7 +388,7 @@ endpoints:
         name: amount_per_person
         description: 'Must be at least 0.'
         required: false
-        example: 59
+        example: 52
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -398,7 +398,7 @@ endpoints:
         name: product_name
         description: ''
         required: false
-        example: voluptate
+        example: recusandae
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -408,7 +408,7 @@ endpoints:
         name: product_description
         description: ''
         required: false
-        example: omnis
+        example: occaecati
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -418,7 +418,7 @@ endpoints:
         name: product_unit_price
         description: 'Must be at least 0.'
         required: false
-        example: 51
+        example: 16
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -428,7 +428,7 @@ endpoints:
         name: product_bulk_price
         description: 'Must be at least 0.'
         required: false
-        example: 14
+        example: 31
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -438,7 +438,7 @@ endpoints:
         name: product_quantity
         description: 'Must be at least 0.'
         required: false
-        example: 23
+        example: 4
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -458,7 +458,7 @@ endpoints:
         name: group_link
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: qad
+        example: vinitbvdhsqgnzhhjcmdtlw
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -468,7 +468,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: false
-        example: '2025-01-21T10:59:00'
+        example: '2025-01-21T13:59:48'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -478,25 +478,25 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: false
-        example: '2121-06-05'
+        example: '2038-10-09'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      title: rrtqjspiyrdradiwffclnb
-      description: 'Aut amet a tempore porro magnam consequatur.'
-      target_amount: 28
-      amount_per_person: 59
-      product_name: voluptate
-      product_description: omnis
-      product_unit_price: 51
-      product_bulk_price: 14
-      product_quantity: 23
-      group_link: qad
-      start_date: '2025-01-21T10:59:00'
-      end_date: '2121-06-05'
+      title: wxuv
+      description: 'Enim iure enim sed odit et enim suscipit.'
+      target_amount: 77
+      amount_per_person: 52
+      product_name: recusandae
+      product_description: occaecati
+      product_unit_price: 16
+      product_bulk_price: 31
+      product_quantity: 4
+      group_link: vinitbvdhsqgnzhhjcmdtlw
+      start_date: '2025-01-21T13:59:48'
+      end_date: '2038-10-09'
     fileParameters:
       product_image: null
     responses: []

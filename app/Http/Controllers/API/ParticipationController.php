@@ -11,7 +11,9 @@ use App\Models\UserInPurchaseGoal;
 use Exception;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Knuckles\Scribe\Attributes\Group;
 
+#[Group('User Participation', 'Endpoints for managing user participation in purchase goals')]
 class ParticipationController extends Controller
 {
     protected $relationships = [
@@ -19,6 +21,11 @@ class ParticipationController extends Controller
         'purchaseGoal',
     ];
 
+    /**
+     * Get participants of a purchase goal.
+     *
+     * Retrieve all participants of a specified purchase goal.
+     */
     public function purchaseGoalParticipants(int $id)
     {
         $purchaseGoal = PurchaseGoal::find($id);
@@ -64,6 +71,11 @@ class ParticipationController extends Controller
         }
     }
 
+    /**
+     * Join a purchase goal.
+     *
+     * Allows a user to join a specific purchase goal.
+     */
     public function join(int $id)
     {
         $purchaseGoal = PurchaseGoal::find($id);
@@ -132,6 +144,11 @@ class ParticipationController extends Controller
         }
     }
 
+    /**
+     * Approve a purchase goal.
+     *
+     * Allows a user to APPROVE another user to join purchase goal.
+     */
     public function approve(PurchaseGoal $purchaseGoal, User $user)
     {
         if (Auth::id() !== $purchaseGoal->creator_id) {
@@ -178,6 +195,11 @@ class ParticipationController extends Controller
         }
     }
 
+    /**
+     * Decline request to join a purchase goal.
+     *
+     * Allows user to DECLINE a request from another user to join purchase goal.
+     */
     public function decline(PurchaseGoal $purchaseGoal, User $user)
     {
         if (Auth::id() !== $purchaseGoal->creator_id) {
