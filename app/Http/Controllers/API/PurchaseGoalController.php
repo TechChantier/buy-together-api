@@ -13,13 +13,16 @@ use App\Services\MediaService;
 use Exception;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Knuckles\Scribe\Attributes\Group;
+
+#[Group('Purchase Goals', 'Endpoints for managing purchase goals')]
 
 class PurchaseGoalController extends Controller
 {
     protected $relationships = [
         'product',
         'creator',
-        'participants'
+        'participants',
     ];
 
     public function __construct(
@@ -27,7 +30,12 @@ class PurchaseGoalController extends Controller
     ) {}
 
     /**
-     * Display a listing of the purchase goals.
+     * Listing of all purchase goals.
+     *
+     * This endpoint allows users to view purchase goals.
+     * <aside class="notice">
+     * Users must NOT be authenticated to access this endpoint.
+     * </aside>
      */
     public function index()
     {
@@ -55,7 +63,12 @@ class PurchaseGoalController extends Controller
     }
 
     /**
-     * Store a newly created purchase goal in storage.
+     * Create a new purchase goal.
+     *
+     * This endpoint allows users to create a purchase goal.
+     * <aside class="notice">
+     * Users must be authenticated to access this endpoint.
+     * </aside>
      */
     public function store(CreatePurchaseGoalRequest $request)
     {
@@ -128,7 +141,9 @@ class PurchaseGoalController extends Controller
     }
 
     /**
-     * Display the specified purchase goal.
+     * Fetch details of a specific purchase goal.
+     *
+     * This endpoint allows users to view the details of a purchase goal by ID.
      */
     public function show(int $id)
     {
@@ -153,7 +168,12 @@ class PurchaseGoalController extends Controller
     }
 
     /**
-     * Update the specified purchase goal in storage.
+     * Update an existing purchase goal.
+     *
+     * This endpoint allows users to update details of a purchase goal.
+     * <aside class="notice">
+     * Only the owner of the goal can update it.
+     * </aside>     
      */
     public function update(UpdatePurchaseGoalRequest $request, int $id)
     {
@@ -251,7 +271,12 @@ class PurchaseGoalController extends Controller
     }
 
     /**
-     * Remove the specified purchase goal from storage.
+     * Delete a purchase goal.
+     * 
+     * This endpoint allows users to delete a specific purchase goal by ID.
+     * <aside class="notice">
+     * Only the owner of the goal can delete it.
+     * </aside>
      */
     public function destroy(int $id)
     {
@@ -299,6 +324,10 @@ class PurchaseGoalController extends Controller
 
     /**
      * Change the status of specified purchase goal
+     * 
+     * <aside class="notice">
+     * Only the owner of the goal can change its status from open to close and vice versa.
+     * </aside>
      */
     public function changeStatus(int $id)
     {

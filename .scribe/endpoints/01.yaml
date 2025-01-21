@@ -1,35 +1,38 @@
-name: Endpoints
-description: ''
+name: 'Purchase Goals'
+description: 'Endpoints for managing purchase goals'
 endpoints:
   -
     httpMethods:
       - POST
-    uri: 'api/purchase-goals/{purchase_goal}/change-status'
+    uri: 'api/purchase-goals/{id}/change-status'
     metadata:
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: 'Purchase Goals'
+      groupDescription: 'Endpoints for managing purchase goals'
       subgroup: ''
       subgroupDescription: ''
       title: 'Change the status of specified purchase goal'
-      description: ''
+      description: |-
+        <aside class="notice">
+        Only the owner of the goal can change its status from open to close and vice versa.
+        </aside>
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      purchase_goal:
-        name: purchase_goal
-        description: ''
+      id:
+        name: id
+        description: 'The ID of the purchase goal.'
         required: true
-        example: asperiores
+        example: aut
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      purchase_goal: asperiores
+      id: aut
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -47,12 +50,16 @@ endpoints:
       - GET
     uri: api/purchase-goals
     metadata:
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: 'Purchase Goals'
+      groupDescription: 'Endpoints for managing purchase goals'
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display a listing of the purchase goals.'
-      description: ''
+      title: 'Listing of all purchase goals.'
+      description: |-
+        This endpoint allows users to view purchase goals.
+        <aside class="notice">
+        Users must NOT be authenticated to access this endpoint.
+        </aside>
       authenticated: false
       custom: []
     headers:
@@ -67,8 +74,58 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
+        status: 200
+        content: '{"success":true,"message":"Purchase goals retrieved successfully.","statusCode":200,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/purchase-goals/{id}'
+    metadata:
+      groupName: 'Purchase Goals'
+      groupDescription: 'Endpoints for managing purchase goals'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Fetch details of a specific purchase goal.'
+      description: 'This endpoint allows users to view the details of a purchase goal by ID.'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the purchase goal.'
+        required: true
+        example: 20
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 20
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: '{"success":false,"message":"Purchase goal not found.","statusCode":404}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -86,12 +143,16 @@ endpoints:
       - POST
     uri: api/purchase-goals
     metadata:
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: 'Purchase Goals'
+      groupDescription: 'Endpoints for managing purchase goals'
       subgroup: ''
       subgroupDescription: ''
-      title: 'Store a newly created purchase goal in storage.'
-      description: ''
+      title: 'Create a new purchase goal.'
+      description: |-
+        This endpoint allows users to create a purchase goal.
+        <aside class="notice">
+        Users must be authenticated to access this endpoint.
+        </aside>
       authenticated: false
       custom: []
     headers:
@@ -106,7 +167,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: s
+        example: zotjgcurbqueiftgw
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -116,7 +177,7 @@ endpoints:
         name: description
         description: ''
         required: true
-        example: 'Sit amet iure sit alias at dolores.'
+        example: 'Molestiae exercitationem qui corrupti sint.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -126,7 +187,7 @@ endpoints:
         name: target_amount
         description: 'Must be at least 0.'
         required: true
-        example: 24
+        example: 49
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -136,7 +197,7 @@ endpoints:
         name: amount_per_person
         description: 'Must be at least 0.'
         required: false
-        example: 11
+        example: 45
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -146,7 +207,7 @@ endpoints:
         name: product_name
         description: ''
         required: true
-        example: et
+        example: suscipit
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -156,7 +217,7 @@ endpoints:
         name: product_description
         description: ''
         required: true
-        example: repellat
+        example: quis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -166,7 +227,7 @@ endpoints:
         name: product_unit_price
         description: 'Must be at least 0.'
         required: true
-        example: 68
+        example: 25
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -176,7 +237,7 @@ endpoints:
         name: product_bulk_price
         description: 'Must be at least 0.'
         required: false
-        example: 79
+        example: 83
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -186,7 +247,7 @@ endpoints:
         name: product_quantity
         description: 'Must be at least 0.'
         required: true
-        example: 76
+        example: 77
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -206,7 +267,7 @@ endpoints:
         name: group_link
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: p
+        example: hpdzjsj
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -216,7 +277,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-01-21T05:15:32'
+        example: '2025-01-21T13:59:48'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -226,78 +287,28 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: false
-        example: '2089-02-03'
+        example: '2067-09-18'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      title: s
-      description: 'Sit amet iure sit alias at dolores.'
-      target_amount: 24
-      amount_per_person: 11
-      product_name: et
-      product_description: repellat
-      product_unit_price: 68
-      product_bulk_price: 79
-      product_quantity: 76
-      group_link: p
-      start_date: '2025-01-21T05:15:32'
-      end_date: '2089-02-03'
+      title: zotjgcurbqueiftgw
+      description: 'Molestiae exercitationem qui corrupti sint.'
+      target_amount: 49
+      amount_per_person: 45
+      product_name: suscipit
+      product_description: quis
+      product_unit_price: 25
+      product_bulk_price: 83
+      product_quantity: 77
+      group_link: hpdzjsj
+      start_date: '2025-01-21T13:59:48'
+      end_date: '2067-09-18'
     fileParameters:
       product_image: null
     responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/purchase-goals/{id}'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Display the specified purchase goal.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the purchase goal.'
-        required: true
-        example: in
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      id: in
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -310,12 +321,16 @@ endpoints:
       - PATCH
     uri: 'api/purchase-goals/{id}'
     metadata:
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: 'Purchase Goals'
+      groupDescription: 'Endpoints for managing purchase goals'
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update the specified purchase goal in storage.'
-      description: ''
+      title: 'Update an existing purchase goal.'
+      description: |-
+        This endpoint allows users to update details of a purchase goal.
+        <aside class="notice">
+        Only the owner of the goal can update it.
+        </aside>
       authenticated: false
       custom: []
     headers:
@@ -326,14 +341,14 @@ endpoints:
         name: id
         description: 'The ID of the purchase goal.'
         required: true
-        example: quia
-        type: string
+        example: 6
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: quia
+      id: 6
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -341,7 +356,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: yeijez
+        example: wxuv
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -351,7 +366,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Eum autem est provident et ad eveniet.'
+        example: 'Enim iure enim sed odit et enim suscipit.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -361,7 +376,7 @@ endpoints:
         name: target_amount
         description: 'Must be at least 0.'
         required: false
-        example: 3
+        example: 77
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -371,7 +386,7 @@ endpoints:
         name: amount_per_person
         description: 'Must be at least 0.'
         required: false
-        example: 8
+        example: 52
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -381,7 +396,7 @@ endpoints:
         name: product_name
         description: ''
         required: false
-        example: laborum
+        example: recusandae
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -391,7 +406,7 @@ endpoints:
         name: product_description
         description: ''
         required: false
-        example: quam
+        example: occaecati
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -401,7 +416,7 @@ endpoints:
         name: product_unit_price
         description: 'Must be at least 0.'
         required: false
-        example: 58
+        example: 16
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -411,7 +426,7 @@ endpoints:
         name: product_bulk_price
         description: 'Must be at least 0.'
         required: false
-        example: 44
+        example: 31
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -421,7 +436,7 @@ endpoints:
         name: product_quantity
         description: 'Must be at least 0.'
         required: false
-        example: 70
+        example: 4
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -441,7 +456,7 @@ endpoints:
         name: group_link
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: bypwnzrmcqrpzmciwmhp
+        example: vinitbvdhsqgnzhhjcmdtlw
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -451,7 +466,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: false
-        example: '2025-01-21T05:15:32'
+        example: '2025-01-21T13:59:48'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -461,25 +476,25 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: false
-        example: '2104-09-28'
+        example: '2038-10-09'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      title: yeijez
-      description: 'Eum autem est provident et ad eveniet.'
-      target_amount: 3
-      amount_per_person: 8
-      product_name: laborum
-      product_description: quam
-      product_unit_price: 58
-      product_bulk_price: 44
-      product_quantity: 70
-      group_link: bypwnzrmcqrpzmciwmhp
-      start_date: '2025-01-21T05:15:32'
-      end_date: '2104-09-28'
+      title: wxuv
+      description: 'Enim iure enim sed odit et enim suscipit.'
+      target_amount: 77
+      amount_per_person: 52
+      product_name: recusandae
+      product_description: occaecati
+      product_unit_price: 16
+      product_bulk_price: 31
+      product_quantity: 4
+      group_link: vinitbvdhsqgnzhhjcmdtlw
+      start_date: '2025-01-21T13:59:48'
+      end_date: '2038-10-09'
     fileParameters:
       product_image: null
     responses: []
@@ -494,12 +509,16 @@ endpoints:
       - DELETE
     uri: 'api/purchase-goals/{id}'
     metadata:
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: 'Purchase Goals'
+      groupDescription: 'Endpoints for managing purchase goals'
       subgroup: ''
       subgroupDescription: ''
-      title: 'Remove the specified purchase goal from storage.'
-      description: ''
+      title: 'Delete a purchase goal.'
+      description: |-
+        This endpoint allows users to delete a specific purchase goal by ID.
+        <aside class="notice">
+        Only the owner of the goal can delete it.
+        </aside>
       authenticated: false
       custom: []
     headers:
@@ -508,138 +527,6 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the purchase goal.'
-        required: true
-        example: iusto
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      id: iusto
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/purchase-goals/{purchase_goal}/participants'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      purchase_goal:
-        name: purchase_goal
-        description: ''
-        required: true
-        example: ratione
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      purchase_goal: ratione
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: 'api/purchase-goals/{purchase_goal}/join'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      purchase_goal:
-        name: purchase_goal
-        description: ''
-        required: true
-        example: et
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      purchase_goal: et
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: 'api/purchase-goals/{purchase_goal_id}/approve/{user_id}'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      purchase_goal_id:
-        name: purchase_goal_id
         description: 'The ID of the purchase goal.'
         required: true
         example: 10
@@ -648,184 +535,8 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         custom: []
-      user_id:
-        name: user_id
-        description: 'The ID of the user.'
-        required: true
-        example: 15
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
     cleanUrlParameters:
-      purchase_goal_id: 10
-      user_id: 15
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: 'api/purchase-goals/{purchase_goal_id}/decline/{user_id}'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      purchase_goal_id:
-        name: purchase_goal_id
-        description: 'The ID of the purchase goal.'
-        required: true
-        example: 4
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      user_id:
-        name: user_id
-        description: 'The ID of the user.'
-        required: true
-        example: 13
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      purchase_goal_id: 4
-      user_id: 13
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/products
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - PUT
-      - PATCH
-    uri: 'api/products/{id}'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the product.'
-        required: true
-        example: 11
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      id: 11
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - DELETE
-    uri: 'api/products/{id}'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the product.'
-        required: true
-        example: 15
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      id: 15
+      id: 10
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

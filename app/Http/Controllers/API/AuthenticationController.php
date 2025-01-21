@@ -11,6 +11,9 @@ use App\Services\MediaService;
 use Exception;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Knuckles\Scribe\Attributes\Group;
+
+#[Group('Authentication', 'Endpoints for login, registration, and logout')]
 
 class AuthenticationController extends Controller
 {
@@ -20,6 +23,11 @@ class AuthenticationController extends Controller
 
     /**
      * User registration
+     *
+     * This endpoint allows you to register a new user.
+     * <aside class="notice">
+     * Users will not be able to create or join purchase goals if they are not registered and logged in
+     * </aside>
      */
     public function register(RegisterRequest $request)
     {
@@ -77,6 +85,11 @@ class AuthenticationController extends Controller
 
     /**
      * User authentication
+     * 
+     * This endpoint allows authenticate or log in a user.
+     * <aside class="notice">
+     * An authentication token is always generated upon successful login.
+     * </aside>
      */
     public function login(LoginRequest $request)
     {
@@ -104,6 +117,11 @@ class AuthenticationController extends Controller
 
     /**
      * User logout from application
+     * 
+     * This endpoint allows you to logout a user from your app.
+     * <aside class="notice">
+     * It requires the auth token of the user to be logged out
+     * </aside>
      */
     public function logout()
     {

@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\API\AuthenticationController;
 use App\Http\Controllers\API\ParticipationController;
-use App\Http\Controllers\API\ProductController;
 use App\Http\Controllers\API\PurchaseGoalController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,18 +13,20 @@ Route::controller(AuthenticationController::class)->group(function () {
 });
 
 // Purchase Goal endpoints
-Route::controller(PurchaseGoalController::class)->group(function () {
-    Route::post('purchase-goals/{purchase_goal}/change-status', 'changeStatus')->middleware('auth:sanctum');
+Route::controller(PurchaseGoalController::class)->middleware(['auth:sanctum'])->group(function () {
+    Route::post('purchase-goals/{id}/change-status', 'changeStatus');
+    Route::get('purchase-goals', 'index')->withoutMiddleware('auth:sanctum');
+    Route::get('purchase-goals/{id}', 'show')->withoutMiddleware('auth:sanctum');
+    Route::post('purchase-goals', 'store');
+    Route::match(['put', 'patch'],'purchase-goals/{id}', 'update');
+    Route::delete('purchase-goals/{id}', 'destroy');
 });
-Route::apiResource('purchase-goals', PurchaseGoalController::class)->middleware('auth:sanctum');
 
 // Participation endpoints
-Route::controller(ParticipationController::class)->group(function () {
-    Route::get('purchase-goals/{purchase_goal}/participants', 'purchaseGoalParticipants')->middleware('auth:sanctum');
-    Route::post('purchase-goals/{purchase_goal}/join', 'join')->middleware('auth:sanctum');
-    Route::post('purchase-goals/{purchase_goal}/approve/{user_id}', 'approve')->middleware('auth:sanctum');
-    Route::post('purchase-goals/{purchase_goal}/decline/{user_id}', 'decline')->middleware('auth:sanctum');
+Route::controller(ParticipationController::class)->middleware(['auth:sanctum'])->group(function () {
+    Route::get('purchase-goals/{id}/participants', 'purchaseGoalParticipants');
+    Route::post('purchase-goals/{id}/join', 'join');
+    Route::post('purchase-goals/{id}/leave', 'leave');
+    Route::post('purchase-goals/{id}/approve/{user_id}', 'approve');
+    Route::post('purchase-goals/{id}/decline/{user_id}', 'decline');
 });
-
-// Product endpoints
-Route::apiResource('products', ProductController::class)->except(['index', 'create', 'show'])->middleware('auth:sanctum');
