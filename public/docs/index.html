@@ -182,12 +182,12 @@ Users will not be able to create or join purchase goals if they are not register
     "http://localhost/api/register" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "name=saozqmbayflsdfxmhjvwse"\
-    --form "email=ugoodwin@example.net"\
-    --form "password=N?}52N_hz:z}wc)"\
-    --form "address=fugit"\
-    --form "phone_number=distinctio"\
-    --form "profile_pic=@C:\Users\user\AppData\Local\Temp\php29DA.tmp" </code></pre></div>
+    --form "name=qohsesjhpekjknvtxpgbqfeq"\
+    --form "email=atillman@example.net"\
+    --form "password=jcxJZ!A"\
+    --form "password_confirmation=jcxJZ!A"\
+    --form "address=praesentium"\
+    --form "phone_number=illum"</code></pre></div>
 
 
 <div class="javascript-example">
@@ -201,12 +201,12 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('name', 'saozqmbayflsdfxmhjvwse');
-body.append('email', 'ugoodwin@example.net');
-body.append('password', 'N?}52N_hz:z}wc)');
-body.append('address', 'fugit');
-body.append('phone_number', 'distinctio');
-body.append('profile_pic', document.querySelector('input[name="profile_pic"]').files[0]);
+body.append('name', 'qohsesjhpekjknvtxpgbqfeq');
+body.append('email', 'atillman@example.net');
+body.append('password', 'jcxJZ!A');
+body.append('password_confirmation', 'jcxJZ!A');
+body.append('address', 'praesentium');
+body.append('phone_number', 'illum');
 
 fetch(url, {
     method: "POST",
@@ -236,7 +236,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <form id="form-POSTapi-register" data-method="POST"
       data-path="api/register"
       data-authed="0"
-      data-hasfiles="1"
+      data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-register', this);">
@@ -294,10 +294,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-register"
-               value="saozqmbayflsdfxmhjvwse"
+               value="qohsesjhpekjknvtxpgbqfeq"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>saozqmbayflsdfxmhjvwse</code></p>
+<p>Must not be greater than 255 characters. Example: <code>qohsesjhpekjknvtxpgbqfeq</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -305,10 +305,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-register"
-               value="ugoodwin@example.net"
+               value="atillman@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>ugoodwin@example.net</code></p>
+<p>Must be a valid email address. Example: <code>atillman@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -316,10 +316,21 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-register"
-               value="N?}52N_hz:z}wc)"
+               value="jcxJZ!A"
                data-component="body">
     <br>
-<p>Example: <code>N?}52N_hz:z}wc)</code></p>
+<p>Example: <code>jcxJZ!A</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>password_confirmation</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="password_confirmation"                data-endpoint="POSTapi-register"
+               value="jcxJZ!A"
+               data-component="body">
+    <br>
+<p>Example: <code>jcxJZ!A</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>address</code></b>&nbsp;&nbsp;
@@ -327,10 +338,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="address"                data-endpoint="POSTapi-register"
-               value="fugit"
+               value="praesentium"
                data-component="body">
     <br>
-<p>Example: <code>fugit</code></p>
+<p>Example: <code>praesentium</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone_number</code></b>&nbsp;&nbsp;
@@ -338,10 +349,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="phone_number"                data-endpoint="POSTapi-register"
-               value="distinctio"
+               value="illum"
                data-component="body">
     <br>
-<p>Example: <code>distinctio</code></p>
+<p>Example: <code>illum</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>profile_pic</code></b>&nbsp;&nbsp;
@@ -352,7 +363,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\user\AppData\Local\Temp\php29DA.tmp</code></p>
+<p>Must be a file. Must not be greater than 51200 kilobytes.</p>
         </div>
         </form>
 
@@ -376,8 +387,8 @@ An authentication token is always generated upon successful login.
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"leif72@example.org\",
-    \"password\": \"0\\\\DHG:AlqNO*&gt;?\"
+    \"email\": \"ian76@example.org\",
+    \"password\": \"{_aV!Uh]\\\"nUgRH\"
 }"
 </code></pre></div>
 
@@ -393,8 +404,8 @@ const headers = {
 };
 
 let body = {
-    "email": "leif72@example.org",
-    "password": "0\\DHG:AlqNO*&gt;?"
+    "email": "ian76@example.org",
+    "password": "{_aV!Uh]\"nUgRH"
 };
 
 fetch(url, {
@@ -483,10 +494,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-login"
-               value="leif72@example.org"
+               value="ian76@example.org"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>leif72@example.org</code></p>
+<p>Must be a valid email address. Example: <code>ian76@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -494,10 +505,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-login"
-               value="0\DHG:AlqNO*>?"
+               value="{_aV!Uh]"nUgRH"
                data-component="body">
     <br>
-<p>Example: <code>0\DHG:AlqNO*&gt;?</code></p>
+<p>Example: <code>{_aV!Uh]"nUgRH</code></p>
         </div>
         </form>
 
@@ -629,14 +640,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/purchase-goals/asperiores/change-status" \
+    "http://localhost/api/purchase-goals/consequatur/change-status" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/asperiores/change-status"
+    "http://localhost/api/purchase-goals/consequatur/change-status"
 );
 
 const headers = {
@@ -729,10 +740,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="purchase_goal"                data-endpoint="POSTapi-purchase-goals--purchase_goal--change-status"
-               value="asperiores"
+               value="consequatur"
                data-component="url">
     <br>
-<p>Example: <code>asperiores</code></p>
+<p>Example: <code>consequatur</code></p>
             </div>
                     </form>
 
@@ -876,19 +887,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
     "http://localhost/api/purchase-goals" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "title=s"\
-    --form "description=Sit amet iure sit alias at dolores."\
-    --form "target_amount=24"\
-    --form "amount_per_person=11"\
-    --form "product_name=et"\
-    --form "product_description=repellat"\
-    --form "product_unit_price=68"\
-    --form "product_bulk_price=79"\
-    --form "product_quantity=76"\
-    --form "group_link=p"\
-    --form "start_date=2025-01-21T05:15:32"\
-    --form "end_date=2089-02-03"\
-    --form "product_image=@C:\Users\user\AppData\Local\Temp\php2A39.tmp" </code></pre></div>
+    --form "title=uehglakbwbbttkjuqbshcxk"\
+    --form "description=Possimus eos sint et quia voluptas distinctio impedit."\
+    --form "target_amount=60"\
+    --form "amount_per_person=83"\
+    --form "product_name=odit"\
+    --form "product_description=dignissimos"\
+    --form "product_unit_price=16"\
+    --form "product_bulk_price=45"\
+    --form "product_quantity=25"\
+    --form "group_link=dzlsgnvxqx"\
+    --form "start_date=2025-01-21T05:30:20"\
+    --form "end_date=2052-09-25"\
+    --form "product_image=@C:\Users\user\AppData\Local\Temp\phpB62E.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -902,18 +913,18 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('title', 's');
-body.append('description', 'Sit amet iure sit alias at dolores.');
-body.append('target_amount', '24');
-body.append('amount_per_person', '11');
-body.append('product_name', 'et');
-body.append('product_description', 'repellat');
-body.append('product_unit_price', '68');
-body.append('product_bulk_price', '79');
-body.append('product_quantity', '76');
-body.append('group_link', 'p');
-body.append('start_date', '2025-01-21T05:15:32');
-body.append('end_date', '2089-02-03');
+body.append('title', 'uehglakbwbbttkjuqbshcxk');
+body.append('description', 'Possimus eos sint et quia voluptas distinctio impedit.');
+body.append('target_amount', '60');
+body.append('amount_per_person', '83');
+body.append('product_name', 'odit');
+body.append('product_description', 'dignissimos');
+body.append('product_unit_price', '16');
+body.append('product_bulk_price', '45');
+body.append('product_quantity', '25');
+body.append('group_link', 'dzlsgnvxqx');
+body.append('start_date', '2025-01-21T05:30:20');
+body.append('end_date', '2052-09-25');
 body.append('product_image', document.querySelector('input[name="product_image"]').files[0]);
 
 fetch(url, {
@@ -1002,10 +1013,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="POSTapi-purchase-goals"
-               value="s"
+               value="uehglakbwbbttkjuqbshcxk"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>s</code></p>
+<p>Must not be greater than 255 characters. Example: <code>uehglakbwbbttkjuqbshcxk</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -1013,10 +1024,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="POSTapi-purchase-goals"
-               value="Sit amet iure sit alias at dolores."
+               value="Possimus eos sint et quia voluptas distinctio impedit."
                data-component="body">
     <br>
-<p>Example: <code>Sit amet iure sit alias at dolores.</code></p>
+<p>Example: <code>Possimus eos sint et quia voluptas distinctio impedit.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>target_amount</code></b>&nbsp;&nbsp;
@@ -1024,10 +1035,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="target_amount"                data-endpoint="POSTapi-purchase-goals"
-               value="24"
+               value="60"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>24</code></p>
+<p>Must be at least 0. Example: <code>60</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>amount_per_person</code></b>&nbsp;&nbsp;
@@ -1035,10 +1046,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="amount_per_person"                data-endpoint="POSTapi-purchase-goals"
-               value="11"
+               value="83"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>11</code></p>
+<p>Must be at least 0. Example: <code>83</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_name</code></b>&nbsp;&nbsp;
@@ -1046,10 +1057,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="product_name"                data-endpoint="POSTapi-purchase-goals"
-               value="et"
+               value="odit"
                data-component="body">
     <br>
-<p>Example: <code>et</code></p>
+<p>Example: <code>odit</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_description</code></b>&nbsp;&nbsp;
@@ -1057,10 +1068,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="product_description"                data-endpoint="POSTapi-purchase-goals"
-               value="repellat"
+               value="dignissimos"
                data-component="body">
     <br>
-<p>Example: <code>repellat</code></p>
+<p>Example: <code>dignissimos</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_unit_price</code></b>&nbsp;&nbsp;
@@ -1068,10 +1079,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_unit_price"                data-endpoint="POSTapi-purchase-goals"
-               value="68"
+               value="16"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>68</code></p>
+<p>Must be at least 0. Example: <code>16</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_bulk_price</code></b>&nbsp;&nbsp;
@@ -1079,10 +1090,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_bulk_price"                data-endpoint="POSTapi-purchase-goals"
-               value="79"
+               value="45"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>79</code></p>
+<p>Must be at least 0. Example: <code>45</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_quantity</code></b>&nbsp;&nbsp;
@@ -1090,10 +1101,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_quantity"                data-endpoint="POSTapi-purchase-goals"
-               value="76"
+               value="25"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>76</code></p>
+<p>Must be at least 0. Example: <code>25</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_image</code></b>&nbsp;&nbsp;
@@ -1104,7 +1115,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\user\AppData\Local\Temp\php2A39.tmp</code></p>
+<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\user\AppData\Local\Temp\phpB62E.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>group_link</code></b>&nbsp;&nbsp;
@@ -1112,10 +1123,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="group_link"                data-endpoint="POSTapi-purchase-goals"
-               value="p"
+               value="dzlsgnvxqx"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>p</code></p>
+<p>Must not be greater than 255 characters. Example: <code>dzlsgnvxqx</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>start_date</code></b>&nbsp;&nbsp;
@@ -1123,10 +1134,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="start_date"                data-endpoint="POSTapi-purchase-goals"
-               value="2025-01-21T05:15:32"
+               value="2025-01-21T05:30:20"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-01-21T05:15:32</code></p>
+<p>Must be a valid date. Example: <code>2025-01-21T05:30:20</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -1134,10 +1145,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="end_date"                data-endpoint="POSTapi-purchase-goals"
-               value="2089-02-03"
+               value="2052-09-25"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2089-02-03</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2052-09-25</code></p>
         </div>
         </form>
 
@@ -1154,14 +1165,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/purchase-goals/in" \
+    --get "http://localhost/api/purchase-goals/fugit" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/in"
+    "http://localhost/api/purchase-goals/fugit"
 );
 
 const headers = {
@@ -1270,10 +1281,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="GETapi-purchase-goals--id-"
-               value="in"
+               value="fugit"
                data-component="url">
     <br>
-<p>The ID of the purchase goal. Example: <code>in</code></p>
+<p>The ID of the purchase goal. Example: <code>fugit</code></p>
             </div>
                     </form>
 
@@ -1290,27 +1301,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/purchase-goals/quia" \
+    "http://localhost/api/purchase-goals/debitis" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "title=yeijez"\
-    --form "description=Eum autem est provident et ad eveniet."\
-    --form "target_amount=3"\
-    --form "amount_per_person=8"\
-    --form "product_name=laborum"\
-    --form "product_description=quam"\
-    --form "product_unit_price=58"\
-    --form "product_bulk_price=44"\
-    --form "product_quantity=70"\
-    --form "group_link=bypwnzrmcqrpzmciwmhp"\
-    --form "start_date=2025-01-21T05:15:32"\
-    --form "end_date=2104-09-28"\
-    --form "product_image=@C:\Users\user\AppData\Local\Temp\php2A3A.tmp" </code></pre></div>
+    --form "title=xayinqiombdrygwhxrhb"\
+    --form "description=Necessitatibus neque quibusdam vel."\
+    --form "target_amount=82"\
+    --form "amount_per_person=13"\
+    --form "product_name=optio"\
+    --form "product_description=minima"\
+    --form "product_unit_price=28"\
+    --form "product_bulk_price=67"\
+    --form "product_quantity=58"\
+    --form "group_link=a"\
+    --form "start_date=2025-01-21T05:30:20"\
+    --form "end_date=2081-07-02"\
+    --form "product_image=@C:\Users\user\AppData\Local\Temp\phpB63E.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/quia"
+    "http://localhost/api/purchase-goals/debitis"
 );
 
 const headers = {
@@ -1319,18 +1330,18 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('title', 'yeijez');
-body.append('description', 'Eum autem est provident et ad eveniet.');
-body.append('target_amount', '3');
-body.append('amount_per_person', '8');
-body.append('product_name', 'laborum');
-body.append('product_description', 'quam');
-body.append('product_unit_price', '58');
-body.append('product_bulk_price', '44');
-body.append('product_quantity', '70');
-body.append('group_link', 'bypwnzrmcqrpzmciwmhp');
-body.append('start_date', '2025-01-21T05:15:32');
-body.append('end_date', '2104-09-28');
+body.append('title', 'xayinqiombdrygwhxrhb');
+body.append('description', 'Necessitatibus neque quibusdam vel.');
+body.append('target_amount', '82');
+body.append('amount_per_person', '13');
+body.append('product_name', 'optio');
+body.append('product_description', 'minima');
+body.append('product_unit_price', '28');
+body.append('product_bulk_price', '67');
+body.append('product_quantity', '58');
+body.append('group_link', 'a');
+body.append('start_date', '2025-01-21T05:30:20');
+body.append('end_date', '2081-07-02');
 body.append('product_image', document.querySelector('input[name="product_image"]').files[0]);
 
 fetch(url, {
@@ -1423,10 +1434,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="quia"
+               value="debitis"
                data-component="url">
     <br>
-<p>The ID of the purchase goal. Example: <code>quia</code></p>
+<p>The ID of the purchase goal. Example: <code>debitis</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -1435,10 +1446,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="yeijez"
+               value="xayinqiombdrygwhxrhb"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>yeijez</code></p>
+<p>Must not be greater than 255 characters. Example: <code>xayinqiombdrygwhxrhb</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -1446,10 +1457,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="Eum autem est provident et ad eveniet."
+               value="Necessitatibus neque quibusdam vel."
                data-component="body">
     <br>
-<p>Example: <code>Eum autem est provident et ad eveniet.</code></p>
+<p>Example: <code>Necessitatibus neque quibusdam vel.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>target_amount</code></b>&nbsp;&nbsp;
@@ -1457,10 +1468,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="target_amount"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="3"
+               value="82"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>3</code></p>
+<p>Must be at least 0. Example: <code>82</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>amount_per_person</code></b>&nbsp;&nbsp;
@@ -1468,10 +1479,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="amount_per_person"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="8"
+               value="13"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>8</code></p>
+<p>Must be at least 0. Example: <code>13</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_name</code></b>&nbsp;&nbsp;
@@ -1479,10 +1490,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="product_name"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="laborum"
+               value="optio"
                data-component="body">
     <br>
-<p>Example: <code>laborum</code></p>
+<p>Example: <code>optio</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_description</code></b>&nbsp;&nbsp;
@@ -1490,10 +1501,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="product_description"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="quam"
+               value="minima"
                data-component="body">
     <br>
-<p>Example: <code>quam</code></p>
+<p>Example: <code>minima</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_unit_price</code></b>&nbsp;&nbsp;
@@ -1501,10 +1512,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_unit_price"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="58"
+               value="28"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>58</code></p>
+<p>Must be at least 0. Example: <code>28</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_bulk_price</code></b>&nbsp;&nbsp;
@@ -1512,10 +1523,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_bulk_price"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="44"
+               value="67"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>44</code></p>
+<p>Must be at least 0. Example: <code>67</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_quantity</code></b>&nbsp;&nbsp;
@@ -1523,10 +1534,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_quantity"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="70"
+               value="58"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>70</code></p>
+<p>Must be at least 0. Example: <code>58</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_image</code></b>&nbsp;&nbsp;
@@ -1537,7 +1548,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\user\AppData\Local\Temp\php2A3A.tmp</code></p>
+<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\user\AppData\Local\Temp\phpB63E.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>group_link</code></b>&nbsp;&nbsp;
@@ -1545,10 +1556,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="group_link"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="bypwnzrmcqrpzmciwmhp"
+               value="a"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>bypwnzrmcqrpzmciwmhp</code></p>
+<p>Must not be greater than 255 characters. Example: <code>a</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>start_date</code></b>&nbsp;&nbsp;
@@ -1556,10 +1567,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="start_date"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="2025-01-21T05:15:32"
+               value="2025-01-21T05:30:20"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-01-21T05:15:32</code></p>
+<p>Must be a valid date. Example: <code>2025-01-21T05:30:20</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -1567,10 +1578,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="end_date"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="2104-09-28"
+               value="2081-07-02"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2104-09-28</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2081-07-02</code></p>
         </div>
         </form>
 
@@ -1587,14 +1598,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/purchase-goals/iusto" \
+    "http://localhost/api/purchase-goals/nobis" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/iusto"
+    "http://localhost/api/purchase-goals/nobis"
 );
 
 const headers = {
@@ -1687,10 +1698,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="DELETEapi-purchase-goals--id-"
-               value="iusto"
+               value="nobis"
                data-component="url">
     <br>
-<p>The ID of the purchase goal. Example: <code>iusto</code></p>
+<p>The ID of the purchase goal. Example: <code>nobis</code></p>
             </div>
                     </form>
 
@@ -1707,14 +1718,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/purchase-goals/ratione/participants" \
+    --get "http://localhost/api/purchase-goals/id/participants" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/ratione/participants"
+    "http://localhost/api/purchase-goals/id/participants"
 );
 
 const headers = {
@@ -1823,10 +1834,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="purchase_goal"                data-endpoint="GETapi-purchase-goals--purchase_goal--participants"
-               value="ratione"
+               value="id"
                data-component="url">
     <br>
-<p>Example: <code>ratione</code></p>
+<p>Example: <code>id</code></p>
             </div>
                     </form>
 
@@ -1843,14 +1854,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/purchase-goals/et/join" \
+    "http://localhost/api/purchase-goals/dolor/join" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/et/join"
+    "http://localhost/api/purchase-goals/dolor/join"
 );
 
 const headers = {
@@ -1943,10 +1954,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="purchase_goal"                data-endpoint="POSTapi-purchase-goals--purchase_goal--join"
-               value="et"
+               value="dolor"
                data-component="url">
     <br>
-<p>Example: <code>et</code></p>
+<p>Example: <code>dolor</code></p>
             </div>
                     </form>
 
@@ -1963,14 +1974,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/purchase-goals/10/approve/15" \
+    "http://localhost/api/purchase-goals/7/approve/12" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/10/approve/15"
+    "http://localhost/api/purchase-goals/7/approve/12"
 );
 
 const headers = {
@@ -2063,10 +2074,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="purchase_goal_id"                data-endpoint="POSTapi-purchase-goals--purchase_goal_id--approve--user_id-"
-               value="10"
+               value="7"
                data-component="url">
     <br>
-<p>The ID of the purchase goal. Example: <code>10</code></p>
+<p>The ID of the purchase goal. Example: <code>7</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>user_id</code></b>&nbsp;&nbsp;
@@ -2074,10 +2085,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="user_id"                data-endpoint="POSTapi-purchase-goals--purchase_goal_id--approve--user_id-"
-               value="15"
+               value="12"
                data-component="url">
     <br>
-<p>The ID of the user. Example: <code>15</code></p>
+<p>The ID of the user. Example: <code>12</code></p>
             </div>
                     </form>
 
@@ -2094,14 +2105,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/purchase-goals/4/decline/13" \
+    "http://localhost/api/purchase-goals/20/decline/2" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/4/decline/13"
+    "http://localhost/api/purchase-goals/20/decline/2"
 );
 
 const headers = {
@@ -2194,10 +2205,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="purchase_goal_id"                data-endpoint="POSTapi-purchase-goals--purchase_goal_id--decline--user_id-"
-               value="4"
+               value="20"
                data-component="url">
     <br>
-<p>The ID of the purchase goal. Example: <code>4</code></p>
+<p>The ID of the purchase goal. Example: <code>20</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>user_id</code></b>&nbsp;&nbsp;
@@ -2205,10 +2216,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="user_id"                data-endpoint="POSTapi-purchase-goals--purchase_goal_id--decline--user_id-"
-               value="13"
+               value="2"
                data-component="url">
     <br>
-<p>The ID of the user. Example: <code>13</code></p>
+<p>The ID of the user. Example: <code>2</code></p>
             </div>
                     </form>
 
@@ -2333,14 +2344,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/products/11" \
+    "http://localhost/api/products/9" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/products/11"
+    "http://localhost/api/products/9"
 );
 
 const headers = {
@@ -2437,10 +2448,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="PUTapi-products--id-"
-               value="11"
+               value="9"
                data-component="url">
     <br>
-<p>The ID of the product. Example: <code>11</code></p>
+<p>The ID of the product. Example: <code>9</code></p>
             </div>
                     </form>
 
@@ -2457,14 +2468,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/products/15" \
+    "http://localhost/api/products/5" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/products/15"
+    "http://localhost/api/products/5"
 );
 
 const headers = {
@@ -2557,10 +2568,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="DELETEapi-products--id-"
-               value="15"
+               value="5"
                data-component="url">
     <br>
-<p>The ID of the product. Example: <code>15</code></p>
+<p>The ID of the product. Example: <code>5</code></p>
             </div>
                     </form>
 

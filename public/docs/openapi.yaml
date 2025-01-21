@@ -26,27 +26,32 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: saozqmbayflsdfxmhjvwse
+                  example: qohsesjhpekjknvtxpgbqfeq
                   nullable: false
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: ugoodwin@example.net
+                  example: atillman@example.net
                   nullable: true
                 password:
                   type: string
                   description: ''
-                  example: 'N?}52N_hz:z}wc)'
+                  example: jcxJZ!A
+                  nullable: false
+                password_confirmation:
+                  type: string
+                  description: ''
+                  example: jcxJZ!A
                   nullable: false
                 address:
                   type: string
                   description: ''
-                  example: fugit
+                  example: praesentium
                   nullable: false
                 phone_number:
                   type: string
                   description: ''
-                  example: distinctio
+                  example: illum
                   nullable: false
                 profile_pic:
                   type: string
@@ -56,6 +61,7 @@ paths:
               required:
                 - name
                 - password
+                - password_confirmation
                 - address
                 - phone_number
       security: []
@@ -78,12 +84,12 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: leif72@example.org
+                  example: ian76@example.org
                   nullable: false
                 password:
                   type: string
                   description: ''
-                  example: '0\DHG:AlqNO*>?'
+                  example: '{_aV!Uh]"nUgRH'
                   nullable: false
               required:
                 - email
@@ -114,7 +120,7 @@ paths:
         in: path
         name: purchase_goal
         description: ''
-        example: asperiores
+        example: consequatur
         required: true
         schema:
           type: string
@@ -158,47 +164,47 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: s
+                  example: uehglakbwbbttkjuqbshcxk
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Sit amet iure sit alias at dolores.'
+                  example: 'Possimus eos sint et quia voluptas distinctio impedit.'
                   nullable: false
                 target_amount:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 24
+                  example: 60
                   nullable: false
                 amount_per_person:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 11
+                  example: 83
                   nullable: true
                 product_name:
                   type: string
                   description: ''
-                  example: et
+                  example: odit
                   nullable: false
                 product_description:
                   type: string
                   description: ''
-                  example: repellat
+                  example: dignissimos
                   nullable: false
                 product_unit_price:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 68
+                  example: 16
                   nullable: false
                 product_bulk_price:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 79
+                  example: 45
                   nullable: true
                 product_quantity:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 76
+                  example: 25
                   nullable: false
                 product_image:
                   type: string
@@ -208,17 +214,17 @@ paths:
                 group_link:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: p
+                  example: dzlsgnvxqx
                   nullable: true
                 start_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2025-01-21T05:15:32'
+                  example: '2025-01-21T05:30:20'
                   nullable: false
                 end_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
-                  example: '2089-02-03'
+                  example: '2052-09-25'
                   nullable: true
               required:
                 - title
@@ -270,47 +276,47 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: yeijez
+                  example: xayinqiombdrygwhxrhb
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Eum autem est provident et ad eveniet.'
+                  example: 'Necessitatibus neque quibusdam vel.'
                   nullable: false
                 target_amount:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 3
+                  example: 82
                   nullable: false
                 amount_per_person:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 8
+                  example: 13
                   nullable: true
                 product_name:
                   type: string
                   description: ''
-                  example: laborum
+                  example: optio
                   nullable: false
                 product_description:
                   type: string
                   description: ''
-                  example: quam
+                  example: minima
                   nullable: false
                 product_unit_price:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 58
+                  example: 28
                   nullable: false
                 product_bulk_price:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 44
+                  example: 67
                   nullable: true
                 product_quantity:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 70
+                  example: 58
                   nullable: false
                 product_image:
                   type: string
@@ -320,17 +326,17 @@ paths:
                 group_link:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: bypwnzrmcqrpzmciwmhp
+                  example: a
                   nullable: true
                 start_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2025-01-21T05:15:32'
+                  example: '2025-01-21T05:30:20'
                   nullable: false
                 end_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
-                  example: '2104-09-28'
+                  example: '2081-07-02'
                   nullable: true
       security: []
     delete:
@@ -347,7 +353,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the purchase goal.'
-        example: in
+        example: fugit
         required: true
         schema:
           type: string
@@ -378,7 +384,7 @@ paths:
         in: path
         name: purchase_goal
         description: ''
-        example: ratione
+        example: id
         required: true
         schema:
           type: string
@@ -397,7 +403,7 @@ paths:
         in: path
         name: purchase_goal
         description: ''
-        example: et
+        example: dolor
         required: true
         schema:
           type: string
@@ -416,7 +422,7 @@ paths:
         in: path
         name: purchase_goal_id
         description: 'The ID of the purchase goal.'
-        example: 10
+        example: 7
         required: true
         schema:
           type: integer
@@ -424,7 +430,7 @@ paths:
         in: path
         name: user_id
         description: 'The ID of the user.'
-        example: 15
+        example: 12
         required: true
         schema:
           type: integer
@@ -443,7 +449,7 @@ paths:
         in: path
         name: purchase_goal_id
         description: 'The ID of the purchase goal.'
-        example: 4
+        example: 20
         required: true
         schema:
           type: integer
@@ -451,7 +457,7 @@ paths:
         in: path
         name: user_id
         description: 'The ID of the user.'
-        example: 13
+        example: 2
         required: true
         schema:
           type: integer
@@ -489,7 +495,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product.'
-        example: 11
+        example: 9
         required: true
         schema:
           type: integer

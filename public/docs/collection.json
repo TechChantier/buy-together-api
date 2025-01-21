@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Buy Together API Documentation",
-        "_postman_id": "30f32151-ef1d-4d2e-9ffc-66c2635fe47a",
+        "_postman_id": "caadad7e-94fa-4132-b0d8-5b640732b8fc",
         "description": "This API aims to provide all the information you need in order to work with our API",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -44,38 +44,39 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "saozqmbayflsdfxmhjvwse",
+                                    "value": "qohsesjhpekjknvtxpgbqfeq",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "email",
-                                    "value": "ugoodwin@example.net",
+                                    "value": "atillman@example.net",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "password",
-                                    "value": "N?}52N_hz:z}wc)",
+                                    "value": "jcxJZ!A",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "password_confirmation",
+                                    "value": "jcxJZ!A",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "address",
-                                    "value": "fugit",
+                                    "value": "praesentium",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "phone_number",
-                                    "value": "distinctio",
+                                    "value": "illum",
                                     "type": "text",
                                     "description": ""
-                                },
-                                {
-                                    "key": "profile_pic",
-                                    "src": [],
-                                    "type": "file"
                                 }
                             ]
                         },
@@ -108,7 +109,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"leif72@example.org\",\"password\":\"0\\\\DHG:AlqNO*>?\"}"
+                            "raw": "{\"email\":\"ian76@example.org\",\"password\":\"{_aV!Uh]\\\"nUgRH\"}"
                         },
                         "description": "This endpoint allows authenticate or log in a user.\n<aside class=\"notice\">\nAn authentication token is always generated upon successful login.\n<\/aside>",
                         "auth": {
@@ -163,7 +164,7 @@
                                 {
                                     "id": "purchase_goal",
                                     "key": "purchase_goal",
-                                    "value": "asperiores",
+                                    "value": "consequatur",
                                     "description": ""
                                 }
                             ]
@@ -260,73 +261,73 @@
                             "formdata": [
                                 {
                                     "key": "title",
-                                    "value": "s",
+                                    "value": "uehglakbwbbttkjuqbshcxk",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "description",
-                                    "value": "Sit amet iure sit alias at dolores.",
+                                    "value": "Possimus eos sint et quia voluptas distinctio impedit.",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "target_amount",
-                                    "value": "24",
+                                    "value": "60",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "amount_per_person",
-                                    "value": "11",
+                                    "value": "83",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "product_name",
-                                    "value": "et",
+                                    "value": "odit",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "product_description",
-                                    "value": "repellat",
+                                    "value": "dignissimos",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "product_unit_price",
-                                    "value": "68",
+                                    "value": "16",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "product_bulk_price",
-                                    "value": "79",
+                                    "value": "45",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "product_quantity",
-                                    "value": "76",
+                                    "value": "25",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "group_link",
-                                    "value": "p",
+                                    "value": "dzlsgnvxqx",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "start_date",
-                                    "value": "2025-01-21T05:15:32",
+                                    "value": "2025-01-21T05:30:20",
                                     "type": "text",
                                     "description": "Must be a valid date."
                                 },
                                 {
                                     "key": "end_date",
-                                    "value": "2089-02-03",
+                                    "value": "2052-09-25",
                                     "type": "text",
                                     "description": "Must be a valid date. Must be a date after or equal to <code>start_date<\/code>."
                                 },
@@ -356,7 +357,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "in",
+                                    "value": "fugit",
                                     "description": "The ID of the purchase goal."
                                 }
                             ]
@@ -412,7 +413,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quia",
+                                    "value": "debitis",
                                     "description": "The ID of the purchase goal."
                                 }
                             ]
@@ -433,73 +434,73 @@
                             "formdata": [
                                 {
                                     "key": "title",
-                                    "value": "yeijez",
+                                    "value": "xayinqiombdrygwhxrhb",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "description",
-                                    "value": "Eum autem est provident et ad eveniet.",
+                                    "value": "Necessitatibus neque quibusdam vel.",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "target_amount",
-                                    "value": "3",
+                                    "value": "82",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "amount_per_person",
-                                    "value": "8",
+                                    "value": "13",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "product_name",
-                                    "value": "laborum",
+                                    "value": "optio",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "product_description",
-                                    "value": "quam",
+                                    "value": "minima",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "product_unit_price",
-                                    "value": "58",
+                                    "value": "28",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "product_bulk_price",
-                                    "value": "44",
+                                    "value": "67",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "product_quantity",
-                                    "value": "70",
+                                    "value": "58",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "group_link",
-                                    "value": "bypwnzrmcqrpzmciwmhp",
+                                    "value": "a",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "start_date",
-                                    "value": "2025-01-21T05:15:32",
+                                    "value": "2025-01-21T05:30:20",
                                     "type": "text",
                                     "description": "Must be a valid date."
                                 },
                                 {
                                     "key": "end_date",
-                                    "value": "2104-09-28",
+                                    "value": "2081-07-02",
                                     "type": "text",
                                     "description": "Must be a valid date. Must be a date after or equal to <code>start_date<\/code>."
                                 },
@@ -534,7 +535,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "iusto",
+                                    "value": "nobis",
                                     "description": "The ID of the purchase goal."
                                 }
                             ]
@@ -570,7 +571,7 @@
                                 {
                                     "id": "purchase_goal",
                                     "key": "purchase_goal",
-                                    "value": "ratione",
+                                    "value": "id",
                                     "description": ""
                                 }
                             ]
@@ -626,7 +627,7 @@
                                 {
                                     "id": "purchase_goal",
                                     "key": "purchase_goal",
-                                    "value": "et",
+                                    "value": "dolor",
                                     "description": ""
                                 }
                             ]
@@ -662,13 +663,13 @@
                                 {
                                     "id": "purchase_goal_id",
                                     "key": "purchase_goal_id",
-                                    "value": "10",
+                                    "value": "7",
                                     "description": "The ID of the purchase goal."
                                 },
                                 {
                                     "id": "user_id",
                                     "key": "user_id",
-                                    "value": "15",
+                                    "value": "12",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -704,13 +705,13 @@
                                 {
                                     "id": "purchase_goal_id",
                                     "key": "purchase_goal_id",
-                                    "value": "4",
+                                    "value": "20",
                                     "description": "The ID of the purchase goal."
                                 },
                                 {
                                     "id": "user_id",
                                     "key": "user_id",
-                                    "value": "13",
+                                    "value": "2",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -774,7 +775,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "11",
+                                    "value": "9",
                                     "description": "The ID of the product."
                                 }
                             ]
@@ -810,7 +811,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "15",
+                                    "value": "5",
                                     "description": "The ID of the product."
                                 }
                             ]
