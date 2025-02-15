@@ -13,13 +13,13 @@ Route::controller(AuthenticationController::class)->group(function () {
 });
 
 // Purchase Goal endpoints
-Route::controller(PurchaseGoalController::class)->middleware(['auth:sanctum'])->group(function () {
-    Route::post('purchase-goals/{id}/change-status', 'changeStatus');
+Route::controller(PurchaseGoalController::class)->group(function () {
+    Route::post('purchase-goals/{id}/change-status', 'changeStatus')->middleware('auth:sanctum');
     Route::get('purchase-goals', 'index')->withoutMiddleware('auth:sanctum');
     Route::get('purchase-goals/{id}', 'show')->withoutMiddleware('auth:sanctum');
-    Route::post('purchase-goals', 'store');
-    Route::match(['put', 'patch'],'purchase-goals/{id}', 'update');
-    Route::delete('purchase-goals/{id}', 'destroy');
+    Route::post('purchase-goals', 'store')->middleware('auth:sanctum');
+    Route::match(['put', 'patch'],'purchase-goals/{id}', 'update')->middleware('auth:sanctum');
+    Route::delete('purchase-goals/{id}', 'destroy')->middleware('auth:sanctum');
 });
 
 // Participation endpoints
