@@ -5,56 +5,6 @@ description: 'Endpoints for managing user participation in purchase goals'
 endpoints:
   -
     httpMethods:
-      - GET
-    uri: 'api/purchase-goals/{id}/participants'
-    metadata:
-      groupName: 'User Participation'
-      groupDescription: 'Endpoints for managing user participation in purchase goals'
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Get participants of a purchase goal.'
-      description: 'Retrieve all participants of a specified purchase goal.'
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the purchase goal.'
-        required: true
-        example: 20
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      id: 20
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
       - POST
     uri: 'api/purchase-goals/{id}/join'
     metadata:
@@ -74,14 +24,14 @@ endpoints:
         name: id
         description: 'The ID of the purchase goal.'
         required: true
-        example: 4
-        type: integer
+        example: tenetur
+        type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 4
+      id: tenetur
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -115,7 +65,7 @@ endpoints:
         name: id
         description: 'The ID of the purchase goal.'
         required: true
-        example: 11
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -125,15 +75,15 @@ endpoints:
         name: user_id
         description: 'The ID of the user.'
         required: true
-        example: 20
+        example: 5
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 11
-      user_id: 20
+      id: 1
+      user_id: 5
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -167,7 +117,7 @@ endpoints:
         name: id
         description: 'The ID of the purchase goal.'
         required: true
-        example: 11
+        example: 12
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -177,15 +127,15 @@ endpoints:
         name: user_id
         description: 'The ID of the user.'
         required: true
-        example: 13
+        example: 12
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 11
-      user_id: 13
+      id: 12
+      user_id: 12
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

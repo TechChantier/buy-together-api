@@ -3,7 +3,7 @@
 This API aims to provide all the information you need in order to work with our API
 
 <aside>
-    <strong>Base URL</strong>: <code>http://localhost</code>
+    <strong>Base URL</strong>: <code>https://rrn24.techchantier.site/buy-together-api/public</code>
 </aside>
 
 This documentation aims to provide all the information you need to work with our API.

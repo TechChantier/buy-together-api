@@ -25,113 +25,20 @@ endpoints:
         name: id
         description: 'The ID of the purchase goal.'
         required: true
-        example: aut
+        example: mollitia
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: aut
+      id: mollitia
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: api/purchase-goals
-    metadata:
-      groupName: 'Purchase Goals'
-      groupDescription: 'Endpoints for managing purchase goals'
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Listing of all purchase goals.'
-      description: |-
-        This endpoint allows users to view purchase goals.
-        <aside class="notice">
-        Users must NOT be authenticated to access this endpoint.
-        </aside>
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"success":true,"message":"Purchase goals retrieved successfully.","statusCode":200,"data":[]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/purchase-goals/{id}'
-    metadata:
-      groupName: 'Purchase Goals'
-      groupDescription: 'Endpoints for managing purchase goals'
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Fetch details of a specific purchase goal.'
-      description: 'This endpoint allows users to view the details of a purchase goal by ID.'
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the purchase goal.'
-        required: true
-        example: 20
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      id: 20
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 404
-        content: '{"success":false,"message":"Purchase goal not found.","statusCode":404}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -167,7 +74,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: zotjgcurbqueiftgw
+        example: yxfvp
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -177,7 +84,7 @@ endpoints:
         name: description
         description: ''
         required: true
-        example: 'Molestiae exercitationem qui corrupti sint.'
+        example: 'Tempora porro et placeat molestiae voluptas sunt officia.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -187,7 +94,7 @@ endpoints:
         name: target_amount
         description: 'Must be at least 0.'
         required: true
-        example: 49
+        example: 23
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -197,7 +104,7 @@ endpoints:
         name: amount_per_person
         description: 'Must be at least 0.'
         required: false
-        example: 45
+        example: 66
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -207,7 +114,7 @@ endpoints:
         name: product_name
         description: ''
         required: true
-        example: suscipit
+        example: ducimus
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -217,7 +124,7 @@ endpoints:
         name: product_description
         description: ''
         required: true
-        example: quis
+        example: ratione
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -237,7 +144,7 @@ endpoints:
         name: product_bulk_price
         description: 'Must be at least 0.'
         required: false
-        example: 83
+        example: 85
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -247,7 +154,7 @@ endpoints:
         name: product_quantity
         description: 'Must be at least 0.'
         required: true
-        example: 77
+        example: 88
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -267,7 +174,7 @@ endpoints:
         name: group_link
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: hpdzjsj
+        example: bihdjxikzdfad
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -277,7 +184,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-01-21T13:59:48'
+        example: '2025-02-25T17:09:47'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -287,25 +194,25 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: false
-        example: '2067-09-18'
+        example: '2047-09-03'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      title: zotjgcurbqueiftgw
-      description: 'Molestiae exercitationem qui corrupti sint.'
-      target_amount: 49
-      amount_per_person: 45
-      product_name: suscipit
-      product_description: quis
+      title: yxfvp
+      description: 'Tempora porro et placeat molestiae voluptas sunt officia.'
+      target_amount: 23
+      amount_per_person: 66
+      product_name: ducimus
+      product_description: ratione
       product_unit_price: 25
-      product_bulk_price: 83
-      product_quantity: 77
-      group_link: hpdzjsj
-      start_date: '2025-01-21T13:59:48'
-      end_date: '2067-09-18'
+      product_bulk_price: 85
+      product_quantity: 88
+      group_link: bihdjxikzdfad
+      start_date: '2025-02-25T17:09:47'
+      end_date: '2047-09-03'
     fileParameters:
       product_image: null
     responses: []
@@ -341,14 +248,14 @@ endpoints:
         name: id
         description: 'The ID of the purchase goal.'
         required: true
-        example: 6
-        type: integer
+        example: similique
+        type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 6
+      id: similique
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -356,7 +263,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: wxuv
+        example: upjzoirnjuf
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -366,7 +273,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Enim iure enim sed odit et enim suscipit.'
+        example: 'Iusto numquam placeat est.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -376,7 +283,7 @@ endpoints:
         name: target_amount
         description: 'Must be at least 0.'
         required: false
-        example: 77
+        example: 74
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -386,7 +293,7 @@ endpoints:
         name: amount_per_person
         description: 'Must be at least 0.'
         required: false
-        example: 52
+        example: 77
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -396,7 +303,7 @@ endpoints:
         name: product_name
         description: ''
         required: false
-        example: recusandae
+        example: rerum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -406,7 +313,7 @@ endpoints:
         name: product_description
         description: ''
         required: false
-        example: occaecati
+        example: minima
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -416,7 +323,7 @@ endpoints:
         name: product_unit_price
         description: 'Must be at least 0.'
         required: false
-        example: 16
+        example: 52
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -426,7 +333,7 @@ endpoints:
         name: product_bulk_price
         description: 'Must be at least 0.'
         required: false
-        example: 31
+        example: 60
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -436,7 +343,7 @@ endpoints:
         name: product_quantity
         description: 'Must be at least 0.'
         required: false
-        example: 4
+        example: 3
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -456,7 +363,7 @@ endpoints:
         name: group_link
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: vinitbvdhsqgnzhhjcmdtlw
+        example: akrudlxbqlvdwla
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -466,7 +373,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: false
-        example: '2025-01-21T13:59:48'
+        example: '2025-02-25T17:09:47'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -476,25 +383,25 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: false
-        example: '2038-10-09'
+        example: '2045-04-20'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      title: wxuv
-      description: 'Enim iure enim sed odit et enim suscipit.'
-      target_amount: 77
-      amount_per_person: 52
-      product_name: recusandae
-      product_description: occaecati
-      product_unit_price: 16
-      product_bulk_price: 31
-      product_quantity: 4
-      group_link: vinitbvdhsqgnzhhjcmdtlw
-      start_date: '2025-01-21T13:59:48'
-      end_date: '2038-10-09'
+      title: upjzoirnjuf
+      description: 'Iusto numquam placeat est.'
+      target_amount: 74
+      amount_per_person: 77
+      product_name: rerum
+      product_description: minima
+      product_unit_price: 52
+      product_bulk_price: 60
+      product_quantity: 3
+      group_link: akrudlxbqlvdwla
+      start_date: '2025-02-25T17:09:47'
+      end_date: '2045-04-20'
     fileParameters:
       product_image: null
     responses: []
@@ -529,14 +436,14 @@ endpoints:
         name: id
         description: 'The ID of the purchase goal.'
         required: true
-        example: 10
-        type: integer
+        example: nulla
+        type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 10
+      id: nulla
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
