@@ -5,7 +5,7 @@ info:
   version: 1.0.0
 servers:
   -
-    url: 'http://localhost'
+    url: 'https://rrn24.techchantier.site/buy-together-api/public'
 paths:
   /api/register:
     post:
@@ -26,27 +26,27 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: fpjtbjpvqveb
+                  example: wsybpizvoeyrjalgulgjz
                   nullable: false
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: raina52@example.org
+                  example: stevie.huels@example.net
                   nullable: true
                 password:
                   type: string
                   description: ''
-                  example: 'e.`\UzNA.>i%](}p'
+                  example: 'KcQ49HwO,wK{2X"m*5J}'
                   nullable: false
                 address:
                   type: string
                   description: ''
-                  example: quos
+                  example: magni
                   nullable: false
                 phone_number:
                   type: string
                   description: ''
-                  example: dolor
+                  example: illo
                   nullable: false
                 profile_pic:
                   type: string
@@ -78,12 +78,12 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: abbie31@example.net
+                  example: tomasa.roob@example.net
                   nullable: false
                 password:
                   type: string
                   description: ''
-                  example: _jUj>ci
+                  example: dTOTefto.p!4tm3
                   nullable: false
               required:
                 - email
@@ -114,7 +114,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the purchase goal.'
-        example: mollitia
+        example: sint
         required: true
         schema:
           type: string
@@ -137,47 +137,47 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: yxfvp
+                  example: qukbdnrojij
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Tempora porro et placeat molestiae voluptas sunt officia.'
+                  example: 'Aut ex ipsum quisquam voluptas dolor.'
                   nullable: false
                 target_amount:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 23
+                  example: 1
                   nullable: false
                 amount_per_person:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 66
+                  example: 57
                   nullable: true
                 product_name:
                   type: string
                   description: ''
-                  example: ducimus
+                  example: expedita
                   nullable: false
                 product_description:
                   type: string
                   description: ''
-                  example: ratione
+                  example: totam
                   nullable: false
                 product_unit_price:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 25
+                  example: 28
                   nullable: false
                 product_bulk_price:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 85
+                  example: 19
                   nullable: true
                 product_quantity:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 88
+                  example: 31
                   nullable: false
                 product_image:
                   type: string
@@ -187,17 +187,17 @@ paths:
                 group_link:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: bihdjxikzdfad
+                  example: untemrusyxbkxqmqlm
                   nullable: true
                 start_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2025-02-25T17:09:47'
+                  example: '2025-02-27T13:17:38'
                   nullable: false
                 end_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
-                  example: '2047-09-03'
+                  example: '2026-10-08'
                   nullable: true
               required:
                 - title
@@ -228,47 +228,47 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: upjzoirnjuf
+                  example: pixzhgitzx
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Iusto numquam placeat est.'
+                  example: 'Cupiditate non consequatur impedit minus maiores enim.'
                   nullable: false
                 target_amount:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 74
+                  example: 49
                   nullable: false
                 amount_per_person:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 77
+                  example: 6
                   nullable: true
                 product_name:
                   type: string
                   description: ''
-                  example: rerum
+                  example: consequatur
                   nullable: false
                 product_description:
                   type: string
                   description: ''
-                  example: minima
+                  example: maxime
                   nullable: false
                 product_unit_price:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 52
+                  example: 15
                   nullable: false
                 product_bulk_price:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 60
+                  example: 4
                   nullable: true
                 product_quantity:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 3
+                  example: 82
                   nullable: false
                 product_image:
                   type: string
@@ -278,17 +278,17 @@ paths:
                 group_link:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: akrudlxbqlvdwla
+                  example: goqeytvpggpqf
                   nullable: true
                 start_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2025-02-25T17:09:47'
+                  example: '2025-02-27T13:17:38'
                   nullable: false
                 end_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
-                  example: '2045-04-20'
+                  example: '2070-11-20'
                   nullable: true
       security: []
     delete:
@@ -305,7 +305,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the purchase goal.'
-        example: similique
+        example: molestias
         required: true
         schema:
           type: string
@@ -324,7 +324,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the purchase goal.'
-        example: tenetur
+        example: et
         required: true
         schema:
           type: string
@@ -343,7 +343,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the purchase goal.'
-        example: 1
+        example: 9
         required: true
         schema:
           type: integer
@@ -351,7 +351,7 @@ paths:
         in: path
         name: user_id
         description: 'The ID of the user.'
-        example: 5
+        example: 10
         required: true
         schema:
           type: integer

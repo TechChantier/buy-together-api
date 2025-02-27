@@ -24,14 +24,14 @@ endpoints:
         name: id
         description: 'The ID of the purchase goal.'
         required: true
-        example: tenetur
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: tenetur
+      id: et
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -65,7 +65,7 @@ endpoints:
         name: id
         description: 'The ID of the purchase goal.'
         required: true
-        example: 1
+        example: 9
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -75,15 +75,15 @@ endpoints:
         name: user_id
         description: 'The ID of the user.'
         required: true
-        example: 5
+        example: 10
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 1
-      user_id: 5
+      id: 9
+      user_id: 10
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

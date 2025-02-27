@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Buy Together API Documentation",
-        "_postman_id": "aebabb51-af66-4a0b-aeff-f9c59cbb5518",
+        "_postman_id": "627b49df-ac2d-4b1f-9fe8-c4f95fb2be35",
         "description": "This API aims to provide all the information you need in order to work with our API",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -44,31 +44,31 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "fpjtbjpvqveb",
+                                    "value": "wsybpizvoeyrjalgulgjz",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "email",
-                                    "value": "raina52@example.org",
+                                    "value": "stevie.huels@example.net",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "password",
-                                    "value": "e.`\\UzNA.>i%](}p",
+                                    "value": "KcQ49HwO,wK{2X\"m*5J}",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "address",
-                                    "value": "quos",
+                                    "value": "magni",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "phone_number",
-                                    "value": "dolor",
+                                    "value": "illo",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -108,7 +108,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"abbie31@example.net\",\"password\":\"_jUj>ci\"}"
+                            "raw": "{\"email\":\"tomasa.roob@example.net\",\"password\":\"dTOTefto.p!4tm3\"}"
                         },
                         "description": "This endpoint allows authenticate or log in a user.\n<aside class=\"notice\">\nAn authentication token is always generated upon successful login.\n<\/aside>",
                         "auth": {
@@ -163,7 +163,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "mollitia",
+                                    "value": "sint",
                                     "description": "The ID of the purchase goal."
                                 }
                             ]
@@ -212,73 +212,73 @@
                             "formdata": [
                                 {
                                     "key": "title",
-                                    "value": "yxfvp",
+                                    "value": "qukbdnrojij",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "description",
-                                    "value": "Tempora porro et placeat molestiae voluptas sunt officia.",
+                                    "value": "Aut ex ipsum quisquam voluptas dolor.",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "target_amount",
-                                    "value": "23",
+                                    "value": "1",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "amount_per_person",
-                                    "value": "66",
+                                    "value": "57",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "product_name",
-                                    "value": "ducimus",
+                                    "value": "expedita",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "product_description",
-                                    "value": "ratione",
+                                    "value": "totam",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "product_unit_price",
-                                    "value": "25",
+                                    "value": "28",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "product_bulk_price",
-                                    "value": "85",
+                                    "value": "19",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "product_quantity",
-                                    "value": "88",
+                                    "value": "31",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "group_link",
-                                    "value": "bihdjxikzdfad",
+                                    "value": "untemrusyxbkxqmqlm",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "start_date",
-                                    "value": "2025-02-25T17:09:47",
+                                    "value": "2025-02-27T13:17:38",
                                     "type": "text",
                                     "description": "Must be a valid date."
                                 },
                                 {
                                     "key": "end_date",
-                                    "value": "2047-09-03",
+                                    "value": "2026-10-08",
                                     "type": "text",
                                     "description": "Must be a valid date. Must be a date after or equal to <code>start_date<\/code>."
                                 },
@@ -308,7 +308,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "similique",
+                                    "value": "molestias",
                                     "description": "The ID of the purchase goal."
                                 }
                             ]
@@ -329,73 +329,73 @@
                             "formdata": [
                                 {
                                     "key": "title",
-                                    "value": "upjzoirnjuf",
+                                    "value": "pixzhgitzx",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "description",
-                                    "value": "Iusto numquam placeat est.",
+                                    "value": "Cupiditate non consequatur impedit minus maiores enim.",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "target_amount",
-                                    "value": "74",
+                                    "value": "49",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "amount_per_person",
-                                    "value": "77",
+                                    "value": "6",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "product_name",
-                                    "value": "rerum",
+                                    "value": "consequatur",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "product_description",
-                                    "value": "minima",
+                                    "value": "maxime",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "product_unit_price",
-                                    "value": "52",
+                                    "value": "15",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "product_bulk_price",
-                                    "value": "60",
+                                    "value": "4",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "product_quantity",
-                                    "value": "3",
+                                    "value": "82",
                                     "type": "text",
                                     "description": "Must be at least 0."
                                 },
                                 {
                                     "key": "group_link",
-                                    "value": "akrudlxbqlvdwla",
+                                    "value": "goqeytvpggpqf",
                                     "type": "text",
                                     "description": "Must not be greater than 255 characters."
                                 },
                                 {
                                     "key": "start_date",
-                                    "value": "2025-02-25T17:09:47",
+                                    "value": "2025-02-27T13:17:38",
                                     "type": "text",
                                     "description": "Must be a valid date."
                                 },
                                 {
                                     "key": "end_date",
-                                    "value": "2045-04-20",
+                                    "value": "2070-11-20",
                                     "type": "text",
                                     "description": "Must be a valid date. Must be a date after or equal to <code>start_date<\/code>."
                                 },
@@ -430,7 +430,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "nulla",
+                                    "value": "sit",
                                     "description": "The ID of the purchase goal."
                                 }
                             ]
@@ -472,7 +472,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "tenetur",
+                                    "value": "et",
                                     "description": "The ID of the purchase goal."
                                 }
                             ]
@@ -508,13 +508,13 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "1",
+                                    "value": "9",
                                     "description": "The ID of the purchase goal."
                                 },
                                 {
                                     "id": "user_id",
                                     "key": "user_id",
-                                    "value": "5",
+                                    "value": "10",
                                     "description": "The ID of the user."
                                 }
                             ]
