@@ -11,6 +11,9 @@ use App\Services\MediaService;
 use Exception;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Knuckles\Scribe\Attributes\Group;
+
+#[Group('Authentication', 'Endpoints for login, registration, and logout')]
 
 class AuthenticationController extends Controller
 {
@@ -20,6 +23,11 @@ class AuthenticationController extends Controller
 
     /**
      * User registration
+     *
+     * This endpoint allows you to register a new user.
+     * <aside class="notice">
+     * Users will not be able to create or join purchase goals if they are not registered and logged in
+     * </aside>
      */
     public function register(RegisterRequest $request)
     {
@@ -36,17 +44,20 @@ class AuthenticationController extends Controller
                 'address' => $validatedRequest['address'],
             ]);
 
-            if ($request->hasFile('avatar')) {
-                $response = $this->mediaService->uploadFile($request->file('avatar'), 'avatars');
+            if ($request->hasFile('profile_pic')) {
+                $response = $this->mediaService->uploadFile($request->file('profile_pic'), 'profile_pics');
 
                 if ($response['success']) {
-                    $user->avatar = $response['path'];
+                    $user->profile_pic = $response['path'];
                     $user->save();
                 } else {
-                    throw new Exception($response['message']);
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'Unable to upload profile picture',
+                    ], 500);
                 }
             }
- 
+
             DB::commit();
 
             $user->load('purchaseGoals');
@@ -74,6 +85,11 @@ class AuthenticationController extends Controller
 
     /**
      * User authentication
+     * 
+     * This endpoint allows authenticate or log in a user.
+     * <aside class="notice">
+     * An authentication token is always generated upon successful login.
+     * </aside>
      */
     public function login(LoginRequest $request)
     {
@@ -101,17 +117,25 @@ class AuthenticationController extends Controller
 
     /**
      * User logout from application
+     * 
+     * This endpoint allows you to logout a user from your app.
+     * <aside class="notice">
+     * It requires the auth token of the user to be logged out
+     * </aside>
      */
     public function logout()
     {
+        /** @var User $user * */
         try {
-            Auth::user()->tokens()->delete();
+            $user = Auth::user();
+
+            $user->tokens()->delete();
 
             return response()->json([
                 'success' => true,
                 'message' => 'Logout successful',
             ], 200);
-            
+
         } catch (Exception $e) {
             logger()->error('Logout failed', [
                 'error' => $e->getMessage(),

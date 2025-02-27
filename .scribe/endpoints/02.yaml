@@ -1,0 +1,148 @@
+name: 'User Participation'
+description: 'Endpoints for managing user participation in purchase goals'
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: 'api/purchase-goals/{id}/join'
+    metadata:
+      groupName: 'User Participation'
+      groupDescription: 'Endpoints for managing user participation in purchase goals'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Join a purchase goal.'
+      description: 'Allows a user to join a specific purchase goal.'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the purchase goal.'
+        required: true
+        example: tenetur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: tenetur
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/purchase-goals/{id}/approve/{user_id}'
+    metadata:
+      groupName: 'User Participation'
+      groupDescription: 'Endpoints for managing user participation in purchase goals'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Approve a purchase goal.'
+      description: 'Allows a user to APPROVE another user to join purchase goal.'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the purchase goal.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      user_id:
+        name: user_id
+        description: 'The ID of the user.'
+        required: true
+        example: 5
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+      user_id: 5
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/purchase-goals/{id}/decline/{user_id}'
+    metadata:
+      groupName: 'User Participation'
+      groupDescription: 'Endpoints for managing user participation in purchase goals'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Decline request to join a purchase goal.'
+      description: 'Allows user to DECLINE a request from another user to join purchase goal.'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the purchase goal.'
+        required: true
+        example: 12
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      user_id:
+        name: user_id
+        description: 'The ID of the user.'
+        required: true
+        example: 12
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 12
+      user_id: 12
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

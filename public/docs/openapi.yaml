@@ -1,0 +1,403 @@
+openapi: 3.0.3
+info:
+  title: 'Buy Together API Documentation'
+  description: 'This API aims to provide all the information you need in order to work with our API'
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/register:
+    post:
+      summary: 'User registration'
+      operationId: userRegistration
+      description: "This endpoint allows you to register a new user.\n<aside class=\"notice\">\nUsers will not be able to create or join purchase goals if they are not registered and logged in\n</aside>"
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: fpjtbjpvqveb
+                  nullable: false
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: raina52@example.org
+                  nullable: true
+                password:
+                  type: string
+                  description: ''
+                  example: 'e.`\UzNA.>i%](}p'
+                  nullable: false
+                address:
+                  type: string
+                  description: ''
+                  example: quos
+                  nullable: false
+                phone_number:
+                  type: string
+                  description: ''
+                  example: dolor
+                  nullable: false
+                profile_pic:
+                  type: string
+                  format: binary
+                  description: 'Must be a file. Must not be greater than 51200 kilobytes.'
+                  nullable: true
+              required:
+                - name
+                - password
+                - address
+                - phone_number
+      security: []
+  /api/login:
+    post:
+      summary: 'User authentication'
+      operationId: userAuthentication
+      description: "This endpoint allows authenticate or log in a user.\n<aside class=\"notice\">\nAn authentication token is always generated upon successful login.\n</aside>"
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: abbie31@example.net
+                  nullable: false
+                password:
+                  type: string
+                  description: ''
+                  example: _jUj>ci
+                  nullable: false
+              required:
+                - email
+                - password
+      security: []
+  /api/logout:
+    post:
+      summary: 'User logout from application'
+      operationId: userLogoutFromApplication
+      description: "This endpoint allows you to logout a user from your app.\n<aside class=\"notice\">\nIt requires the auth token of the user to be logged out\n</aside>"
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+      security: []
+  '/api/purchase-goals/{id}/change-status':
+    post:
+      summary: 'Change the status of specified purchase goal'
+      operationId: changeTheStatusOfSpecifiedPurchaseGoal
+      description: "<aside class=\"notice\">\nOnly the owner of the goal can change its status from open to close and vice versa.\n</aside>"
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Purchase Goals'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the purchase goal.'
+        example: mollitia
+        required: true
+        schema:
+          type: string
+  /api/purchase-goals:
+    post:
+      summary: 'Create a new purchase goal.'
+      operationId: createANewPurchaseGoal
+      description: "This endpoint allows users to create a purchase goal.\n<aside class=\"notice\">\nUsers must be authenticated to access this endpoint.\n</aside>"
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Purchase Goals'
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: yxfvp
+                  nullable: false
+                description:
+                  type: string
+                  description: ''
+                  example: 'Tempora porro et placeat molestiae voluptas sunt officia.'
+                  nullable: false
+                target_amount:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 23
+                  nullable: false
+                amount_per_person:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 66
+                  nullable: true
+                product_name:
+                  type: string
+                  description: ''
+                  example: ducimus
+                  nullable: false
+                product_description:
+                  type: string
+                  description: ''
+                  example: ratione
+                  nullable: false
+                product_unit_price:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 25
+                  nullable: false
+                product_bulk_price:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 85
+                  nullable: true
+                product_quantity:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 88
+                  nullable: false
+                product_image:
+                  type: string
+                  format: binary
+                  description: 'Must be a file. Must not be greater than 51200 kilobytes.'
+                  nullable: true
+                group_link:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: bihdjxikzdfad
+                  nullable: true
+                start_date:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2025-02-25T17:09:47'
+                  nullable: false
+                end_date:
+                  type: string
+                  description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
+                  example: '2047-09-03'
+                  nullable: true
+              required:
+                - title
+                - description
+                - target_amount
+                - product_name
+                - product_description
+                - product_unit_price
+                - product_quantity
+                - start_date
+      security: []
+  '/api/purchase-goals/{id}':
+    put:
+      summary: 'Update an existing purchase goal.'
+      operationId: updateAnExistingPurchaseGoal
+      description: "This endpoint allows users to update details of a purchase goal.\n<aside class=\"notice\">\nOnly the owner of the goal can update it.\n</aside>"
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Purchase Goals'
+      requestBody:
+        required: false
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: upjzoirnjuf
+                  nullable: false
+                description:
+                  type: string
+                  description: ''
+                  example: 'Iusto numquam placeat est.'
+                  nullable: false
+                target_amount:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 74
+                  nullable: false
+                amount_per_person:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 77
+                  nullable: true
+                product_name:
+                  type: string
+                  description: ''
+                  example: rerum
+                  nullable: false
+                product_description:
+                  type: string
+                  description: ''
+                  example: minima
+                  nullable: false
+                product_unit_price:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 52
+                  nullable: false
+                product_bulk_price:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 60
+                  nullable: true
+                product_quantity:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 3
+                  nullable: false
+                product_image:
+                  type: string
+                  format: binary
+                  description: 'Must be a file. Must not be greater than 51200 kilobytes.'
+                  nullable: true
+                group_link:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: akrudlxbqlvdwla
+                  nullable: true
+                start_date:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2025-02-25T17:09:47'
+                  nullable: false
+                end_date:
+                  type: string
+                  description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
+                  example: '2045-04-20'
+                  nullable: true
+      security: []
+    delete:
+      summary: 'Delete a purchase goal.'
+      operationId: deleteAPurchaseGoal
+      description: "This endpoint allows users to delete a specific purchase goal by ID.\n<aside class=\"notice\">\nOnly the owner of the goal can delete it.\n</aside>"
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Purchase Goals'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the purchase goal.'
+        example: similique
+        required: true
+        schema:
+          type: string
+  '/api/purchase-goals/{id}/join':
+    post:
+      summary: 'Join a purchase goal.'
+      operationId: joinAPurchaseGoal
+      description: 'Allows a user to join a specific purchase goal.'
+      parameters: []
+      responses: {  }
+      tags:
+        - 'User Participation'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the purchase goal.'
+        example: tenetur
+        required: true
+        schema:
+          type: string
+  '/api/purchase-goals/{id}/approve/{user_id}':
+    post:
+      summary: 'Approve a purchase goal.'
+      operationId: approveAPurchaseGoal
+      description: 'Allows a user to APPROVE another user to join purchase goal.'
+      parameters: []
+      responses: {  }
+      tags:
+        - 'User Participation'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the purchase goal.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+      -
+        in: path
+        name: user_id
+        description: 'The ID of the user.'
+        example: 5
+        required: true
+        schema:
+          type: integer
+  '/api/purchase-goals/{id}/decline/{user_id}':
+    post:
+      summary: 'Decline request to join a purchase goal.'
+      operationId: declineRequestToJoinAPurchaseGoal
+      description: 'Allows user to DECLINE a request from another user to join purchase goal.'
+      parameters: []
+      responses: {  }
+      tags:
+        - 'User Participation'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the purchase goal.'
+        example: 12
+        required: true
+        schema:
+          type: integer
+      -
+        in: path
+        name: user_id
+        description: 'The ID of the user.'
+        example: 12
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: Authentication
+    description: 'Endpoints for login, registration, and logout'
+  -
+    name: 'Purchase Goals'
+    description: 'Endpoints for managing purchase goals'
+  -
+    name: 'User Participation'
+    description: 'Endpoints for managing user participation in purchase goals'
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: 'You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.'
+security:
+  -
+    default: []

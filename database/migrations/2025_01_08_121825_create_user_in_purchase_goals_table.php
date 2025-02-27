@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('user_in_purchase_goals', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('purchase_goal_id');
+            $table->enum('status', ['pending', 'approved', 'declined'])->default('pending');
+            $table->unsignedInteger('contributed_amount')->nullable();
+            $table->dateTime('joined_at');
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('purchase_goal_id')->references('id')->on('purchase_goals')->onDelete('cascade');
         });
     }
 
