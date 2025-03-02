@@ -22,7 +22,7 @@ class ProductFactory extends Factory
             'bulk_price' => $this->faker->randomFloat(2, 50, 5000),
             'quantity' => $this->faker->numberBetween(1, 100),
             'image' => 'https://placehold.co/300x300/',
-            'purchase_goal_id' => PurchaseGoal::factory(),
+            'purchase_goal_id' => $this->faker->numberBetween(1, PurchaseGoal::count()),
         ];
     }
 }
