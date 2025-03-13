@@ -149,9 +149,10 @@ class ParticipationController extends Controller
      *
      * Allows a user to APPROVE another user to join purchase goal.
      */
-    public function approve(int $purchaseGoalId, User $user)
+    public function approve(int $purchaseGoalId, int $userId)
     {
         $purchaseGoal = PurchaseGoal::find($purchaseGoalId);
+        $user = User::find($userId);
         logger($user);
         if (Auth::id() !== $purchaseGoal->creator_id) {
             return response()->json([
@@ -201,9 +202,10 @@ class ParticipationController extends Controller
      *
      * Allows user to DECLINE a request from another user to join purchase goal.
      */
-    public function decline(PurchaseGoal $purchaseGoal, User $user)
+    public function decline(PurchaseGoal $purchaseGoal, int $userId)
     {
         $purchaseGoal = PurchaseGoal::find($purchaseGoalId);
+        $user = User::find($userId);
         if (Auth::id() !== $purchaseGoal->creator_id) {
             return response()->json([
                 'success' => false,
