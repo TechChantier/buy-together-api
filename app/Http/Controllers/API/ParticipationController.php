@@ -149,9 +149,10 @@ class ParticipationController extends Controller
      *
      * Allows a user to APPROVE another user to join purchase goal.
      */
-    public function approve(PurchaseGoal $purchaseGoal, User $user)
+    public function approve(int $purchaseGoalId, User $user)
     {
-
+        $purchaseGoal = PurchaseGoal::find($purchaseGoalId);
+        
         $joinRequest = $purchaseGoal->participants()
             ->where('user_id', $user->id)
             ->where('status', 'pending')
