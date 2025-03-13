@@ -152,7 +152,7 @@ class ParticipationController extends Controller
     public function approve(int $purchaseGoalId, User $user)
     {
         $purchaseGoal = PurchaseGoal::find($purchaseGoalId);
-        
+        logger($purchaseGoal);
         $joinRequest = $purchaseGoal->participants()
             ->where('user_id', $user->id)
             ->where('status', 'pending')
