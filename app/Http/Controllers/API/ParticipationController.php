@@ -202,7 +202,7 @@ class ParticipationController extends Controller
      *
      * Allows user to DECLINE a request from another user to join purchase goal.
      */
-    public function decline(PurchaseGoal $purchaseGoal, int $userId)
+    public function decline(int $purchaseGoalId, int $userId)
     {
         $purchaseGoal = PurchaseGoal::find($purchaseGoalId);
         $user = User::find($userId);
