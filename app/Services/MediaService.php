@@ -17,7 +17,7 @@ class MediaService
             return [
                 'success' => true,
                 'message' => 'File uploaded successfully.',
-                'path' => $path,
+                'path' => asset($path),
             ];
         } catch (\Exception $e) {
             logger()->error('File upload failed', [
