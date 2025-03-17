@@ -39,7 +39,7 @@ class MediaService
     public function deleteFile(string $path, ?string $disk = 'public'): array
     {
         try {
-            $deleted = Storage::disk($disk)->delete($path);
+            $deleted = Storage::disk($disk)->delete(asset($path));
 
             if ($deleted) {
                 return [
