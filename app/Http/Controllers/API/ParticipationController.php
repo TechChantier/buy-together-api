@@ -149,16 +149,18 @@ class ParticipationController extends Controller
      *
      * Allows a user to APPROVE another user to join purchase goal.
      */
-    public function approve(PurchaseGoal $purchaseGoal, User $user)
+    public function approve(int $purchaseGoalId, int $userId)
     {
+        $purchaseGoal = PurchaseGoal::find($purchaseGoalId);
+        $user = User::find($userId);
+        logger($user);
         if (Auth::id() !== $purchaseGoal->creator_id) {
             return response()->json([
                 'success' => false,
-                'message' => 'Unauthorized to approve this join request.',
+                'message' => 'Unauthorized to decline join requests.',
                 'statusCode' => 401,
             ], 401);
         }
-
         $joinRequest = $purchaseGoal->participants()
             ->where('user_id', $user->id)
             ->where('status', 'pending')
@@ -200,8 +202,10 @@ class ParticipationController extends Controller
      *
      * Allows user to DECLINE a request from another user to join purchase goal.
      */
-    public function decline(PurchaseGoal $purchaseGoal, User $user)
+    public function decline(int $purchaseGoalId, int $userId)
     {
+        $purchaseGoal = PurchaseGoal::find($purchaseGoalId);
+        $user = User::find($userId);
         if (Auth::id() !== $purchaseGoal->creator_id) {
             return response()->json([
                 'success' => false,
@@ -209,7 +213,6 @@ class ParticipationController extends Controller
                 'statusCode' => 401,
             ], 401);
         }
-
         $joinRequest = $purchaseGoal->participants()
             ->where('user_id', $user->id)
             ->where('status', 'pending')

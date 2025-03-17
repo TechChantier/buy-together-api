@@ -18,7 +18,7 @@ Route::controller(PurchaseGoalController::class)->group(function () {
     Route::get('purchase-goals', 'index')->withoutMiddleware('auth:sanctum');
     Route::get('purchase-goals/{id}', 'show')->withoutMiddleware('auth:sanctum');
     Route::post('purchase-goals', 'store')->middleware('auth:sanctum');
-    Route::match(['put', 'patch'],'purchase-goals/{id}', 'update')->middleware('auth:sanctum');
+    Route::match(['put', 'patch'], 'purchase-goals/{id}', 'update')->middleware('auth:sanctum');
     Route::delete('purchase-goals/{id}', 'destroy')->middleware('auth:sanctum');
 });
 
