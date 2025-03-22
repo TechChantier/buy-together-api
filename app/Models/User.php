@@ -46,7 +46,6 @@ class User extends Authenticatable
     public function purchaseGoalsParticipated(): BelongsToMany
     {
         return $this->belongsToMany(PurchaseGoal::class, 'user_in_purchase_goals')
-            ->withPivot('contributed_amount', 'joined_at', 'status')
-            ->withTimestamps();
+            ->withPivot('contributed_amount', 'joined_at', 'status');
     }
 }
