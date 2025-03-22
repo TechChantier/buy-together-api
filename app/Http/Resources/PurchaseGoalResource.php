@@ -30,9 +30,10 @@ class PurchaseGoalResource extends JsonResource
             'updated_at' => $this->updated_at,
         ];
 
-        if (UserInPurchaseGoalResource::collection($this->whenLoaded('participants')) != null) {
-            array_merge($data, ['number_of_participants' => count(UserInPurchaseGoalResource::collection($this->whenLoaded('participants')))]);
-        }
+        // if (UserInPurchaseGoalResource::collection($this->whenLoaded('participants')) != null) {
+        //     logger(UserInPurchaseGoalResource::collection($this->whenLoaded('participants')));
+        //     array_merge($data, ['number_of_participants' => count(UserInPurchaseGoalResource::collection($this->whenLoaded('participants')))]);
+        // }
 
         return $data;
     }
