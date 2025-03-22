@@ -266,17 +266,18 @@ class ParticipationController extends Controller
                 'success' => true,
                 'message' => 'User purchase goals retrieved successfully.',
                 'statusCode' => 200,
-                'data' => $purchaseGoals->map(function ($goal) {
-                    return [
-                        'id' => $goal->id,
-                        'name' => $goal->name,
-                        'description' => $goal->description,
-                        'status' => $goal->pivot->status,
-                        'contributed_amount' => $goal->pivot->contributed_amount,
-                        'joined_at' => $goal->pivot->joined_at,
-                        'creator_id' => $goal->creator_id,
-                    ];
-                }),
+                'data' => PurchaseGoalResource::collection($purchaseGoals)
+                // 'data' => $purchaseGoals->map(function ($goal) {
+                //     return [
+                //         'id' => $goal->id,
+                //         'name' => $goal->name,
+                //         'description' => $goal->description,
+                //         'status' => $goal->pivot->status,
+                //         'contributed_amount' => $goal->pivot->contributed_amount,
+                //         'joined_at' => $goal->pivot->joined_at,
+                //         'creator_id' => $goal->creator_id,
+                //     ];
+                // }),
             ], 200);
 
         } catch (Exception $e) {
