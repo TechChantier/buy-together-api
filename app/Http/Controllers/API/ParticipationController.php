@@ -260,7 +260,7 @@ class ParticipationController extends Controller
     {
         try {
             $user = Auth::user();
-            $purchaseGoals = $user->purchaseGoalsParticipated->get();
+            $purchaseGoals = $user->purchaseGoalsParticipated;
 
             return response()->json([
                 'success' => true,
