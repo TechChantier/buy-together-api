@@ -29,4 +29,5 @@ Route::controller(ParticipationController::class)->middleware(['auth:sanctum'])-
     Route::post('purchase-goals/{id}/leave', 'leave');
     Route::post('purchase-goals/{id}/approve/{user_id}', 'approve');
     Route::post('purchase-goals/{id}/decline/{user_id}', 'decline');
+    Route::get('/user/purchase-goals', 'userPurchaseGoals');
 });
