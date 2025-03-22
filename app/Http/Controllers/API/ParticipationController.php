@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\PurchaseGoalResource;
 use App\Http\Resources\UserInPurchaseGoalResource;
 use App\Http\Resources\UserResource;
 use App\Models\PurchaseGoal;
@@ -247,5 +248,50 @@ class ParticipationController extends Controller
                 'error' => $e->getMessage(),
             ], 500);
         }
+    }
+
+    /**
+     * Get all purchase goals a user is participating in.
+     *
+     * Retrieves a list of all purchase goals the authenticated user is part of,
+     * along with their status and contribution details.
+     */
+    public function userPurchaseGoals()
+    {
+        try {
+            $user = Auth::user();
+            $purchaseGoals = $user->purchaseGoalsParticipated->get();
+
+            return response()->json([
+                'success' => true,
+                'message' => 'User purchase goals retrieved successfully.',
+                'statusCode' => 200,
+                'data' => $purchaseGoals->map(function ($goal) {
+                    return [
+                        'id' => $goal->id,
+                        'name' => $goal->name,
+                        'description' => $goal->description,
+                        'status' => $goal->pivot->status,
+                        'contributed_amount' => $goal->pivot->contributed_amount,
+                        'joined_at' => $goal->pivot->joined_at,
+                        'creator_id' => $goal->creator_id,
+                    ];
+                }),
+            ], 200);
+
+        } catch (Exception $e) {
+            logger()->error('Failed to retrieve user purchase goals', [
+                'error' => $e->getMessage(),
+                'trace' => $e->getTraceAsString(),
+            ]);
+
+            return response()->json([
+                'success' => false,
+                'message' => 'Failed to retrieve user purchase goals.',
+                'statusCode' => 500,
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+
     }
 }
