@@ -14,13 +14,12 @@ class PurchaseGoalResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return [
+        $data = [
             'id' => $this->id,
             'title' => $this->title,
             'description' => $this->description,
             'target_amount' => $this->target_amount,
             'amount_per_person' => $this->amount_per_person,
-            'number_of_participants' => count(UserInPurchaseGoalResource::collection($this->whenLoaded('participants'))),
             'status' => $this->status ?? 'open',
             'group_link' => $this->group_link,
             'start_date' => $this->start_date,
@@ -30,5 +29,11 @@ class PurchaseGoalResource extends JsonResource
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];
+
+        if (UserInPurchaseGoalResource::collection($this->whenLoaded('participants')) != null) {
+            array_merge($data, ['number_of_participants' => count(UserInPurchaseGoalResource::collection($this->whenLoaded('participants')))]);
+        }
+
+        return $data;
     }
 }
