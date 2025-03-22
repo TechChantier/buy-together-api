@@ -266,7 +266,10 @@ class ParticipationController extends Controller
                 'success' => true,
                 'message' => 'User purchase goals retrieved successfully.',
                 'statusCode' => 200,
-                'data' => PurchaseGoalResource::collection($purchaseGoals)
+                'data' => PurchaseGoalResource::collection($purchaseGoals->with([
+                    'creator',
+                    'product'
+                ]))
                 // 'data' => $purchaseGoals->map(function ($goal) {
                 //     return [
                 //         'id' => $goal->id,
