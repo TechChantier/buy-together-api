@@ -262,14 +262,16 @@ class ParticipationController extends Controller
             $user = Auth::user();
             $purchaseGoals = $user->purchaseGoalsParticipated;
 
+            $purchaseGoals->load([
+                'creator',
+                'product'
+            ]);
+
             return response()->json([
                 'success' => true,
                 'message' => 'User purchase goals retrieved successfully.',
                 'statusCode' => 200,
-                'data' => PurchaseGoalResource::collection($purchaseGoals->with([
-                    'creator',
-                    'product'
-                ]))
+                'data' => PurchaseGoalResource::collection($purchaseGoals)
                 // 'data' => $purchaseGoals->map(function ($goal) {
                 //     return [
                 //         'id' => $goal->id,
