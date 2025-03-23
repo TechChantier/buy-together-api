@@ -91,6 +91,12 @@
                                                     <li class="tocify-item level-2" data-unique="purchase-goals-POSTapi-purchase-goals--id--change-status">
                                 <a href="#purchase-goals-POSTapi-purchase-goals--id--change-status">Change the status of specified purchase goal</a>
                             </li>
+                                                                                <li class="tocify-item level-2" data-unique="purchase-goals-GETapi-purchase-goals">
+                                <a href="#purchase-goals-GETapi-purchase-goals">Listing of all purchase goals.</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="purchase-goals-GETapi-purchase-goals--id-">
+                                <a href="#purchase-goals-GETapi-purchase-goals--id-">Fetch details of a specific purchase goal.</a>
+                            </li>
                                                                                 <li class="tocify-item level-2" data-unique="purchase-goals-POSTapi-purchase-goals">
                                 <a href="#purchase-goals-POSTapi-purchase-goals">Create a new purchase goal.</a>
                             </li>
@@ -107,7 +113,10 @@
                     <a href="#user-participation">User Participation</a>
                 </li>
                                     <ul id="tocify-subheader-user-participation" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="user-participation-POSTapi-purchase-goals--id--join">
+                                                    <li class="tocify-item level-2" data-unique="user-participation-GETapi-purchase-goals--id--participants">
+                                <a href="#user-participation-GETapi-purchase-goals--id--participants">Get participants of a purchase goal.</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="user-participation-POSTapi-purchase-goals--id--join">
                                 <a href="#user-participation-POSTapi-purchase-goals--id--join">Join a purchase goal.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="user-participation-POSTapi-purchase-goals--id--approve--user_id-">
@@ -115,6 +124,9 @@
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="user-participation-POSTapi-purchase-goals--id--decline--user_id-">
                                 <a href="#user-participation-POSTapi-purchase-goals--id--decline--user_id-">Decline request to join a purchase goal.</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="user-participation-GETapi-user-purchase-goals">
+                                <a href="#user-participation-GETapi-user-purchase-goals">Get all purchase goals a user is participating in.</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -127,7 +139,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: March 22, 2025</li>
+        <li>Last updated: March 23, 2025</li>
     </ul>
 </div>
 
@@ -137,7 +149,7 @@
         <h1 id="introduction">Introduction</h1>
 <p>This API aims to provide all the information you need in order to work with our API</p>
 <aside>
-    <strong>Base URL</strong>: <code>https://rrn24.techchantier.site/buy-together-api/public</code>
+    <strong>Base URL</strong>: <code>https://rrn24.techchantier.site/buy_together/public</code>
 </aside>
 <p>This documentation aims to provide all the information you need to work with our API.</p>
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
@@ -171,12 +183,12 @@ Users will not be able to create or join purchase goals if they are not register
     "http://localhost/api/register" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "name=jzf"\
-    --form "email=sonia68@example.net"\
-    --form "password=t@%G7l41QakmyMH%&gt;7"\
-    --form "address=consequatur"\
-    --form "phone_number=sequi"\
-    --form "profile_pic=@C:\Users\user\AppData\Local\Temp\phpDC05.tmp" </code></pre></div>
+    --form "name=p"\
+    --form "email=lehner.emmanuel@example.net"\
+    --form "password=a&amp;D*;+NogEu[~#ElT"\
+    --form "address=et"\
+    --form "phone_number=autem"\
+    --form "profile_pic=@C:\Users\user\AppData\Local\Temp\phpCA30.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -190,11 +202,11 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('name', 'jzf');
-body.append('email', 'sonia68@example.net');
-body.append('password', 't@%G7l41QakmyMH%&gt;7');
-body.append('address', 'consequatur');
-body.append('phone_number', 'sequi');
+body.append('name', 'p');
+body.append('email', 'lehner.emmanuel@example.net');
+body.append('password', 'a&amp;D*;+NogEu[~#ElT');
+body.append('address', 'et');
+body.append('phone_number', 'autem');
 body.append('profile_pic', document.querySelector('input[name="profile_pic"]').files[0]);
 
 fetch(url, {
@@ -283,10 +295,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-register"
-               value="jzf"
+               value="p"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>jzf</code></p>
+<p>Must not be greater than 255 characters. Example: <code>p</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -294,10 +306,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-register"
-               value="sonia68@example.net"
+               value="lehner.emmanuel@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>sonia68@example.net</code></p>
+<p>Must be a valid email address. Example: <code>lehner.emmanuel@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -305,10 +317,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-register"
-               value="t@%G7l41QakmyMH%>7"
+               value="a&D*;+NogEu[~#ElT"
                data-component="body">
     <br>
-<p>Example: <code>t@%G7l41QakmyMH%&gt;7</code></p>
+<p>Example: <code>a&amp;D*;+NogEu[~#ElT</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>address</code></b>&nbsp;&nbsp;
@@ -316,10 +328,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="address"                data-endpoint="POSTapi-register"
-               value="consequatur"
+               value="et"
                data-component="body">
     <br>
-<p>Example: <code>consequatur</code></p>
+<p>Example: <code>et</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone_number</code></b>&nbsp;&nbsp;
@@ -327,10 +339,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="phone_number"                data-endpoint="POSTapi-register"
-               value="sequi"
+               value="autem"
                data-component="body">
     <br>
-<p>Example: <code>sequi</code></p>
+<p>Example: <code>autem</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>profile_pic</code></b>&nbsp;&nbsp;
@@ -341,7 +353,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\user\AppData\Local\Temp\phpDC05.tmp</code></p>
+<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\user\AppData\Local\Temp\phpCA30.tmp</code></p>
         </div>
         </form>
 
@@ -365,8 +377,8 @@ An authentication token is always generated upon successful login.
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"meggie37@example.net\",
-    \"password\": \"`:7ljg[?;1m7cd#Ub_uW\"
+    \"email\": \"botsford.makayla@example.com\",
+    \"password\": \"mJv}$TU7Y&gt;o;PvfD\'&gt;}k\"
 }"
 </code></pre></div>
 
@@ -382,8 +394,8 @@ const headers = {
 };
 
 let body = {
-    "email": "meggie37@example.net",
-    "password": "`:7ljg[?;1m7cd#Ub_uW"
+    "email": "botsford.makayla@example.com",
+    "password": "mJv}$TU7Y&gt;o;PvfD'&gt;}k"
 };
 
 fetch(url, {
@@ -472,10 +484,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-login"
-               value="meggie37@example.net"
+               value="botsford.makayla@example.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>meggie37@example.net</code></p>
+<p>Must be a valid email address. Example: <code>botsford.makayla@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -483,10 +495,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-login"
-               value="`:7ljg[?;1m7cd#Ub_uW"
+               value="mJv}$TU7Y>o;PvfD'>}k"
                data-component="body">
     <br>
-<p>Example: <code>`:7ljg[?;1m7cd#Ub_uW</code></p>
+<p>Example: <code>mJv}$TU7Y&gt;o;PvfD'&gt;}k</code></p>
         </div>
         </form>
 
@@ -620,14 +632,14 @@ Only the owner of the goal can change its status from open to close and vice ver
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/purchase-goals/deleniti/change-status" \
+    "http://localhost/api/purchase-goals/itaque/change-status" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/deleniti/change-status"
+    "http://localhost/api/purchase-goals/itaque/change-status"
 );
 
 const headers = {
@@ -720,10 +732,585 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="POSTapi-purchase-goals--id--change-status"
-               value="deleniti"
+               value="itaque"
                data-component="url">
     <br>
-<p>The ID of the purchase goal. Example: <code>deleniti</code></p>
+<p>The ID of the purchase goal. Example: <code>itaque</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="purchase-goals-GETapi-purchase-goals">Listing of all purchase goals.</h2>
+
+<p>
+</p>
+
+<p>This endpoint allows users to view purchase goals.</p>
+<aside class="notice">
+Users must NOT be authenticated to access this endpoint.
+</aside>
+
+<span id="example-requests-GETapi-purchase-goals">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/purchase-goals" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/purchase-goals"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-purchase-goals">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Purchase goals retrieved successfully.&quot;,
+    &quot;statusCode&quot;: 200,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;title&quot;: &quot;Recusandae pariatur nulla est libero sed rerum.&quot;,
+            &quot;description&quot;: &quot;Repellat est molestiae hic autem ut placeat est. Est sed id omnis quod. Aliquam dolorum facere hic quo ad. Aperiam qui ut et voluptatem. Earum et eos aut soluta excepturi non voluptas.&quot;,
+            &quot;target_amount&quot;: &quot;558.53&quot;,
+            &quot;amount_per_person&quot;: &quot;250.08&quot;,
+            &quot;status&quot;: &quot;open&quot;,
+            &quot;group_link&quot;: &quot;http://hill.com/non-debitis-velit-asperiores-nesciunt-iure&quot;,
+            &quot;start_date&quot;: &quot;2025-02-07T00:00:00.000000Z&quot;,
+            &quot;end_date&quot;: &quot;2025-05-21T00:00:00.000000Z&quot;,
+            &quot;created_by&quot;: {
+                &quot;id&quot;: 11,
+                &quot;name&quot;: &quot;Randi Hermiston PhD&quot;,
+                &quot;email&quot;: &quot;rolfson.evangeline@example.net&quot;,
+                &quot;phone_number&quot;: &quot;(440) 569-4789&quot;,
+                &quot;address&quot;: &quot;1188 Elyssa Flat\nGoyettetown, RI 82159-7918&quot;,
+                &quot;profile_pic&quot;: &quot;https://placehold.co/300x300/&quot;
+            },
+            &quot;product&quot;: {
+                &quot;id&quot;: 1,
+                &quot;name&quot;: &quot;doloribus&quot;,
+                &quot;description&quot;: &quot;Est enim maxime sit cum quia.&quot;,
+                &quot;unit_price&quot;: &quot;230.3&quot;,
+                &quot;bulk_price&quot;: &quot;422.41&quot;,
+                &quot;quantity&quot;: 68,
+                &quot;image&quot;: &quot;https://placehold.co/300x300/&quot;
+            },
+            &quot;created_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;title&quot;: &quot;Facilis in vero occaecati.&quot;,
+            &quot;description&quot;: &quot;Hic sapiente dolore quo at. Voluptatem ut voluptate nostrum voluptatem fugit accusamus quam fugit. Rerum illo error enim harum velit sapiente eum. Eum ea quaerat aperiam explicabo.&quot;,
+            &quot;target_amount&quot;: &quot;5334.79&quot;,
+            &quot;amount_per_person&quot;: &quot;386.47&quot;,
+            &quot;status&quot;: &quot;open&quot;,
+            &quot;group_link&quot;: &quot;http://www.rempel.com/nulla-magni-vel-et-vel-quibusdam&quot;,
+            &quot;start_date&quot;: &quot;2025-03-22T00:00:00.000000Z&quot;,
+            &quot;end_date&quot;: &quot;2025-07-17T00:00:00.000000Z&quot;,
+            &quot;created_by&quot;: {
+                &quot;id&quot;: 12,
+                &quot;name&quot;: &quot;Alia Schroeder&quot;,
+                &quot;email&quot;: &quot;corine91@example.net&quot;,
+                &quot;phone_number&quot;: &quot;862-299-4772&quot;,
+                &quot;address&quot;: &quot;54074 Simeon Fort\nPort Jammie, OK 16290&quot;,
+                &quot;profile_pic&quot;: &quot;https://placehold.co/300x300/&quot;
+            },
+            &quot;product&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;dolores&quot;,
+                &quot;description&quot;: &quot;At aperiam iure veritatis laborum.&quot;,
+                &quot;unit_price&quot;: &quot;458.01&quot;,
+                &quot;bulk_price&quot;: &quot;4556.99&quot;,
+                &quot;quantity&quot;: 84,
+                &quot;image&quot;: &quot;https://placehold.co/300x300/&quot;
+            },
+            &quot;created_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;title&quot;: &quot;Eum aliquid aut rerum eos commodi labore repellendus officia.&quot;,
+            &quot;description&quot;: &quot;Illo corporis consequuntur ex quam possimus dolorem vero. Qui doloribus laborum nisi exercitationem et non. Voluptas ratione mollitia cum ut enim rerum.&quot;,
+            &quot;target_amount&quot;: &quot;814.30&quot;,
+            &quot;amount_per_person&quot;: &quot;49.94&quot;,
+            &quot;status&quot;: &quot;open&quot;,
+            &quot;group_link&quot;: &quot;http://oconnell.com/voluptatem-cum-qui-aliquid-dolorem&quot;,
+            &quot;start_date&quot;: &quot;2025-02-16T00:00:00.000000Z&quot;,
+            &quot;end_date&quot;: &quot;2025-05-17T00:00:00.000000Z&quot;,
+            &quot;created_by&quot;: {
+                &quot;id&quot;: 13,
+                &quot;name&quot;: &quot;Amy Feest Sr.&quot;,
+                &quot;email&quot;: &quot;dare.hallie@example.org&quot;,
+                &quot;phone_number&quot;: &quot;+1-630-283-4042&quot;,
+                &quot;address&quot;: &quot;12151 O&#039;Conner Island\nRomagueraberg, MO 64877-7494&quot;,
+                &quot;profile_pic&quot;: &quot;https://placehold.co/300x300/&quot;
+            },
+            &quot;product&quot;: {
+                &quot;id&quot;: 9,
+                &quot;name&quot;: &quot;voluptatum&quot;,
+                &quot;description&quot;: &quot;Rerum ut temporibus dignissimos blanditiis.&quot;,
+                &quot;unit_price&quot;: &quot;385.47&quot;,
+                &quot;bulk_price&quot;: &quot;437.18&quot;,
+                &quot;quantity&quot;: 88,
+                &quot;image&quot;: &quot;https://placehold.co/300x300/&quot;
+            },
+            &quot;created_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;title&quot;: &quot;Dolores a voluptas et vel.&quot;,
+            &quot;description&quot;: &quot;Quis velit aut aut consequatur. Voluptatem alias similique alias neque autem. Vel id quis id atque mollitia similique accusantium.&quot;,
+            &quot;target_amount&quot;: &quot;7439.34&quot;,
+            &quot;amount_per_person&quot;: &quot;217.53&quot;,
+            &quot;status&quot;: &quot;open&quot;,
+            &quot;group_link&quot;: &quot;https://www.pfannerstill.info/non-similique-ducimus-qui-beatae&quot;,
+            &quot;start_date&quot;: &quot;2025-02-04T00:00:00.000000Z&quot;,
+            &quot;end_date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;created_by&quot;: {
+                &quot;id&quot;: 14,
+                &quot;name&quot;: &quot;Eveline Reinger&quot;,
+                &quot;email&quot;: &quot;mcdermott.brock@example.net&quot;,
+                &quot;phone_number&quot;: &quot;+1-959-536-0193&quot;,
+                &quot;address&quot;: &quot;351 Bahringer Lake Apt. 359\nPort Griffin, ME 18405-9000&quot;,
+                &quot;profile_pic&quot;: &quot;https://placehold.co/300x300/&quot;
+            },
+            &quot;product&quot;: {
+                &quot;id&quot;: 10,
+                &quot;name&quot;: &quot;porro&quot;,
+                &quot;description&quot;: &quot;Modi iusto sint in et sit.&quot;,
+                &quot;unit_price&quot;: &quot;329.69&quot;,
+                &quot;bulk_price&quot;: &quot;971.79&quot;,
+                &quot;quantity&quot;: 82,
+                &quot;image&quot;: &quot;https://placehold.co/300x300/&quot;
+            },
+            &quot;created_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;title&quot;: &quot;Consequuntur distinctio qui facere beatae accusamus impedit qui.&quot;,
+            &quot;description&quot;: &quot;Quod ad aut commodi temporibus facilis. Libero eligendi sunt sint. Debitis et ipsam expedita quibusdam eligendi.&quot;,
+            &quot;target_amount&quot;: &quot;5439.49&quot;,
+            &quot;amount_per_person&quot;: &quot;292.98&quot;,
+            &quot;status&quot;: &quot;open&quot;,
+            &quot;group_link&quot;: &quot;http://www.gleason.org/ea-itaque-non-ut-ipsa-explicabo-repellendus-libero&quot;,
+            &quot;start_date&quot;: &quot;2025-02-11T00:00:00.000000Z&quot;,
+            &quot;end_date&quot;: &quot;2025-04-17T00:00:00.000000Z&quot;,
+            &quot;created_by&quot;: {
+                &quot;id&quot;: 15,
+                &quot;name&quot;: &quot;Mrs. Raquel Mayer&quot;,
+                &quot;email&quot;: &quot;peffertz@example.com&quot;,
+                &quot;phone_number&quot;: &quot;+1-862-417-4180&quot;,
+                &quot;address&quot;: &quot;55104 Ortiz Forest\nHartmannbury, WY 65086&quot;,
+                &quot;profile_pic&quot;: &quot;https://placehold.co/300x300/&quot;
+            },
+            &quot;product&quot;: {
+                &quot;id&quot;: 7,
+                &quot;name&quot;: &quot;saepe&quot;,
+                &quot;description&quot;: &quot;In et ut culpa est est et.&quot;,
+                &quot;unit_price&quot;: &quot;338.13&quot;,
+                &quot;bulk_price&quot;: &quot;916.47&quot;,
+                &quot;quantity&quot;: 71,
+                &quot;image&quot;: &quot;https://placehold.co/300x300/&quot;
+            },
+            &quot;created_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;title&quot;: &quot;Modi vitae accusamus modi facilis non ab.&quot;,
+            &quot;description&quot;: &quot;Accusantium facilis minus assumenda minima facilis. Quasi dignissimos nisi quo dolores aut recusandae quo. Necessitatibus sed quia doloremque quo saepe occaecati aut. Doloribus et fuga eligendi facere voluptas. Explicabo velit recusandae eum assumenda et ut.&quot;,
+            &quot;target_amount&quot;: &quot;655.02&quot;,
+            &quot;amount_per_person&quot;: &quot;328.07&quot;,
+            &quot;status&quot;: &quot;open&quot;,
+            &quot;group_link&quot;: &quot;http://bauch.biz/&quot;,
+            &quot;start_date&quot;: &quot;2025-03-12T00:00:00.000000Z&quot;,
+            &quot;end_date&quot;: &quot;2025-08-05T00:00:00.000000Z&quot;,
+            &quot;created_by&quot;: {
+                &quot;id&quot;: 16,
+                &quot;name&quot;: &quot;Valentine Prosacco&quot;,
+                &quot;email&quot;: &quot;tracy.rippin@example.com&quot;,
+                &quot;phone_number&quot;: &quot;+1-657-798-0587&quot;,
+                &quot;address&quot;: &quot;40775 Bradtke Loop Apt. 223\nRogeliomouth, IL 09128-7923&quot;,
+                &quot;profile_pic&quot;: &quot;https://placehold.co/300x300/&quot;
+            },
+            &quot;product&quot;: null,
+            &quot;created_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 7,
+            &quot;title&quot;: &quot;Voluptatem natus voluptas iusto qui.&quot;,
+            &quot;description&quot;: &quot;Ratione excepturi officiis placeat quod sit et qui. Veritatis sint ab nesciunt temporibus. Qui dolorum consectetur fugit eum eos sit doloribus. Harum dolorum exercitationem sint doloribus veritatis dolore voluptatem.&quot;,
+            &quot;target_amount&quot;: &quot;8391.22&quot;,
+            &quot;amount_per_person&quot;: &quot;275.12&quot;,
+            &quot;status&quot;: &quot;open&quot;,
+            &quot;group_link&quot;: &quot;http://daniel.net/officiis-cupiditate-et-dolorum-voluptatem-aut&quot;,
+            &quot;start_date&quot;: &quot;2025-03-31T00:00:00.000000Z&quot;,
+            &quot;end_date&quot;: &quot;2025-06-01T00:00:00.000000Z&quot;,
+            &quot;created_by&quot;: {
+                &quot;id&quot;: 17,
+                &quot;name&quot;: &quot;Dorthy Leuschke&quot;,
+                &quot;email&quot;: &quot;emard.marlen@example.net&quot;,
+                &quot;phone_number&quot;: &quot;952.588.6520&quot;,
+                &quot;address&quot;: &quot;6878 Evans Cliff\nDrewshire, FL 43334&quot;,
+                &quot;profile_pic&quot;: &quot;https://placehold.co/300x300/&quot;
+            },
+            &quot;product&quot;: null,
+            &quot;created_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 8,
+            &quot;title&quot;: &quot;Pariatur optio impedit unde enim voluptatem debitis et.&quot;,
+            &quot;description&quot;: &quot;Inventore adipisci ipsa occaecati voluptatem optio. Rerum alias vel error occaecati. Sunt quia eos amet illum quia quaerat praesentium. Cumque itaque velit numquam enim laborum et.&quot;,
+            &quot;target_amount&quot;: &quot;9793.91&quot;,
+            &quot;amount_per_person&quot;: &quot;108.18&quot;,
+            &quot;status&quot;: &quot;open&quot;,
+            &quot;group_link&quot;: &quot;http://hill.com/sed-necessitatibus-ipsa-sunt-occaecati-consectetur.html&quot;,
+            &quot;start_date&quot;: &quot;2025-03-26T00:00:00.000000Z&quot;,
+            &quot;end_date&quot;: &quot;2025-08-30T00:00:00.000000Z&quot;,
+            &quot;created_by&quot;: {
+                &quot;id&quot;: 18,
+                &quot;name&quot;: &quot;Miss Karolann Muller&quot;,
+                &quot;email&quot;: &quot;brielle.strosin@example.com&quot;,
+                &quot;phone_number&quot;: &quot;+1-817-206-5312&quot;,
+                &quot;address&quot;: &quot;37343 Quitzon Viaduct Apt. 477\nSouth Jany, VT 25253&quot;,
+                &quot;profile_pic&quot;: &quot;https://placehold.co/300x300/&quot;
+            },
+            &quot;product&quot;: {
+                &quot;id&quot;: 2,
+                &quot;name&quot;: &quot;facere&quot;,
+                &quot;description&quot;: &quot;Delectus nostrum velit aperiam.&quot;,
+                &quot;unit_price&quot;: &quot;386.13&quot;,
+                &quot;bulk_price&quot;: &quot;698.85&quot;,
+                &quot;quantity&quot;: 6,
+                &quot;image&quot;: &quot;https://placehold.co/300x300/&quot;
+            },
+            &quot;created_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 9,
+            &quot;title&quot;: &quot;Nam voluptatem hic optio voluptatem et magnam consequuntur.&quot;,
+            &quot;description&quot;: &quot;Dolores tempore ut perferendis corporis aut deleniti pariatur. Distinctio sit earum corporis corporis in atque. Dolores doloremque quo amet quis. Pariatur ex sequi debitis enim velit libero.&quot;,
+            &quot;target_amount&quot;: &quot;3248.45&quot;,
+            &quot;amount_per_person&quot;: &quot;223.98&quot;,
+            &quot;status&quot;: &quot;open&quot;,
+            &quot;group_link&quot;: &quot;http://ratke.biz/sed-cupiditate-reprehenderit-neque-sed.html&quot;,
+            &quot;start_date&quot;: &quot;2025-02-15T00:00:00.000000Z&quot;,
+            &quot;end_date&quot;: &quot;2025-06-01T00:00:00.000000Z&quot;,
+            &quot;created_by&quot;: {
+                &quot;id&quot;: 19,
+                &quot;name&quot;: &quot;Prof. Ariel Gislason&quot;,
+                &quot;email&quot;: &quot;upton.earline@example.org&quot;,
+                &quot;phone_number&quot;: &quot;+1-239-273-7000&quot;,
+                &quot;address&quot;: &quot;9897 Howe Club\nKathlynmouth, VA 77967-8383&quot;,
+                &quot;profile_pic&quot;: &quot;https://placehold.co/300x300/&quot;
+            },
+            &quot;product&quot;: null,
+            &quot;created_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 10,
+            &quot;title&quot;: &quot;Tempore consequuntur unde ullam accusamus animi exercitationem.&quot;,
+            &quot;description&quot;: &quot;Non quis facere necessitatibus id aut dolor. Vero sed repellat consequatur vitae alias est.&quot;,
+            &quot;target_amount&quot;: &quot;1539.73&quot;,
+            &quot;amount_per_person&quot;: &quot;420.78&quot;,
+            &quot;status&quot;: &quot;open&quot;,
+            &quot;group_link&quot;: &quot;http://torphy.net/quidem-vel-expedita-molestias-veniam-et-quas&quot;,
+            &quot;start_date&quot;: &quot;2025-02-25T00:00:00.000000Z&quot;,
+            &quot;end_date&quot;: &quot;2025-06-30T00:00:00.000000Z&quot;,
+            &quot;created_by&quot;: {
+                &quot;id&quot;: 20,
+                &quot;name&quot;: &quot;Camille Koepp DDS&quot;,
+                &quot;email&quot;: &quot;vkuhic@example.com&quot;,
+                &quot;phone_number&quot;: &quot;+1.564.974.1024&quot;,
+                &quot;address&quot;: &quot;8848 Labadie Way\nHerzoghaven, AL 45126&quot;,
+                &quot;profile_pic&quot;: &quot;https://placehold.co/300x300/&quot;
+            },
+            &quot;product&quot;: {
+                &quot;id&quot;: 8,
+                &quot;name&quot;: &quot;harum&quot;,
+                &quot;description&quot;: &quot;Corrupti veniam sed rerum id necessitatibus aut.&quot;,
+                &quot;unit_price&quot;: &quot;81.37&quot;,
+                &quot;bulk_price&quot;: &quot;4561.45&quot;,
+                &quot;quantity&quot;: 66,
+                &quot;image&quot;: &quot;https://placehold.co/300x300/&quot;
+            },
+            &quot;created_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-purchase-goals" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-purchase-goals"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-purchase-goals"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-purchase-goals" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-purchase-goals">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-purchase-goals" data-method="GET"
+      data-path="api/purchase-goals"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-purchase-goals', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-purchase-goals"
+                    onclick="tryItOut('GETapi-purchase-goals');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-purchase-goals"
+                    onclick="cancelTryOut('GETapi-purchase-goals');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-purchase-goals"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/purchase-goals</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-purchase-goals"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-purchase-goals"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="purchase-goals-GETapi-purchase-goals--id-">Fetch details of a specific purchase goal.</h2>
+
+<p>
+</p>
+
+<p>This endpoint allows users to view the details of a purchase goal by ID.</p>
+
+<span id="example-requests-GETapi-purchase-goals--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/purchase-goals/1" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/purchase-goals/1"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-purchase-goals--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Purchase goal retrieved successfully.&quot;,
+    &quot;statusCode&quot;: 200,
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;title&quot;: &quot;Recusandae pariatur nulla est libero sed rerum.&quot;,
+        &quot;description&quot;: &quot;Repellat est molestiae hic autem ut placeat est. Est sed id omnis quod. Aliquam dolorum facere hic quo ad. Aperiam qui ut et voluptatem. Earum et eos aut soluta excepturi non voluptas.&quot;,
+        &quot;target_amount&quot;: &quot;558.53&quot;,
+        &quot;amount_per_person&quot;: &quot;250.08&quot;,
+        &quot;status&quot;: &quot;open&quot;,
+        &quot;group_link&quot;: &quot;http://hill.com/non-debitis-velit-asperiores-nesciunt-iure&quot;,
+        &quot;start_date&quot;: &quot;2025-02-07T00:00:00.000000Z&quot;,
+        &quot;end_date&quot;: &quot;2025-05-21T00:00:00.000000Z&quot;,
+        &quot;created_by&quot;: {
+            &quot;id&quot;: 11,
+            &quot;name&quot;: &quot;Randi Hermiston PhD&quot;,
+            &quot;email&quot;: &quot;rolfson.evangeline@example.net&quot;,
+            &quot;phone_number&quot;: &quot;(440) 569-4789&quot;,
+            &quot;address&quot;: &quot;1188 Elyssa Flat\nGoyettetown, RI 82159-7918&quot;,
+            &quot;profile_pic&quot;: &quot;https://placehold.co/300x300/&quot;
+        },
+        &quot;product&quot;: {
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;doloribus&quot;,
+            &quot;description&quot;: &quot;Est enim maxime sit cum quia.&quot;,
+            &quot;unit_price&quot;: &quot;230.3&quot;,
+            &quot;bulk_price&quot;: &quot;422.41&quot;,
+            &quot;quantity&quot;: 68,
+            &quot;image&quot;: &quot;https://placehold.co/300x300/&quot;
+        },
+        &quot;created_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-03-02T15:51:46.000000Z&quot;
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-purchase-goals--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-purchase-goals--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-purchase-goals--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-purchase-goals--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-purchase-goals--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-purchase-goals--id-" data-method="GET"
+      data-path="api/purchase-goals/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-purchase-goals--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-purchase-goals--id-"
+                    onclick="tryItOut('GETapi-purchase-goals--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-purchase-goals--id-"
+                    onclick="cancelTryOut('GETapi-purchase-goals--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-purchase-goals--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/purchase-goals/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-purchase-goals--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-purchase-goals--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="GETapi-purchase-goals--id-"
+               value="1"
+               data-component="url">
+    <br>
+<p>The ID of the purchase goal. Example: <code>1</code></p>
             </div>
                     </form>
 
@@ -746,19 +1333,19 @@ Users must be authenticated to access this endpoint.
     "http://localhost/api/purchase-goals" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "title=oqmwuleejtnjok"\
-    --form "description=Temporibus atque ipsum vel deserunt in vel odit."\
-    --form "target_amount=38"\
-    --form "amount_per_person=62"\
-    --form "product_name=quisquam"\
-    --form "product_description=ducimus"\
-    --form "product_unit_price=72"\
-    --form "product_bulk_price=5"\
-    --form "product_quantity=81"\
-    --form "group_link=ntpzpocynavh"\
-    --form "start_date=2025-03-22T20:50:25"\
-    --form "end_date=2027-11-09"\
-    --form "product_image=@C:\Users\user\AppData\Local\Temp\php2091.tmp" </code></pre></div>
+    --form "title=mdrfickbf"\
+    --form "description=Ut deserunt eos omnis quam."\
+    --form "target_amount=83"\
+    --form "amount_per_person=35"\
+    --form "product_name=maiores"\
+    --form "product_description=aut"\
+    --form "product_unit_price=89"\
+    --form "product_bulk_price=76"\
+    --form "product_quantity=44"\
+    --form "group_link=amo"\
+    --form "start_date=2025-03-23T13:54:36"\
+    --form "end_date=2089-12-12"\
+    --form "product_image=@C:\Users\user\AppData\Local\Temp\phpCA9E.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -772,18 +1359,18 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('title', 'oqmwuleejtnjok');
-body.append('description', 'Temporibus atque ipsum vel deserunt in vel odit.');
-body.append('target_amount', '38');
-body.append('amount_per_person', '62');
-body.append('product_name', 'quisquam');
-body.append('product_description', 'ducimus');
-body.append('product_unit_price', '72');
-body.append('product_bulk_price', '5');
-body.append('product_quantity', '81');
-body.append('group_link', 'ntpzpocynavh');
-body.append('start_date', '2025-03-22T20:50:25');
-body.append('end_date', '2027-11-09');
+body.append('title', 'mdrfickbf');
+body.append('description', 'Ut deserunt eos omnis quam.');
+body.append('target_amount', '83');
+body.append('amount_per_person', '35');
+body.append('product_name', 'maiores');
+body.append('product_description', 'aut');
+body.append('product_unit_price', '89');
+body.append('product_bulk_price', '76');
+body.append('product_quantity', '44');
+body.append('group_link', 'amo');
+body.append('start_date', '2025-03-23T13:54:36');
+body.append('end_date', '2089-12-12');
 body.append('product_image', document.querySelector('input[name="product_image"]').files[0]);
 
 fetch(url, {
@@ -872,10 +1459,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="POSTapi-purchase-goals"
-               value="oqmwuleejtnjok"
+               value="mdrfickbf"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>oqmwuleejtnjok</code></p>
+<p>Must not be greater than 255 characters. Example: <code>mdrfickbf</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -883,10 +1470,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="POSTapi-purchase-goals"
-               value="Temporibus atque ipsum vel deserunt in vel odit."
+               value="Ut deserunt eos omnis quam."
                data-component="body">
     <br>
-<p>Example: <code>Temporibus atque ipsum vel deserunt in vel odit.</code></p>
+<p>Example: <code>Ut deserunt eos omnis quam.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>target_amount</code></b>&nbsp;&nbsp;
@@ -894,10 +1481,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="target_amount"                data-endpoint="POSTapi-purchase-goals"
-               value="38"
+               value="83"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>38</code></p>
+<p>Must be at least 0. Example: <code>83</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>amount_per_person</code></b>&nbsp;&nbsp;
@@ -905,10 +1492,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="amount_per_person"                data-endpoint="POSTapi-purchase-goals"
-               value="62"
+               value="35"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>62</code></p>
+<p>Must be at least 0. Example: <code>35</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_name</code></b>&nbsp;&nbsp;
@@ -916,10 +1503,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="product_name"                data-endpoint="POSTapi-purchase-goals"
-               value="quisquam"
+               value="maiores"
                data-component="body">
     <br>
-<p>Example: <code>quisquam</code></p>
+<p>Example: <code>maiores</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_description</code></b>&nbsp;&nbsp;
@@ -927,10 +1514,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="product_description"                data-endpoint="POSTapi-purchase-goals"
-               value="ducimus"
+               value="aut"
                data-component="body">
     <br>
-<p>Example: <code>ducimus</code></p>
+<p>Example: <code>aut</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_unit_price</code></b>&nbsp;&nbsp;
@@ -938,10 +1525,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_unit_price"                data-endpoint="POSTapi-purchase-goals"
-               value="72"
+               value="89"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>72</code></p>
+<p>Must be at least 0. Example: <code>89</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_bulk_price</code></b>&nbsp;&nbsp;
@@ -949,10 +1536,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_bulk_price"                data-endpoint="POSTapi-purchase-goals"
-               value="5"
+               value="76"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>5</code></p>
+<p>Must be at least 0. Example: <code>76</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_quantity</code></b>&nbsp;&nbsp;
@@ -960,10 +1547,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_quantity"                data-endpoint="POSTapi-purchase-goals"
-               value="81"
+               value="44"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>81</code></p>
+<p>Must be at least 0. Example: <code>44</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_image</code></b>&nbsp;&nbsp;
@@ -974,7 +1561,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\user\AppData\Local\Temp\php2091.tmp</code></p>
+<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\user\AppData\Local\Temp\phpCA9E.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>group_link</code></b>&nbsp;&nbsp;
@@ -982,10 +1569,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="group_link"                data-endpoint="POSTapi-purchase-goals"
-               value="ntpzpocynavh"
+               value="amo"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>ntpzpocynavh</code></p>
+<p>Must not be greater than 255 characters. Example: <code>amo</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>start_date</code></b>&nbsp;&nbsp;
@@ -993,10 +1580,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="start_date"                data-endpoint="POSTapi-purchase-goals"
-               value="2025-03-22T20:50:25"
+               value="2025-03-23T13:54:36"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-03-22T20:50:25</code></p>
+<p>Must be a valid date. Example: <code>2025-03-23T13:54:36</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -1004,10 +1591,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="end_date"                data-endpoint="POSTapi-purchase-goals"
-               value="2027-11-09"
+               value="2089-12-12"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2027-11-09</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2089-12-12</code></p>
         </div>
         </form>
 
@@ -1027,27 +1614,27 @@ Only the owner of the goal can update it.
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/purchase-goals/ut" \
+    "http://localhost/api/purchase-goals/1" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "title=uxlibvasraclmuzokukilju"\
-    --form "description=Dolores et ut qui temporibus nihil."\
-    --form "target_amount=60"\
-    --form "amount_per_person=83"\
-    --form "product_name=pariatur"\
-    --form "product_description=sint"\
-    --form "product_unit_price=63"\
-    --form "product_bulk_price=41"\
-    --form "product_quantity=87"\
-    --form "group_link=zifqjrengzaqzhj"\
-    --form "start_date=2025-03-22T20:50:25"\
-    --form "end_date=2095-05-16"\
-    --form "product_image=@C:\Users\user\AppData\Local\Temp\php20A1.tmp" </code></pre></div>
+    --form "title=xkgprlizipkawbtdijsgbwyo"\
+    --form "description=Quia earum molestiae rerum enim reprehenderit."\
+    --form "target_amount=71"\
+    --form "amount_per_person=10"\
+    --form "product_name=temporibus"\
+    --form "product_description=ut"\
+    --form "product_unit_price=36"\
+    --form "product_bulk_price=56"\
+    --form "product_quantity=42"\
+    --form "group_link=yvqwoitbfzlgqjarhrdikx"\
+    --form "start_date=2025-03-23T13:54:36"\
+    --form "end_date=2041-12-20"\
+    --form "product_image=@C:\Users\user\AppData\Local\Temp\phpCAAF.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/ut"
+    "http://localhost/api/purchase-goals/1"
 );
 
 const headers = {
@@ -1056,18 +1643,18 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('title', 'uxlibvasraclmuzokukilju');
-body.append('description', 'Dolores et ut qui temporibus nihil.');
-body.append('target_amount', '60');
-body.append('amount_per_person', '83');
-body.append('product_name', 'pariatur');
-body.append('product_description', 'sint');
-body.append('product_unit_price', '63');
-body.append('product_bulk_price', '41');
-body.append('product_quantity', '87');
-body.append('group_link', 'zifqjrengzaqzhj');
-body.append('start_date', '2025-03-22T20:50:25');
-body.append('end_date', '2095-05-16');
+body.append('title', 'xkgprlizipkawbtdijsgbwyo');
+body.append('description', 'Quia earum molestiae rerum enim reprehenderit.');
+body.append('target_amount', '71');
+body.append('amount_per_person', '10');
+body.append('product_name', 'temporibus');
+body.append('product_description', 'ut');
+body.append('product_unit_price', '36');
+body.append('product_bulk_price', '56');
+body.append('product_quantity', '42');
+body.append('group_link', 'yvqwoitbfzlgqjarhrdikx');
+body.append('start_date', '2025-03-23T13:54:36');
+body.append('end_date', '2041-12-20');
 body.append('product_image', document.querySelector('input[name="product_image"]').files[0]);
 
 fetch(url, {
@@ -1156,14 +1743,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
                         <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
+<small>integer</small>&nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="id"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="ut"
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="PUTapi-purchase-goals--id-"
+               value="1"
                data-component="url">
     <br>
-<p>The ID of the purchase goal. Example: <code>ut</code></p>
+<p>The ID of the purchase goal. Example: <code>1</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -1172,10 +1759,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="uxlibvasraclmuzokukilju"
+               value="xkgprlizipkawbtdijsgbwyo"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>uxlibvasraclmuzokukilju</code></p>
+<p>Must not be greater than 255 characters. Example: <code>xkgprlizipkawbtdijsgbwyo</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -1183,10 +1770,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="Dolores et ut qui temporibus nihil."
+               value="Quia earum molestiae rerum enim reprehenderit."
                data-component="body">
     <br>
-<p>Example: <code>Dolores et ut qui temporibus nihil.</code></p>
+<p>Example: <code>Quia earum molestiae rerum enim reprehenderit.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>target_amount</code></b>&nbsp;&nbsp;
@@ -1194,10 +1781,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="target_amount"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="60"
+               value="71"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>60</code></p>
+<p>Must be at least 0. Example: <code>71</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>amount_per_person</code></b>&nbsp;&nbsp;
@@ -1205,10 +1792,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="amount_per_person"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="83"
+               value="10"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>83</code></p>
+<p>Must be at least 0. Example: <code>10</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_name</code></b>&nbsp;&nbsp;
@@ -1216,10 +1803,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="product_name"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="pariatur"
+               value="temporibus"
                data-component="body">
     <br>
-<p>Example: <code>pariatur</code></p>
+<p>Example: <code>temporibus</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_description</code></b>&nbsp;&nbsp;
@@ -1227,10 +1814,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="product_description"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="sint"
+               value="ut"
                data-component="body">
     <br>
-<p>Example: <code>sint</code></p>
+<p>Example: <code>ut</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_unit_price</code></b>&nbsp;&nbsp;
@@ -1238,10 +1825,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_unit_price"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="63"
+               value="36"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>63</code></p>
+<p>Must be at least 0. Example: <code>36</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_bulk_price</code></b>&nbsp;&nbsp;
@@ -1249,10 +1836,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_bulk_price"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="41"
+               value="56"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>41</code></p>
+<p>Must be at least 0. Example: <code>56</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_quantity</code></b>&nbsp;&nbsp;
@@ -1260,10 +1847,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_quantity"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="87"
+               value="42"
                data-component="body">
     <br>
-<p>Must be at least 0. Example: <code>87</code></p>
+<p>Must be at least 0. Example: <code>42</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_image</code></b>&nbsp;&nbsp;
@@ -1274,7 +1861,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\user\AppData\Local\Temp\php20A1.tmp</code></p>
+<p>Must be a file. Must not be greater than 51200 kilobytes. Example: <code>C:\Users\user\AppData\Local\Temp\phpCAAF.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>group_link</code></b>&nbsp;&nbsp;
@@ -1282,10 +1869,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="group_link"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="zifqjrengzaqzhj"
+               value="yvqwoitbfzlgqjarhrdikx"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>zifqjrengzaqzhj</code></p>
+<p>Must not be greater than 255 characters. Example: <code>yvqwoitbfzlgqjarhrdikx</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>start_date</code></b>&nbsp;&nbsp;
@@ -1293,10 +1880,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="start_date"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="2025-03-22T20:50:25"
+               value="2025-03-23T13:54:36"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-03-22T20:50:25</code></p>
+<p>Must be a valid date. Example: <code>2025-03-23T13:54:36</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -1304,10 +1891,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="end_date"                data-endpoint="PUTapi-purchase-goals--id-"
-               value="2095-05-16"
+               value="2041-12-20"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2095-05-16</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2041-12-20</code></p>
         </div>
         </form>
 
@@ -1327,14 +1914,14 @@ Only the owner of the goal can delete it.
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/purchase-goals/eius" \
+    "http://localhost/api/purchase-goals/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/eius"
+    "http://localhost/api/purchase-goals/1"
 );
 
 const headers = {
@@ -1423,14 +2010,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
                         <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
+<small>integer</small>&nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="id"                data-endpoint="DELETEapi-purchase-goals--id-"
-               value="eius"
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="DELETEapi-purchase-goals--id-"
+               value="1"
                data-component="url">
     <br>
-<p>The ID of the purchase goal. Example: <code>eius</code></p>
+<p>The ID of the purchase goal. Example: <code>1</code></p>
             </div>
                     </form>
 
@@ -1438,7 +2025,143 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
     <p>Endpoints for managing user participation in purchase goals</p>
 
-                                <h2 id="user-participation-POSTapi-purchase-goals--id--join">Join a purchase goal.</h2>
+                                <h2 id="user-participation-GETapi-purchase-goals--id--participants">Get participants of a purchase goal.</h2>
+
+<p>
+</p>
+
+<p>Retrieve all participants of a specified purchase goal.</p>
+
+<span id="example-requests-GETapi-purchase-goals--id--participants">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/purchase-goals/1/participants" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/purchase-goals/1/participants"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-purchase-goals--id--participants">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-purchase-goals--id--participants" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-purchase-goals--id--participants"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-purchase-goals--id--participants"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-purchase-goals--id--participants" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-purchase-goals--id--participants">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-purchase-goals--id--participants" data-method="GET"
+      data-path="api/purchase-goals/{id}/participants"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-purchase-goals--id--participants', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-purchase-goals--id--participants"
+                    onclick="tryItOut('GETapi-purchase-goals--id--participants');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-purchase-goals--id--participants"
+                    onclick="cancelTryOut('GETapi-purchase-goals--id--participants');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-purchase-goals--id--participants"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/purchase-goals/{id}/participants</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-purchase-goals--id--participants"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-purchase-goals--id--participants"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="GETapi-purchase-goals--id--participants"
+               value="1"
+               data-component="url">
+    <br>
+<p>The ID of the purchase goal. Example: <code>1</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="user-participation-POSTapi-purchase-goals--id--join">Join a purchase goal.</h2>
 
 <p>
 </p>
@@ -1451,14 +2174,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/purchase-goals/non/join" \
+    "http://localhost/api/purchase-goals/1/join" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/non/join"
+    "http://localhost/api/purchase-goals/1/join"
 );
 
 const headers = {
@@ -1547,14 +2270,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
                         <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
+<small>integer</small>&nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="id"                data-endpoint="POSTapi-purchase-goals--id--join"
-               value="non"
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="POSTapi-purchase-goals--id--join"
+               value="1"
                data-component="url">
     <br>
-<p>The ID of the purchase goal. Example: <code>non</code></p>
+<p>The ID of the purchase goal. Example: <code>1</code></p>
             </div>
                     </form>
 
@@ -1571,14 +2294,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/purchase-goals/omnis/approve/qui" \
+    "http://localhost/api/purchase-goals/1/approve/dolor" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/omnis/approve/qui"
+    "http://localhost/api/purchase-goals/1/approve/dolor"
 );
 
 const headers = {
@@ -1667,14 +2390,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
                         <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
+<small>integer</small>&nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="id"                data-endpoint="POSTapi-purchase-goals--id--approve--user_id-"
-               value="omnis"
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="POSTapi-purchase-goals--id--approve--user_id-"
+               value="1"
                data-component="url">
     <br>
-<p>The ID of the purchase goal. Example: <code>omnis</code></p>
+<p>The ID of the purchase goal. Example: <code>1</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>user_id</code></b>&nbsp;&nbsp;
@@ -1682,10 +2405,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="user_id"                data-endpoint="POSTapi-purchase-goals--id--approve--user_id-"
-               value="qui"
+               value="dolor"
                data-component="url">
     <br>
-<p>The ID of the user. Example: <code>qui</code></p>
+<p>The ID of the user. Example: <code>dolor</code></p>
             </div>
                     </form>
 
@@ -1702,14 +2425,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/purchase-goals/amet/decline/optio" \
+    "http://localhost/api/purchase-goals/1/decline/impedit" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/purchase-goals/amet/decline/optio"
+    "http://localhost/api/purchase-goals/1/decline/impedit"
 );
 
 const headers = {
@@ -1798,14 +2521,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
                         <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
+<small>integer</small>&nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="id"                data-endpoint="POSTapi-purchase-goals--id--decline--user_id-"
-               value="amet"
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="POSTapi-purchase-goals--id--decline--user_id-"
+               value="1"
                data-component="url">
     <br>
-<p>The ID of the purchase goal. Example: <code>amet</code></p>
+<p>The ID of the purchase goal. Example: <code>1</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>user_id</code></b>&nbsp;&nbsp;
@@ -1813,12 +2536,137 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="user_id"                data-endpoint="POSTapi-purchase-goals--id--decline--user_id-"
-               value="optio"
+               value="impedit"
                data-component="url">
     <br>
-<p>The ID of the user. Example: <code>optio</code></p>
+<p>The ID of the user. Example: <code>impedit</code></p>
             </div>
                     </form>
+
+                    <h2 id="user-participation-GETapi-user-purchase-goals">Get all purchase goals a user is participating in.</h2>
+
+<p>
+</p>
+
+<p>Retrieves a list of all purchase goals the authenticated user is part of,
+along with their status and contribution details.</p>
+
+<span id="example-requests-GETapi-user-purchase-goals">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/user/purchase-goals" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/user/purchase-goals"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-user-purchase-goals">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-user-purchase-goals" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-user-purchase-goals"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-user-purchase-goals"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-user-purchase-goals" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-user-purchase-goals">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-user-purchase-goals" data-method="GET"
+      data-path="api/user/purchase-goals"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-user-purchase-goals', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-user-purchase-goals"
+                    onclick="tryItOut('GETapi-user-purchase-goals');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-user-purchase-goals"
+                    onclick="cancelTryOut('GETapi-user-purchase-goals');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-user-purchase-goals"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/user/purchase-goals</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-user-purchase-goals"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-user-purchase-goals"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
 
             
 

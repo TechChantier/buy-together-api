@@ -26,27 +26,27 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: jzf
+                  example: p
                   nullable: false
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: sonia68@example.net
+                  example: lehner.emmanuel@example.net
                   nullable: true
                 password:
                   type: string
                   description: ''
-                  example: t@%G7l41QakmyMH%>7
+                  example: 'a&D*;+NogEu[~#ElT'
                   nullable: false
                 address:
                   type: string
                   description: ''
-                  example: consequatur
+                  example: et
                   nullable: false
                 phone_number:
                   type: string
                   description: ''
-                  example: sequi
+                  example: autem
                   nullable: false
                 profile_pic:
                   type: string
@@ -78,12 +78,12 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: meggie37@example.net
+                  example: botsford.makayla@example.com
                   nullable: false
                 password:
                   type: string
                   description: ''
-                  example: '`:7ljg[?;1m7cd#Ub_uW'
+                  example: "mJv}$TU7Y>o;PvfD'>}k"
                   nullable: false
               required:
                 - email
@@ -114,11 +114,623 @@ paths:
         in: path
         name: id
         description: 'The ID of the purchase goal.'
-        example: deleniti
+        example: itaque
         required: true
         schema:
           type: string
   /api/purchase-goals:
+    get:
+      summary: 'Listing of all purchase goals.'
+      operationId: listingOfAllPurchaseGoals
+      description: "This endpoint allows users to view purchase goals.\n<aside class=\"notice\">\nUsers must NOT be authenticated to access this endpoint.\n</aside>"
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  message: 'Purchase goals retrieved successfully.'
+                  statusCode: 200
+                  data:
+                    -
+                      id: 1
+                      title: 'Recusandae pariatur nulla est libero sed rerum.'
+                      description: 'Repellat est molestiae hic autem ut placeat est. Est sed id omnis quod. Aliquam dolorum facere hic quo ad. Aperiam qui ut et voluptatem. Earum et eos aut soluta excepturi non voluptas.'
+                      target_amount: '558.53'
+                      amount_per_person: '250.08'
+                      status: open
+                      group_link: 'http://hill.com/non-debitis-velit-asperiores-nesciunt-iure'
+                      start_date: '2025-02-07T00:00:00.000000Z'
+                      end_date: '2025-05-21T00:00:00.000000Z'
+                      created_by:
+                        id: 11
+                        name: 'Randi Hermiston PhD'
+                        email: rolfson.evangeline@example.net
+                        phone_number: '(440) 569-4789'
+                        address: "1188 Elyssa Flat\nGoyettetown, RI 82159-7918"
+                        profile_pic: 'https://placehold.co/300x300/'
+                      product:
+                        id: 1
+                        name: doloribus
+                        description: 'Est enim maxime sit cum quia.'
+                        unit_price: '230.3'
+                        bulk_price: '422.41'
+                        quantity: 68
+                        image: 'https://placehold.co/300x300/'
+                      created_at: '2025-03-02T15:51:46.000000Z'
+                      updated_at: '2025-03-02T15:51:46.000000Z'
+                    -
+                      id: 2
+                      title: 'Facilis in vero occaecati.'
+                      description: 'Hic sapiente dolore quo at. Voluptatem ut voluptate nostrum voluptatem fugit accusamus quam fugit. Rerum illo error enim harum velit sapiente eum. Eum ea quaerat aperiam explicabo.'
+                      target_amount: '5334.79'
+                      amount_per_person: '386.47'
+                      status: open
+                      group_link: 'http://www.rempel.com/nulla-magni-vel-et-vel-quibusdam'
+                      start_date: '2025-03-22T00:00:00.000000Z'
+                      end_date: '2025-07-17T00:00:00.000000Z'
+                      created_by:
+                        id: 12
+                        name: 'Alia Schroeder'
+                        email: corine91@example.net
+                        phone_number: 862-299-4772
+                        address: "54074 Simeon Fort\nPort Jammie, OK 16290"
+                        profile_pic: 'https://placehold.co/300x300/'
+                      product:
+                        id: 5
+                        name: dolores
+                        description: 'At aperiam iure veritatis laborum.'
+                        unit_price: '458.01'
+                        bulk_price: '4556.99'
+                        quantity: 84
+                        image: 'https://placehold.co/300x300/'
+                      created_at: '2025-03-02T15:51:46.000000Z'
+                      updated_at: '2025-03-02T15:51:46.000000Z'
+                    -
+                      id: 3
+                      title: 'Eum aliquid aut rerum eos commodi labore repellendus officia.'
+                      description: 'Illo corporis consequuntur ex quam possimus dolorem vero. Qui doloribus laborum nisi exercitationem et non. Voluptas ratione mollitia cum ut enim rerum.'
+                      target_amount: '814.30'
+                      amount_per_person: '49.94'
+                      status: open
+                      group_link: 'http://oconnell.com/voluptatem-cum-qui-aliquid-dolorem'
+                      start_date: '2025-02-16T00:00:00.000000Z'
+                      end_date: '2025-05-17T00:00:00.000000Z'
+                      created_by:
+                        id: 13
+                        name: 'Amy Feest Sr.'
+                        email: dare.hallie@example.org
+                        phone_number: +1-630-283-4042
+                        address: "12151 O'Conner Island\nRomagueraberg, MO 64877-7494"
+                        profile_pic: 'https://placehold.co/300x300/'
+                      product:
+                        id: 9
+                        name: voluptatum
+                        description: 'Rerum ut temporibus dignissimos blanditiis.'
+                        unit_price: '385.47'
+                        bulk_price: '437.18'
+                        quantity: 88
+                        image: 'https://placehold.co/300x300/'
+                      created_at: '2025-03-02T15:51:46.000000Z'
+                      updated_at: '2025-03-02T15:51:46.000000Z'
+                    -
+                      id: 4
+                      title: 'Dolores a voluptas et vel.'
+                      description: 'Quis velit aut aut consequatur. Voluptatem alias similique alias neque autem. Vel id quis id atque mollitia similique accusantium.'
+                      target_amount: '7439.34'
+                      amount_per_person: '217.53'
+                      status: open
+                      group_link: 'https://www.pfannerstill.info/non-similique-ducimus-qui-beatae'
+                      start_date: '2025-02-04T00:00:00.000000Z'
+                      end_date: '2025-08-27T00:00:00.000000Z'
+                      created_by:
+                        id: 14
+                        name: 'Eveline Reinger'
+                        email: mcdermott.brock@example.net
+                        phone_number: +1-959-536-0193
+                        address: "351 Bahringer Lake Apt. 359\nPort Griffin, ME 18405-9000"
+                        profile_pic: 'https://placehold.co/300x300/'
+                      product:
+                        id: 10
+                        name: porro
+                        description: 'Modi iusto sint in et sit.'
+                        unit_price: '329.69'
+                        bulk_price: '971.79'
+                        quantity: 82
+                        image: 'https://placehold.co/300x300/'
+                      created_at: '2025-03-02T15:51:46.000000Z'
+                      updated_at: '2025-03-02T15:51:46.000000Z'
+                    -
+                      id: 5
+                      title: 'Consequuntur distinctio qui facere beatae accusamus impedit qui.'
+                      description: 'Quod ad aut commodi temporibus facilis. Libero eligendi sunt sint. Debitis et ipsam expedita quibusdam eligendi.'
+                      target_amount: '5439.49'
+                      amount_per_person: '292.98'
+                      status: open
+                      group_link: 'http://www.gleason.org/ea-itaque-non-ut-ipsa-explicabo-repellendus-libero'
+                      start_date: '2025-02-11T00:00:00.000000Z'
+                      end_date: '2025-04-17T00:00:00.000000Z'
+                      created_by:
+                        id: 15
+                        name: 'Mrs. Raquel Mayer'
+                        email: peffertz@example.com
+                        phone_number: +1-862-417-4180
+                        address: "55104 Ortiz Forest\nHartmannbury, WY 65086"
+                        profile_pic: 'https://placehold.co/300x300/'
+                      product:
+                        id: 7
+                        name: saepe
+                        description: 'In et ut culpa est est et.'
+                        unit_price: '338.13'
+                        bulk_price: '916.47'
+                        quantity: 71
+                        image: 'https://placehold.co/300x300/'
+                      created_at: '2025-03-02T15:51:46.000000Z'
+                      updated_at: '2025-03-02T15:51:46.000000Z'
+                    -
+                      id: 6
+                      title: 'Modi vitae accusamus modi facilis non ab.'
+                      description: 'Accusantium facilis minus assumenda minima facilis. Quasi dignissimos nisi quo dolores aut recusandae quo. Necessitatibus sed quia doloremque quo saepe occaecati aut. Doloribus et fuga eligendi facere voluptas. Explicabo velit recusandae eum assumenda et ut.'
+                      target_amount: '655.02'
+                      amount_per_person: '328.07'
+                      status: open
+                      group_link: 'http://bauch.biz/'
+                      start_date: '2025-03-12T00:00:00.000000Z'
+                      end_date: '2025-08-05T00:00:00.000000Z'
+                      created_by:
+                        id: 16
+                        name: 'Valentine Prosacco'
+                        email: tracy.rippin@example.com
+                        phone_number: +1-657-798-0587
+                        address: "40775 Bradtke Loop Apt. 223\nRogeliomouth, IL 09128-7923"
+                        profile_pic: 'https://placehold.co/300x300/'
+                      product: null
+                      created_at: '2025-03-02T15:51:46.000000Z'
+                      updated_at: '2025-03-02T15:51:46.000000Z'
+                    -
+                      id: 7
+                      title: 'Voluptatem natus voluptas iusto qui.'
+                      description: 'Ratione excepturi officiis placeat quod sit et qui. Veritatis sint ab nesciunt temporibus. Qui dolorum consectetur fugit eum eos sit doloribus. Harum dolorum exercitationem sint doloribus veritatis dolore voluptatem.'
+                      target_amount: '8391.22'
+                      amount_per_person: '275.12'
+                      status: open
+                      group_link: 'http://daniel.net/officiis-cupiditate-et-dolorum-voluptatem-aut'
+                      start_date: '2025-03-31T00:00:00.000000Z'
+                      end_date: '2025-06-01T00:00:00.000000Z'
+                      created_by:
+                        id: 17
+                        name: 'Dorthy Leuschke'
+                        email: emard.marlen@example.net
+                        phone_number: 952.588.6520
+                        address: "6878 Evans Cliff\nDrewshire, FL 43334"
+                        profile_pic: 'https://placehold.co/300x300/'
+                      product: null
+                      created_at: '2025-03-02T15:51:46.000000Z'
+                      updated_at: '2025-03-02T15:51:46.000000Z'
+                    -
+                      id: 8
+                      title: 'Pariatur optio impedit unde enim voluptatem debitis et.'
+                      description: 'Inventore adipisci ipsa occaecati voluptatem optio. Rerum alias vel error occaecati. Sunt quia eos amet illum quia quaerat praesentium. Cumque itaque velit numquam enim laborum et.'
+                      target_amount: '9793.91'
+                      amount_per_person: '108.18'
+                      status: open
+                      group_link: 'http://hill.com/sed-necessitatibus-ipsa-sunt-occaecati-consectetur.html'
+                      start_date: '2025-03-26T00:00:00.000000Z'
+                      end_date: '2025-08-30T00:00:00.000000Z'
+                      created_by:
+                        id: 18
+                        name: 'Miss Karolann Muller'
+                        email: brielle.strosin@example.com
+                        phone_number: +1-817-206-5312
+                        address: "37343 Quitzon Viaduct Apt. 477\nSouth Jany, VT 25253"
+                        profile_pic: 'https://placehold.co/300x300/'
+                      product:
+                        id: 2
+                        name: facere
+                        description: 'Delectus nostrum velit aperiam.'
+                        unit_price: '386.13'
+                        bulk_price: '698.85'
+                        quantity: 6
+                        image: 'https://placehold.co/300x300/'
+                      created_at: '2025-03-02T15:51:46.000000Z'
+                      updated_at: '2025-03-02T15:51:46.000000Z'
+                    -
+                      id: 9
+                      title: 'Nam voluptatem hic optio voluptatem et magnam consequuntur.'
+                      description: 'Dolores tempore ut perferendis corporis aut deleniti pariatur. Distinctio sit earum corporis corporis in atque. Dolores doloremque quo amet quis. Pariatur ex sequi debitis enim velit libero.'
+                      target_amount: '3248.45'
+                      amount_per_person: '223.98'
+                      status: open
+                      group_link: 'http://ratke.biz/sed-cupiditate-reprehenderit-neque-sed.html'
+                      start_date: '2025-02-15T00:00:00.000000Z'
+                      end_date: '2025-06-01T00:00:00.000000Z'
+                      created_by:
+                        id: 19
+                        name: 'Prof. Ariel Gislason'
+                        email: upton.earline@example.org
+                        phone_number: +1-239-273-7000
+                        address: "9897 Howe Club\nKathlynmouth, VA 77967-8383"
+                        profile_pic: 'https://placehold.co/300x300/'
+                      product: null
+                      created_at: '2025-03-02T15:51:46.000000Z'
+                      updated_at: '2025-03-02T15:51:46.000000Z'
+                    -
+                      id: 10
+                      title: 'Tempore consequuntur unde ullam accusamus animi exercitationem.'
+                      description: 'Non quis facere necessitatibus id aut dolor. Vero sed repellat consequatur vitae alias est.'
+                      target_amount: '1539.73'
+                      amount_per_person: '420.78'
+                      status: open
+                      group_link: 'http://torphy.net/quidem-vel-expedita-molestias-veniam-et-quas'
+                      start_date: '2025-02-25T00:00:00.000000Z'
+                      end_date: '2025-06-30T00:00:00.000000Z'
+                      created_by:
+                        id: 20
+                        name: 'Camille Koepp DDS'
+                        email: vkuhic@example.com
+                        phone_number: +1.564.974.1024
+                        address: "8848 Labadie Way\nHerzoghaven, AL 45126"
+                        profile_pic: 'https://placehold.co/300x300/'
+                      product:
+                        id: 8
+                        name: harum
+                        description: 'Corrupti veniam sed rerum id necessitatibus aut.'
+                        unit_price: '81.37'
+                        bulk_price: '4561.45'
+                        quantity: 66
+                        image: 'https://placehold.co/300x300/'
+                      created_at: '2025-03-02T15:51:46.000000Z'
+                      updated_at: '2025-03-02T15:51:46.000000Z'
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Purchase goals retrieved successfully.'
+                  statusCode:
+                    type: integer
+                    example: 200
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        title: 'Recusandae pariatur nulla est libero sed rerum.'
+                        description: 'Repellat est molestiae hic autem ut placeat est. Est sed id omnis quod. Aliquam dolorum facere hic quo ad. Aperiam qui ut et voluptatem. Earum et eos aut soluta excepturi non voluptas.'
+                        target_amount: '558.53'
+                        amount_per_person: '250.08'
+                        status: open
+                        group_link: 'http://hill.com/non-debitis-velit-asperiores-nesciunt-iure'
+                        start_date: '2025-02-07T00:00:00.000000Z'
+                        end_date: '2025-05-21T00:00:00.000000Z'
+                        created_by:
+                          id: 11
+                          name: 'Randi Hermiston PhD'
+                          email: rolfson.evangeline@example.net
+                          phone_number: '(440) 569-4789'
+                          address: "1188 Elyssa Flat\nGoyettetown, RI 82159-7918"
+                          profile_pic: 'https://placehold.co/300x300/'
+                        product:
+                          id: 1
+                          name: doloribus
+                          description: 'Est enim maxime sit cum quia.'
+                          unit_price: '230.3'
+                          bulk_price: '422.41'
+                          quantity: 68
+                          image: 'https://placehold.co/300x300/'
+                        created_at: '2025-03-02T15:51:46.000000Z'
+                        updated_at: '2025-03-02T15:51:46.000000Z'
+                      -
+                        id: 2
+                        title: 'Facilis in vero occaecati.'
+                        description: 'Hic sapiente dolore quo at. Voluptatem ut voluptate nostrum voluptatem fugit accusamus quam fugit. Rerum illo error enim harum velit sapiente eum. Eum ea quaerat aperiam explicabo.'
+                        target_amount: '5334.79'
+                        amount_per_person: '386.47'
+                        status: open
+                        group_link: 'http://www.rempel.com/nulla-magni-vel-et-vel-quibusdam'
+                        start_date: '2025-03-22T00:00:00.000000Z'
+                        end_date: '2025-07-17T00:00:00.000000Z'
+                        created_by:
+                          id: 12
+                          name: 'Alia Schroeder'
+                          email: corine91@example.net
+                          phone_number: 862-299-4772
+                          address: "54074 Simeon Fort\nPort Jammie, OK 16290"
+                          profile_pic: 'https://placehold.co/300x300/'
+                        product:
+                          id: 5
+                          name: dolores
+                          description: 'At aperiam iure veritatis laborum.'
+                          unit_price: '458.01'
+                          bulk_price: '4556.99'
+                          quantity: 84
+                          image: 'https://placehold.co/300x300/'
+                        created_at: '2025-03-02T15:51:46.000000Z'
+                        updated_at: '2025-03-02T15:51:46.000000Z'
+                      -
+                        id: 3
+                        title: 'Eum aliquid aut rerum eos commodi labore repellendus officia.'
+                        description: 'Illo corporis consequuntur ex quam possimus dolorem vero. Qui doloribus laborum nisi exercitationem et non. Voluptas ratione mollitia cum ut enim rerum.'
+                        target_amount: '814.30'
+                        amount_per_person: '49.94'
+                        status: open
+                        group_link: 'http://oconnell.com/voluptatem-cum-qui-aliquid-dolorem'
+                        start_date: '2025-02-16T00:00:00.000000Z'
+                        end_date: '2025-05-17T00:00:00.000000Z'
+                        created_by:
+                          id: 13
+                          name: 'Amy Feest Sr.'
+                          email: dare.hallie@example.org
+                          phone_number: +1-630-283-4042
+                          address: "12151 O'Conner Island\nRomagueraberg, MO 64877-7494"
+                          profile_pic: 'https://placehold.co/300x300/'
+                        product:
+                          id: 9
+                          name: voluptatum
+                          description: 'Rerum ut temporibus dignissimos blanditiis.'
+                          unit_price: '385.47'
+                          bulk_price: '437.18'
+                          quantity: 88
+                          image: 'https://placehold.co/300x300/'
+                        created_at: '2025-03-02T15:51:46.000000Z'
+                        updated_at: '2025-03-02T15:51:46.000000Z'
+                      -
+                        id: 4
+                        title: 'Dolores a voluptas et vel.'
+                        description: 'Quis velit aut aut consequatur. Voluptatem alias similique alias neque autem. Vel id quis id atque mollitia similique accusantium.'
+                        target_amount: '7439.34'
+                        amount_per_person: '217.53'
+                        status: open
+                        group_link: 'https://www.pfannerstill.info/non-similique-ducimus-qui-beatae'
+                        start_date: '2025-02-04T00:00:00.000000Z'
+                        end_date: '2025-08-27T00:00:00.000000Z'
+                        created_by:
+                          id: 14
+                          name: 'Eveline Reinger'
+                          email: mcdermott.brock@example.net
+                          phone_number: +1-959-536-0193
+                          address: "351 Bahringer Lake Apt. 359\nPort Griffin, ME 18405-9000"
+                          profile_pic: 'https://placehold.co/300x300/'
+                        product:
+                          id: 10
+                          name: porro
+                          description: 'Modi iusto sint in et sit.'
+                          unit_price: '329.69'
+                          bulk_price: '971.79'
+                          quantity: 82
+                          image: 'https://placehold.co/300x300/'
+                        created_at: '2025-03-02T15:51:46.000000Z'
+                        updated_at: '2025-03-02T15:51:46.000000Z'
+                      -
+                        id: 5
+                        title: 'Consequuntur distinctio qui facere beatae accusamus impedit qui.'
+                        description: 'Quod ad aut commodi temporibus facilis. Libero eligendi sunt sint. Debitis et ipsam expedita quibusdam eligendi.'
+                        target_amount: '5439.49'
+                        amount_per_person: '292.98'
+                        status: open
+                        group_link: 'http://www.gleason.org/ea-itaque-non-ut-ipsa-explicabo-repellendus-libero'
+                        start_date: '2025-02-11T00:00:00.000000Z'
+                        end_date: '2025-04-17T00:00:00.000000Z'
+                        created_by:
+                          id: 15
+                          name: 'Mrs. Raquel Mayer'
+                          email: peffertz@example.com
+                          phone_number: +1-862-417-4180
+                          address: "55104 Ortiz Forest\nHartmannbury, WY 65086"
+                          profile_pic: 'https://placehold.co/300x300/'
+                        product:
+                          id: 7
+                          name: saepe
+                          description: 'In et ut culpa est est et.'
+                          unit_price: '338.13'
+                          bulk_price: '916.47'
+                          quantity: 71
+                          image: 'https://placehold.co/300x300/'
+                        created_at: '2025-03-02T15:51:46.000000Z'
+                        updated_at: '2025-03-02T15:51:46.000000Z'
+                      -
+                        id: 6
+                        title: 'Modi vitae accusamus modi facilis non ab.'
+                        description: 'Accusantium facilis minus assumenda minima facilis. Quasi dignissimos nisi quo dolores aut recusandae quo. Necessitatibus sed quia doloremque quo saepe occaecati aut. Doloribus et fuga eligendi facere voluptas. Explicabo velit recusandae eum assumenda et ut.'
+                        target_amount: '655.02'
+                        amount_per_person: '328.07'
+                        status: open
+                        group_link: 'http://bauch.biz/'
+                        start_date: '2025-03-12T00:00:00.000000Z'
+                        end_date: '2025-08-05T00:00:00.000000Z'
+                        created_by:
+                          id: 16
+                          name: 'Valentine Prosacco'
+                          email: tracy.rippin@example.com
+                          phone_number: +1-657-798-0587
+                          address: "40775 Bradtke Loop Apt. 223\nRogeliomouth, IL 09128-7923"
+                          profile_pic: 'https://placehold.co/300x300/'
+                        product: null
+                        created_at: '2025-03-02T15:51:46.000000Z'
+                        updated_at: '2025-03-02T15:51:46.000000Z'
+                      -
+                        id: 7
+                        title: 'Voluptatem natus voluptas iusto qui.'
+                        description: 'Ratione excepturi officiis placeat quod sit et qui. Veritatis sint ab nesciunt temporibus. Qui dolorum consectetur fugit eum eos sit doloribus. Harum dolorum exercitationem sint doloribus veritatis dolore voluptatem.'
+                        target_amount: '8391.22'
+                        amount_per_person: '275.12'
+                        status: open
+                        group_link: 'http://daniel.net/officiis-cupiditate-et-dolorum-voluptatem-aut'
+                        start_date: '2025-03-31T00:00:00.000000Z'
+                        end_date: '2025-06-01T00:00:00.000000Z'
+                        created_by:
+                          id: 17
+                          name: 'Dorthy Leuschke'
+                          email: emard.marlen@example.net
+                          phone_number: 952.588.6520
+                          address: "6878 Evans Cliff\nDrewshire, FL 43334"
+                          profile_pic: 'https://placehold.co/300x300/'
+                        product: null
+                        created_at: '2025-03-02T15:51:46.000000Z'
+                        updated_at: '2025-03-02T15:51:46.000000Z'
+                      -
+                        id: 8
+                        title: 'Pariatur optio impedit unde enim voluptatem debitis et.'
+                        description: 'Inventore adipisci ipsa occaecati voluptatem optio. Rerum alias vel error occaecati. Sunt quia eos amet illum quia quaerat praesentium. Cumque itaque velit numquam enim laborum et.'
+                        target_amount: '9793.91'
+                        amount_per_person: '108.18'
+                        status: open
+                        group_link: 'http://hill.com/sed-necessitatibus-ipsa-sunt-occaecati-consectetur.html'
+                        start_date: '2025-03-26T00:00:00.000000Z'
+                        end_date: '2025-08-30T00:00:00.000000Z'
+                        created_by:
+                          id: 18
+                          name: 'Miss Karolann Muller'
+                          email: brielle.strosin@example.com
+                          phone_number: +1-817-206-5312
+                          address: "37343 Quitzon Viaduct Apt. 477\nSouth Jany, VT 25253"
+                          profile_pic: 'https://placehold.co/300x300/'
+                        product:
+                          id: 2
+                          name: facere
+                          description: 'Delectus nostrum velit aperiam.'
+                          unit_price: '386.13'
+                          bulk_price: '698.85'
+                          quantity: 6
+                          image: 'https://placehold.co/300x300/'
+                        created_at: '2025-03-02T15:51:46.000000Z'
+                        updated_at: '2025-03-02T15:51:46.000000Z'
+                      -
+                        id: 9
+                        title: 'Nam voluptatem hic optio voluptatem et magnam consequuntur.'
+                        description: 'Dolores tempore ut perferendis corporis aut deleniti pariatur. Distinctio sit earum corporis corporis in atque. Dolores doloremque quo amet quis. Pariatur ex sequi debitis enim velit libero.'
+                        target_amount: '3248.45'
+                        amount_per_person: '223.98'
+                        status: open
+                        group_link: 'http://ratke.biz/sed-cupiditate-reprehenderit-neque-sed.html'
+                        start_date: '2025-02-15T00:00:00.000000Z'
+                        end_date: '2025-06-01T00:00:00.000000Z'
+                        created_by:
+                          id: 19
+                          name: 'Prof. Ariel Gislason'
+                          email: upton.earline@example.org
+                          phone_number: +1-239-273-7000
+                          address: "9897 Howe Club\nKathlynmouth, VA 77967-8383"
+                          profile_pic: 'https://placehold.co/300x300/'
+                        product: null
+                        created_at: '2025-03-02T15:51:46.000000Z'
+                        updated_at: '2025-03-02T15:51:46.000000Z'
+                      -
+                        id: 10
+                        title: 'Tempore consequuntur unde ullam accusamus animi exercitationem.'
+                        description: 'Non quis facere necessitatibus id aut dolor. Vero sed repellat consequatur vitae alias est.'
+                        target_amount: '1539.73'
+                        amount_per_person: '420.78'
+                        status: open
+                        group_link: 'http://torphy.net/quidem-vel-expedita-molestias-veniam-et-quas'
+                        start_date: '2025-02-25T00:00:00.000000Z'
+                        end_date: '2025-06-30T00:00:00.000000Z'
+                        created_by:
+                          id: 20
+                          name: 'Camille Koepp DDS'
+                          email: vkuhic@example.com
+                          phone_number: +1.564.974.1024
+                          address: "8848 Labadie Way\nHerzoghaven, AL 45126"
+                          profile_pic: 'https://placehold.co/300x300/'
+                        product:
+                          id: 8
+                          name: harum
+                          description: 'Corrupti veniam sed rerum id necessitatibus aut.'
+                          unit_price: '81.37'
+                          bulk_price: '4561.45'
+                          quantity: 66
+                          image: 'https://placehold.co/300x300/'
+                        created_at: '2025-03-02T15:51:46.000000Z'
+                        updated_at: '2025-03-02T15:51:46.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        title:
+                          type: string
+                          example: 'Recusandae pariatur nulla est libero sed rerum.'
+                        description:
+                          type: string
+                          example: 'Repellat est molestiae hic autem ut placeat est. Est sed id omnis quod. Aliquam dolorum facere hic quo ad. Aperiam qui ut et voluptatem. Earum et eos aut soluta excepturi non voluptas.'
+                        target_amount:
+                          type: string
+                          example: '558.53'
+                        amount_per_person:
+                          type: string
+                          example: '250.08'
+                        status:
+                          type: string
+                          example: open
+                        group_link:
+                          type: string
+                          example: 'http://hill.com/non-debitis-velit-asperiores-nesciunt-iure'
+                        start_date:
+                          type: string
+                          example: '2025-02-07T00:00:00.000000Z'
+                        end_date:
+                          type: string
+                          example: '2025-05-21T00:00:00.000000Z'
+                        created_by:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 11
+                            name:
+                              type: string
+                              example: 'Randi Hermiston PhD'
+                            email:
+                              type: string
+                              example: rolfson.evangeline@example.net
+                            phone_number:
+                              type: string
+                              example: '(440) 569-4789'
+                            address:
+                              type: string
+                              example: "1188 Elyssa Flat\nGoyettetown, RI 82159-7918"
+                            profile_pic:
+                              type: string
+                              example: 'https://placehold.co/300x300/'
+                        product:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 1
+                            name:
+                              type: string
+                              example: doloribus
+                            description:
+                              type: string
+                              example: 'Est enim maxime sit cum quia.'
+                            unit_price:
+                              type: string
+                              example: '230.3'
+                            bulk_price:
+                              type: string
+                              example: '422.41'
+                            quantity:
+                              type: integer
+                              example: 68
+                            image:
+                              type: string
+                              example: 'https://placehold.co/300x300/'
+                        created_at:
+                          type: string
+                          example: '2025-03-02T15:51:46.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2025-03-02T15:51:46.000000Z'
+      tags:
+        - 'Purchase Goals'
+      security: []
     post:
       summary: 'Create a new purchase goal.'
       operationId: createANewPurchaseGoal
@@ -137,47 +749,47 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: oqmwuleejtnjok
+                  example: mdrfickbf
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Temporibus atque ipsum vel deserunt in vel odit.'
+                  example: 'Ut deserunt eos omnis quam.'
                   nullable: false
                 target_amount:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 38
+                  example: 83
                   nullable: false
                 amount_per_person:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 62
+                  example: 35
                   nullable: true
                 product_name:
                   type: string
                   description: ''
-                  example: quisquam
+                  example: maiores
                   nullable: false
                 product_description:
                   type: string
                   description: ''
-                  example: ducimus
+                  example: aut
                   nullable: false
                 product_unit_price:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 72
+                  example: 89
                   nullable: false
                 product_bulk_price:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 5
+                  example: 76
                   nullable: true
                 product_quantity:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 81
+                  example: 44
                   nullable: false
                 product_image:
                   type: string
@@ -187,17 +799,17 @@ paths:
                 group_link:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ntpzpocynavh
+                  example: amo
                   nullable: true
                 start_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2025-03-22T20:50:25'
+                  example: '2025-03-23T13:54:36'
                   nullable: false
                 end_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
-                  example: '2027-11-09'
+                  example: '2089-12-12'
                   nullable: true
               required:
                 - title
@@ -210,6 +822,143 @@ paths:
                 - start_date
       security: []
   '/api/purchase-goals/{id}':
+    get:
+      summary: 'Fetch details of a specific purchase goal.'
+      operationId: fetchDetailsOfASpecificPurchaseGoal
+      description: 'This endpoint allows users to view the details of a purchase goal by ID.'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  message: 'Purchase goal retrieved successfully.'
+                  statusCode: 200
+                  data:
+                    id: 1
+                    title: 'Recusandae pariatur nulla est libero sed rerum.'
+                    description: 'Repellat est molestiae hic autem ut placeat est. Est sed id omnis quod. Aliquam dolorum facere hic quo ad. Aperiam qui ut et voluptatem. Earum et eos aut soluta excepturi non voluptas.'
+                    target_amount: '558.53'
+                    amount_per_person: '250.08'
+                    status: open
+                    group_link: 'http://hill.com/non-debitis-velit-asperiores-nesciunt-iure'
+                    start_date: '2025-02-07T00:00:00.000000Z'
+                    end_date: '2025-05-21T00:00:00.000000Z'
+                    created_by:
+                      id: 11
+                      name: 'Randi Hermiston PhD'
+                      email: rolfson.evangeline@example.net
+                      phone_number: '(440) 569-4789'
+                      address: "1188 Elyssa Flat\nGoyettetown, RI 82159-7918"
+                      profile_pic: 'https://placehold.co/300x300/'
+                    product:
+                      id: 1
+                      name: doloribus
+                      description: 'Est enim maxime sit cum quia.'
+                      unit_price: '230.3'
+                      bulk_price: '422.41'
+                      quantity: 68
+                      image: 'https://placehold.co/300x300/'
+                    created_at: '2025-03-02T15:51:46.000000Z'
+                    updated_at: '2025-03-02T15:51:46.000000Z'
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Purchase goal retrieved successfully.'
+                  statusCode:
+                    type: integer
+                    example: 200
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      title:
+                        type: string
+                        example: 'Recusandae pariatur nulla est libero sed rerum.'
+                      description:
+                        type: string
+                        example: 'Repellat est molestiae hic autem ut placeat est. Est sed id omnis quod. Aliquam dolorum facere hic quo ad. Aperiam qui ut et voluptatem. Earum et eos aut soluta excepturi non voluptas.'
+                      target_amount:
+                        type: string
+                        example: '558.53'
+                      amount_per_person:
+                        type: string
+                        example: '250.08'
+                      status:
+                        type: string
+                        example: open
+                      group_link:
+                        type: string
+                        example: 'http://hill.com/non-debitis-velit-asperiores-nesciunt-iure'
+                      start_date:
+                        type: string
+                        example: '2025-02-07T00:00:00.000000Z'
+                      end_date:
+                        type: string
+                        example: '2025-05-21T00:00:00.000000Z'
+                      created_by:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 11
+                          name:
+                            type: string
+                            example: 'Randi Hermiston PhD'
+                          email:
+                            type: string
+                            example: rolfson.evangeline@example.net
+                          phone_number:
+                            type: string
+                            example: '(440) 569-4789'
+                          address:
+                            type: string
+                            example: "1188 Elyssa Flat\nGoyettetown, RI 82159-7918"
+                          profile_pic:
+                            type: string
+                            example: 'https://placehold.co/300x300/'
+                      product:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 1
+                          name:
+                            type: string
+                            example: doloribus
+                          description:
+                            type: string
+                            example: 'Est enim maxime sit cum quia.'
+                          unit_price:
+                            type: string
+                            example: '230.3'
+                          bulk_price:
+                            type: string
+                            example: '422.41'
+                          quantity:
+                            type: integer
+                            example: 68
+                          image:
+                            type: string
+                            example: 'https://placehold.co/300x300/'
+                      created_at:
+                        type: string
+                        example: '2025-03-02T15:51:46.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2025-03-02T15:51:46.000000Z'
+      tags:
+        - 'Purchase Goals'
+      security: []
     put:
       summary: 'Update an existing purchase goal.'
       operationId: updateAnExistingPurchaseGoal
@@ -228,47 +977,47 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: uxlibvasraclmuzokukilju
+                  example: xkgprlizipkawbtdijsgbwyo
                   nullable: false
                 description:
                   type: string
                   description: ''
-                  example: 'Dolores et ut qui temporibus nihil.'
+                  example: 'Quia earum molestiae rerum enim reprehenderit.'
                   nullable: false
                 target_amount:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 60
+                  example: 71
                   nullable: false
                 amount_per_person:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 83
+                  example: 10
                   nullable: true
                 product_name:
                   type: string
                   description: ''
-                  example: pariatur
+                  example: temporibus
                   nullable: false
                 product_description:
                   type: string
                   description: ''
-                  example: sint
+                  example: ut
                   nullable: false
                 product_unit_price:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 63
+                  example: 36
                   nullable: false
                 product_bulk_price:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 41
+                  example: 56
                   nullable: true
                 product_quantity:
                   type: number
                   description: 'Must be at least 0.'
-                  example: 87
+                  example: 42
                   nullable: false
                 product_image:
                   type: string
@@ -278,17 +1027,17 @@ paths:
                 group_link:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: zifqjrengzaqzhj
+                  example: yvqwoitbfzlgqjarhrdikx
                   nullable: true
                 start_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2025-03-22T20:50:25'
+                  example: '2025-03-23T13:54:36'
                   nullable: false
                 end_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
-                  example: '2095-05-16'
+                  example: '2041-12-20'
                   nullable: true
       security: []
     delete:
@@ -305,10 +1054,41 @@ paths:
         in: path
         name: id
         description: 'The ID of the purchase goal.'
-        example: ut
+        example: 1
         required: true
         schema:
-          type: string
+          type: integer
+  '/api/purchase-goals/{id}/participants':
+    get:
+      summary: 'Get participants of a purchase goal.'
+      operationId: getParticipantsOfAPurchaseGoal
+      description: 'Retrieve all participants of a specified purchase goal.'
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'User Participation'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the purchase goal.'
+        example: 1
+        required: true
+        schema:
+          type: integer
   '/api/purchase-goals/{id}/join':
     post:
       summary: 'Join a purchase goal.'
@@ -324,10 +1104,10 @@ paths:
         in: path
         name: id
         description: 'The ID of the purchase goal.'
-        example: non
+        example: 1
         required: true
         schema:
-          type: string
+          type: integer
   '/api/purchase-goals/{id}/approve/{user_id}':
     post:
       summary: 'Approve a purchase goal.'
@@ -343,15 +1123,15 @@ paths:
         in: path
         name: id
         description: 'The ID of the purchase goal.'
-        example: omnis
+        example: 1
         required: true
         schema:
-          type: string
+          type: integer
       -
         in: path
         name: user_id
         description: 'The ID of the user.'
-        example: qui
+        example: dolor
         required: true
         schema:
           type: string
@@ -370,18 +1150,40 @@ paths:
         in: path
         name: id
         description: 'The ID of the purchase goal.'
-        example: amet
+        example: 1
         required: true
         schema:
-          type: string
+          type: integer
       -
         in: path
         name: user_id
         description: 'The ID of the user.'
-        example: optio
+        example: impedit
         required: true
         schema:
           type: string
+  /api/user/purchase-goals:
+    get:
+      summary: 'Get all purchase goals a user is participating in.'
+      operationId: getAllPurchaseGoalsAUserIsParticipatingIn
+      description: "Retrieves a list of all purchase goals the authenticated user is part of,\nalong with their status and contribution details."
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'User Participation'
+      security: []
 tags:
   -
     name: Authentication

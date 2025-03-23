@@ -27,20 +27,113 @@ endpoints:
         name: id
         description: 'The ID of the purchase goal.'
         required: true
-        example: deleniti
+        example: itaque
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: deleniti
+      id: itaque
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/purchase-goals
+    metadata:
+      groupName: 'Purchase Goals'
+      groupDescription: 'Endpoints for managing purchase goals'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Listing of all purchase goals.'
+      description: |-
+        This endpoint allows users to view purchase goals.
+        <aside class="notice">
+        Users must NOT be authenticated to access this endpoint.
+        </aside>
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"message":"Purchase goals retrieved successfully.","statusCode":200,"data":[{"id":1,"title":"Recusandae pariatur nulla est libero sed rerum.","description":"Repellat est molestiae hic autem ut placeat est. Est sed id omnis quod. Aliquam dolorum facere hic quo ad. Aperiam qui ut et voluptatem. Earum et eos aut soluta excepturi non voluptas.","target_amount":"558.53","amount_per_person":"250.08","status":"open","group_link":"http:\/\/hill.com\/non-debitis-velit-asperiores-nesciunt-iure","start_date":"2025-02-07T00:00:00.000000Z","end_date":"2025-05-21T00:00:00.000000Z","created_by":{"id":11,"name":"Randi Hermiston PhD","email":"rolfson.evangeline@example.net","phone_number":"(440) 569-4789","address":"1188 Elyssa Flat\nGoyettetown, RI 82159-7918","profile_pic":"https:\/\/placehold.co\/300x300\/"},"product":{"id":1,"name":"doloribus","description":"Est enim maxime sit cum quia.","unit_price":"230.3","bulk_price":"422.41","quantity":68,"image":"https:\/\/placehold.co\/300x300\/"},"created_at":"2025-03-02T15:51:46.000000Z","updated_at":"2025-03-02T15:51:46.000000Z"},{"id":2,"title":"Facilis in vero occaecati.","description":"Hic sapiente dolore quo at. Voluptatem ut voluptate nostrum voluptatem fugit accusamus quam fugit. Rerum illo error enim harum velit sapiente eum. Eum ea quaerat aperiam explicabo.","target_amount":"5334.79","amount_per_person":"386.47","status":"open","group_link":"http:\/\/www.rempel.com\/nulla-magni-vel-et-vel-quibusdam","start_date":"2025-03-22T00:00:00.000000Z","end_date":"2025-07-17T00:00:00.000000Z","created_by":{"id":12,"name":"Alia Schroeder","email":"corine91@example.net","phone_number":"862-299-4772","address":"54074 Simeon Fort\nPort Jammie, OK 16290","profile_pic":"https:\/\/placehold.co\/300x300\/"},"product":{"id":5,"name":"dolores","description":"At aperiam iure veritatis laborum.","unit_price":"458.01","bulk_price":"4556.99","quantity":84,"image":"https:\/\/placehold.co\/300x300\/"},"created_at":"2025-03-02T15:51:46.000000Z","updated_at":"2025-03-02T15:51:46.000000Z"},{"id":3,"title":"Eum aliquid aut rerum eos commodi labore repellendus officia.","description":"Illo corporis consequuntur ex quam possimus dolorem vero. Qui doloribus laborum nisi exercitationem et non. Voluptas ratione mollitia cum ut enim rerum.","target_amount":"814.30","amount_per_person":"49.94","status":"open","group_link":"http:\/\/oconnell.com\/voluptatem-cum-qui-aliquid-dolorem","start_date":"2025-02-16T00:00:00.000000Z","end_date":"2025-05-17T00:00:00.000000Z","created_by":{"id":13,"name":"Amy Feest Sr.","email":"dare.hallie@example.org","phone_number":"+1-630-283-4042","address":"12151 O''Conner Island\nRomagueraberg, MO 64877-7494","profile_pic":"https:\/\/placehold.co\/300x300\/"},"product":{"id":9,"name":"voluptatum","description":"Rerum ut temporibus dignissimos blanditiis.","unit_price":"385.47","bulk_price":"437.18","quantity":88,"image":"https:\/\/placehold.co\/300x300\/"},"created_at":"2025-03-02T15:51:46.000000Z","updated_at":"2025-03-02T15:51:46.000000Z"},{"id":4,"title":"Dolores a voluptas et vel.","description":"Quis velit aut aut consequatur. Voluptatem alias similique alias neque autem. Vel id quis id atque mollitia similique accusantium.","target_amount":"7439.34","amount_per_person":"217.53","status":"open","group_link":"https:\/\/www.pfannerstill.info\/non-similique-ducimus-qui-beatae","start_date":"2025-02-04T00:00:00.000000Z","end_date":"2025-08-27T00:00:00.000000Z","created_by":{"id":14,"name":"Eveline Reinger","email":"mcdermott.brock@example.net","phone_number":"+1-959-536-0193","address":"351 Bahringer Lake Apt. 359\nPort Griffin, ME 18405-9000","profile_pic":"https:\/\/placehold.co\/300x300\/"},"product":{"id":10,"name":"porro","description":"Modi iusto sint in et sit.","unit_price":"329.69","bulk_price":"971.79","quantity":82,"image":"https:\/\/placehold.co\/300x300\/"},"created_at":"2025-03-02T15:51:46.000000Z","updated_at":"2025-03-02T15:51:46.000000Z"},{"id":5,"title":"Consequuntur distinctio qui facere beatae accusamus impedit qui.","description":"Quod ad aut commodi temporibus facilis. Libero eligendi sunt sint. Debitis et ipsam expedita quibusdam eligendi.","target_amount":"5439.49","amount_per_person":"292.98","status":"open","group_link":"http:\/\/www.gleason.org\/ea-itaque-non-ut-ipsa-explicabo-repellendus-libero","start_date":"2025-02-11T00:00:00.000000Z","end_date":"2025-04-17T00:00:00.000000Z","created_by":{"id":15,"name":"Mrs. Raquel Mayer","email":"peffertz@example.com","phone_number":"+1-862-417-4180","address":"55104 Ortiz Forest\nHartmannbury, WY 65086","profile_pic":"https:\/\/placehold.co\/300x300\/"},"product":{"id":7,"name":"saepe","description":"In et ut culpa est est et.","unit_price":"338.13","bulk_price":"916.47","quantity":71,"image":"https:\/\/placehold.co\/300x300\/"},"created_at":"2025-03-02T15:51:46.000000Z","updated_at":"2025-03-02T15:51:46.000000Z"},{"id":6,"title":"Modi vitae accusamus modi facilis non ab.","description":"Accusantium facilis minus assumenda minima facilis. Quasi dignissimos nisi quo dolores aut recusandae quo. Necessitatibus sed quia doloremque quo saepe occaecati aut. Doloribus et fuga eligendi facere voluptas. Explicabo velit recusandae eum assumenda et ut.","target_amount":"655.02","amount_per_person":"328.07","status":"open","group_link":"http:\/\/bauch.biz\/","start_date":"2025-03-12T00:00:00.000000Z","end_date":"2025-08-05T00:00:00.000000Z","created_by":{"id":16,"name":"Valentine Prosacco","email":"tracy.rippin@example.com","phone_number":"+1-657-798-0587","address":"40775 Bradtke Loop Apt. 223\nRogeliomouth, IL 09128-7923","profile_pic":"https:\/\/placehold.co\/300x300\/"},"product":null,"created_at":"2025-03-02T15:51:46.000000Z","updated_at":"2025-03-02T15:51:46.000000Z"},{"id":7,"title":"Voluptatem natus voluptas iusto qui.","description":"Ratione excepturi officiis placeat quod sit et qui. Veritatis sint ab nesciunt temporibus. Qui dolorum consectetur fugit eum eos sit doloribus. Harum dolorum exercitationem sint doloribus veritatis dolore voluptatem.","target_amount":"8391.22","amount_per_person":"275.12","status":"open","group_link":"http:\/\/daniel.net\/officiis-cupiditate-et-dolorum-voluptatem-aut","start_date":"2025-03-31T00:00:00.000000Z","end_date":"2025-06-01T00:00:00.000000Z","created_by":{"id":17,"name":"Dorthy Leuschke","email":"emard.marlen@example.net","phone_number":"952.588.6520","address":"6878 Evans Cliff\nDrewshire, FL 43334","profile_pic":"https:\/\/placehold.co\/300x300\/"},"product":null,"created_at":"2025-03-02T15:51:46.000000Z","updated_at":"2025-03-02T15:51:46.000000Z"},{"id":8,"title":"Pariatur optio impedit unde enim voluptatem debitis et.","description":"Inventore adipisci ipsa occaecati voluptatem optio. Rerum alias vel error occaecati. Sunt quia eos amet illum quia quaerat praesentium. Cumque itaque velit numquam enim laborum et.","target_amount":"9793.91","amount_per_person":"108.18","status":"open","group_link":"http:\/\/hill.com\/sed-necessitatibus-ipsa-sunt-occaecati-consectetur.html","start_date":"2025-03-26T00:00:00.000000Z","end_date":"2025-08-30T00:00:00.000000Z","created_by":{"id":18,"name":"Miss Karolann Muller","email":"brielle.strosin@example.com","phone_number":"+1-817-206-5312","address":"37343 Quitzon Viaduct Apt. 477\nSouth Jany, VT 25253","profile_pic":"https:\/\/placehold.co\/300x300\/"},"product":{"id":2,"name":"facere","description":"Delectus nostrum velit aperiam.","unit_price":"386.13","bulk_price":"698.85","quantity":6,"image":"https:\/\/placehold.co\/300x300\/"},"created_at":"2025-03-02T15:51:46.000000Z","updated_at":"2025-03-02T15:51:46.000000Z"},{"id":9,"title":"Nam voluptatem hic optio voluptatem et magnam consequuntur.","description":"Dolores tempore ut perferendis corporis aut deleniti pariatur. Distinctio sit earum corporis corporis in atque. Dolores doloremque quo amet quis. Pariatur ex sequi debitis enim velit libero.","target_amount":"3248.45","amount_per_person":"223.98","status":"open","group_link":"http:\/\/ratke.biz\/sed-cupiditate-reprehenderit-neque-sed.html","start_date":"2025-02-15T00:00:00.000000Z","end_date":"2025-06-01T00:00:00.000000Z","created_by":{"id":19,"name":"Prof. Ariel Gislason","email":"upton.earline@example.org","phone_number":"+1-239-273-7000","address":"9897 Howe Club\nKathlynmouth, VA 77967-8383","profile_pic":"https:\/\/placehold.co\/300x300\/"},"product":null,"created_at":"2025-03-02T15:51:46.000000Z","updated_at":"2025-03-02T15:51:46.000000Z"},{"id":10,"title":"Tempore consequuntur unde ullam accusamus animi exercitationem.","description":"Non quis facere necessitatibus id aut dolor. Vero sed repellat consequatur vitae alias est.","target_amount":"1539.73","amount_per_person":"420.78","status":"open","group_link":"http:\/\/torphy.net\/quidem-vel-expedita-molestias-veniam-et-quas","start_date":"2025-02-25T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","created_by":{"id":20,"name":"Camille Koepp DDS","email":"vkuhic@example.com","phone_number":"+1.564.974.1024","address":"8848 Labadie Way\nHerzoghaven, AL 45126","profile_pic":"https:\/\/placehold.co\/300x300\/"},"product":{"id":8,"name":"harum","description":"Corrupti veniam sed rerum id necessitatibus aut.","unit_price":"81.37","bulk_price":"4561.45","quantity":66,"image":"https:\/\/placehold.co\/300x300\/"},"created_at":"2025-03-02T15:51:46.000000Z","updated_at":"2025-03-02T15:51:46.000000Z"}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/purchase-goals/{id}'
+    metadata:
+      groupName: 'Purchase Goals'
+      groupDescription: 'Endpoints for managing purchase goals'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Fetch details of a specific purchase goal.'
+      description: 'This endpoint allows users to view the details of a purchase goal by ID.'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the purchase goal.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"message":"Purchase goal retrieved successfully.","statusCode":200,"data":{"id":1,"title":"Recusandae pariatur nulla est libero sed rerum.","description":"Repellat est molestiae hic autem ut placeat est. Est sed id omnis quod. Aliquam dolorum facere hic quo ad. Aperiam qui ut et voluptatem. Earum et eos aut soluta excepturi non voluptas.","target_amount":"558.53","amount_per_person":"250.08","status":"open","group_link":"http:\/\/hill.com\/non-debitis-velit-asperiores-nesciunt-iure","start_date":"2025-02-07T00:00:00.000000Z","end_date":"2025-05-21T00:00:00.000000Z","created_by":{"id":11,"name":"Randi Hermiston PhD","email":"rolfson.evangeline@example.net","phone_number":"(440) 569-4789","address":"1188 Elyssa Flat\nGoyettetown, RI 82159-7918","profile_pic":"https:\/\/placehold.co\/300x300\/"},"product":{"id":1,"name":"doloribus","description":"Est enim maxime sit cum quia.","unit_price":"230.3","bulk_price":"422.41","quantity":68,"image":"https:\/\/placehold.co\/300x300\/"},"created_at":"2025-03-02T15:51:46.000000Z","updated_at":"2025-03-02T15:51:46.000000Z"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -76,7 +169,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: oqmwuleejtnjok
+        example: mdrfickbf
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -86,7 +179,7 @@ endpoints:
         name: description
         description: ''
         required: true
-        example: 'Temporibus atque ipsum vel deserunt in vel odit.'
+        example: 'Ut deserunt eos omnis quam.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -96,7 +189,7 @@ endpoints:
         name: target_amount
         description: 'Must be at least 0.'
         required: true
-        example: 38
+        example: 83
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -106,7 +199,7 @@ endpoints:
         name: amount_per_person
         description: 'Must be at least 0.'
         required: false
-        example: 62
+        example: 35
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -116,7 +209,7 @@ endpoints:
         name: product_name
         description: ''
         required: true
-        example: quisquam
+        example: maiores
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -126,7 +219,7 @@ endpoints:
         name: product_description
         description: ''
         required: true
-        example: ducimus
+        example: aut
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -136,7 +229,7 @@ endpoints:
         name: product_unit_price
         description: 'Must be at least 0.'
         required: true
-        example: 72
+        example: 89
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -146,7 +239,7 @@ endpoints:
         name: product_bulk_price
         description: 'Must be at least 0.'
         required: false
-        example: 5
+        example: 76
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -156,7 +249,7 @@ endpoints:
         name: product_quantity
         description: 'Must be at least 0.'
         required: true
-        example: 81
+        example: 44
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -176,7 +269,7 @@ endpoints:
         name: group_link
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: ntpzpocynavh
+        example: amo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -186,7 +279,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-03-22T20:50:25'
+        example: '2025-03-23T13:54:36'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -196,25 +289,25 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: false
-        example: '2027-11-09'
+        example: '2089-12-12'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      title: oqmwuleejtnjok
-      description: 'Temporibus atque ipsum vel deserunt in vel odit.'
-      target_amount: 38
-      amount_per_person: 62
-      product_name: quisquam
-      product_description: ducimus
-      product_unit_price: 72
-      product_bulk_price: 5
-      product_quantity: 81
-      group_link: ntpzpocynavh
-      start_date: '2025-03-22T20:50:25'
-      end_date: '2027-11-09'
+      title: mdrfickbf
+      description: 'Ut deserunt eos omnis quam.'
+      target_amount: 83
+      amount_per_person: 35
+      product_name: maiores
+      product_description: aut
+      product_unit_price: 89
+      product_bulk_price: 76
+      product_quantity: 44
+      group_link: amo
+      start_date: '2025-03-23T13:54:36'
+      end_date: '2089-12-12'
     fileParameters:
       product_image: null
     responses: []
@@ -250,14 +343,14 @@ endpoints:
         name: id
         description: 'The ID of the purchase goal.'
         required: true
-        example: ut
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: ut
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -265,7 +358,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: uxlibvasraclmuzokukilju
+        example: xkgprlizipkawbtdijsgbwyo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -275,7 +368,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Dolores et ut qui temporibus nihil.'
+        example: 'Quia earum molestiae rerum enim reprehenderit.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -285,7 +378,7 @@ endpoints:
         name: target_amount
         description: 'Must be at least 0.'
         required: false
-        example: 60
+        example: 71
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -295,7 +388,7 @@ endpoints:
         name: amount_per_person
         description: 'Must be at least 0.'
         required: false
-        example: 83
+        example: 10
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -305,7 +398,7 @@ endpoints:
         name: product_name
         description: ''
         required: false
-        example: pariatur
+        example: temporibus
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -315,7 +408,7 @@ endpoints:
         name: product_description
         description: ''
         required: false
-        example: sint
+        example: ut
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -325,7 +418,7 @@ endpoints:
         name: product_unit_price
         description: 'Must be at least 0.'
         required: false
-        example: 63
+        example: 36
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -335,7 +428,7 @@ endpoints:
         name: product_bulk_price
         description: 'Must be at least 0.'
         required: false
-        example: 41
+        example: 56
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -345,7 +438,7 @@ endpoints:
         name: product_quantity
         description: 'Must be at least 0.'
         required: false
-        example: 87
+        example: 42
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -365,7 +458,7 @@ endpoints:
         name: group_link
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: zifqjrengzaqzhj
+        example: yvqwoitbfzlgqjarhrdikx
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -375,7 +468,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: false
-        example: '2025-03-22T20:50:25'
+        example: '2025-03-23T13:54:36'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -385,25 +478,25 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: false
-        example: '2095-05-16'
+        example: '2041-12-20'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: true
         custom: []
     cleanBodyParameters:
-      title: uxlibvasraclmuzokukilju
-      description: 'Dolores et ut qui temporibus nihil.'
-      target_amount: 60
-      amount_per_person: 83
-      product_name: pariatur
-      product_description: sint
-      product_unit_price: 63
-      product_bulk_price: 41
-      product_quantity: 87
-      group_link: zifqjrengzaqzhj
-      start_date: '2025-03-22T20:50:25'
-      end_date: '2095-05-16'
+      title: xkgprlizipkawbtdijsgbwyo
+      description: 'Quia earum molestiae rerum enim reprehenderit.'
+      target_amount: 71
+      amount_per_person: 10
+      product_name: temporibus
+      product_description: ut
+      product_unit_price: 36
+      product_bulk_price: 56
+      product_quantity: 42
+      group_link: yvqwoitbfzlgqjarhrdikx
+      start_date: '2025-03-23T13:54:36'
+      end_date: '2041-12-20'
     fileParameters:
       product_image: null
     responses: []
@@ -438,14 +531,14 @@ endpoints:
         name: id
         description: 'The ID of the purchase goal.'
         required: true
-        example: eius
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: eius
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

@@ -5,6 +5,56 @@ description: 'Endpoints for managing user participation in purchase goals'
 endpoints:
   -
     httpMethods:
+      - GET
+    uri: 'api/purchase-goals/{id}/participants'
+    metadata:
+      groupName: 'User Participation'
+      groupDescription: 'Endpoints for managing user participation in purchase goals'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get participants of a purchase goal.'
+      description: 'Retrieve all participants of a specified purchase goal.'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the purchase goal.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
       - POST
     uri: 'api/purchase-goals/{id}/join'
     metadata:
@@ -24,14 +74,14 @@ endpoints:
         name: id
         description: 'The ID of the purchase goal.'
         required: true
-        example: non
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: non
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -65,8 +115,8 @@ endpoints:
         name: id
         description: 'The ID of the purchase goal.'
         required: true
-        example: omnis
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
@@ -75,15 +125,15 @@ endpoints:
         name: user_id
         description: 'The ID of the user.'
         required: true
-        example: qui
+        example: dolor
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: omnis
-      user_id: qui
+      id: 1
+      user_id: dolor
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -117,8 +167,8 @@ endpoints:
         name: id
         description: 'The ID of the purchase goal.'
         required: true
-        example: amet
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
@@ -127,21 +177,62 @@ endpoints:
         name: user_id
         description: 'The ID of the user.'
         required: true
-        example: optio
+        example: impedit
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: amet
-      user_id: optio
+      id: 1
+      user_id: impedit
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/user/purchase-goals
+    metadata:
+      groupName: 'User Participation'
+      groupDescription: 'Endpoints for managing user participation in purchase goals'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get all purchase goals a user is participating in.'
+      description: |-
+        Retrieves a list of all purchase goals the authenticated user is part of,
+        along with their status and contribution details.
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
     responseFields: []
     auth: []
     controller: null
